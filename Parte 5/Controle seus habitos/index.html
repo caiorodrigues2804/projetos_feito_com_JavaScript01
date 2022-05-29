@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Controle seus habitos</title>
+</head>
+<body>
+	<h1> Controle seus hábitos </h1>
+	<h2 id="bixin"></h2>
+	<h2 id="niveis"></h2>
+	<input 
+	type="button"
+	value="Recomeçar novamente" 
+	name=""
+	style="font-size: 16px;" 
+	onclick="remover()" 
+	/>
+	<script type="text/javascript">
+		document.body.style.backgroundColor = "#ccc"
+	 
+			//Acrescentar
+			let inps = document.createElement('input')	
+			document.querySelector('body').appendChild(inps)
+			inps.type = 'button'
+			inps.value = 'Já concluir um dia'
+			inps.style.fontSize = 16 + 'px'
+			let contador = localStorage.contador;
+		 	
+			inps.onclick = () => {
+
+				if (localStorage.desafios) {
+				localStorage.desafios=Number(localStorage.desafios)+1;
+
+				}
+				else{
+				  localStorage.desafios=1
+				}
+	 					let n = document.getElementById('niveis')
+					var salvar = localStorage.desafios;
+	 			let b = document.getElementById('bixin')
+	 				b.innerHTML = `Dias concluídos: ${salvar}`
+			}
+	 			var salvar = localStorage.desafios;
+	 			let b = document.getElementById('bixin')
+	 				b.innerHTML = `Dias concluídos: ${salvar}`
+	 					if (salvar === undefined) {
+	 						b.innerHTML = `Dias concluídos: ${0}`	
+	 					}
+	 		  	function remover() {
+	 	 		b.innerHTML = `Dias concluídos: ${0}`
+	 	 			localStorage.removeItem("desafios")
+	 			}
+
+
+	</script>
+</body>
+</html>

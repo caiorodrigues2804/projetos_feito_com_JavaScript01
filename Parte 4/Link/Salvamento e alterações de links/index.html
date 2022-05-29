@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<html lang="pt-br">
+	<title>JavaScript</title>
+</head>
+<body style="background: #ccc;">
+	<h1>JavaScript testes</h1>
+	<input type="text" name="">
+	 		<input type="text" id="caiobador" name="">
+
+	<script type="text/javascript">
+	let historico = []
+
+		let c = document.querySelector('input')
+		c.type = 'button'
+		c.value = 'Clique aqui'
+		c.style.fontSize = 15 + 'px'
+		let links = prompt('digite um link')
+		historico.push(links)
+		alert('o link foi salvo com sucesso')
+
+		c.onclick = function() {
+			window.open('https://' + historico[0])
+		}
+
+		let u = document.querySelector('#caiobador')
+		u.type ="button"
+		u.value = "Alterar o link"
+		u.style.fontSize = 15 + 'px'
+		u.onclick = function() {
+			historico.pop()
+			let links = prompt('digite a alteração do link')
+			historico.push(links)
+			alert('o link foi salvo com sucesso')
+		}
+	</script>
+</body>
+</html>

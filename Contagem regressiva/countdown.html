@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<html lang="pt-br">
+	<title>Countdown JS</title>
+	</head>
+	<body style="background-color: #ccc;">
+	<br>
+		<center>
+	<h1>Countdown JS</h1>
+	<script>
+	       let nina_bolotas = document.createElement('br');
+	       document.getElementsByTagName('center')[0].appendChild(nina_bolotas)
+
+	let hsw;
+	hsw = document.createElement('h1')
+	document.getElementsByTagName('center')[0].appendChild(hsw);
+let datas, datas_02;
+	datas_02 = new Date('April 28, 2022 16:18:00').getTime()
+	setInterval(() => {
+	datas = new Date()
+		let divisor;
+		divisor =  datas_02 - datas 
+		if(divisor < 0){hsw.innerHTML = 0;}
+
+		let nina_bolotas = function(){
+			var anos,dias,horas,minutos,segundos;
+		  	anos = Math.floor(divisor / (365 * 24 * 60 * 60 * 1000))
+			dias = Math.floor(divisor / (1000 * 60 * 60 * 24));
+			horas = Math.floor(divisor / (1000*60*60));
+			minutos = Math.floor(divisor / (1000*60));
+			segundos = Math.floor(divisor / (1000));
+			hsw.innerHTML = anos + ' anos ' + dias  + 'd ' + horas + 'h ' + minutos + 'm ' + segundos + 's ';
+		}
+		nina_bolotas();
+	})
+
+
+	</script>
+		</center>
+	</body>
+	</html>
+	</!DOCTYPE html>

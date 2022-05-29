@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+	<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Tabuada</title>
+</head>
+	<html>
+<body>
+	<script>
+document.write('<center>');
+document.write('<h1>');
+	document.write('Tabuada de soma e multiplicação <br><br>');
+	document.write('Soma (+)');
+document.write('</h1>');
+	let x,y;
+	x = 0;y=0;
+	while(x < 10){
+	x += 1;
+document.write('<h3>Tabuada do ' + x + '</h3>');
+	y = 0;
+	 while(y < 10){
+	 y += 1;
+document.write('<h2>'+ x + ' + ' + y + ' = ' + (x + y) + '</h2>');
+	  }
+	document.write('<hr>');
+	}
+ 	document.write('<h2>')
+		document.write('Multiplicação (*)');
+	document.write('</h2>');
+let k,z;
+for(k = 0;k < 11;k++){
+	document.write('<h3>Tabuada do ' + k + '</h3>')
+  for(z = 0;z < 11;z++){
+	document.write('<h2>' + k + ' * ' + z + ' = ' + (k * z) + '</h2>')
+	}
+	document.write('<hr>');
+}
+	</script>
+</body>
+	</html>

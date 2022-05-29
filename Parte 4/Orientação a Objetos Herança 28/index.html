@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Herança</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		/*
+		class animal{
+			constructor(cor,tamanho){
+				this.cor = cor
+				this.tamanho = tamanho
+			}
+		}
+
+		class bixin extends animal{
+			constructor(){
+			super('verde','20')
+			this.nome = 'Papagaio'	
+
+			}
+		}
+
+		let d = new bixin()
+		console.log(d)
+		*/
+
+		class animal{
+			constructor(nome,cor,dieta,especie,imperativadade){
+				this.nome = nome
+				this.cor = cor
+				this.dieta = dieta
+				this.especie = especie
+				this.imperativadade = imperativadade
+			}
+		}
+		class cachorro extends animal{
+			constructor(nome,cor,dieta,especie,imperativadade){
+				super(nome,cor,dieta,especie,imperativadade)
+				this.imperativadade = imperativadade
+			}
+		}
+		class gato extends animal{
+			constructor(nome,cor,dieta,especie,imperativadade){
+				super(nome,cor,dieta,especie,imperativadade)
+				this.imperativadade = imperativadade
+			}
+		}			
+
+		let t = new cachorro('Nina','Marrom e marrom claro, cinza','biscoitos, carne e osso, pesticos e ração','Cachorro',true)
+		console.log(t)
+		let ti = new cachorro('Bolota','Preta e dourada','biscoitos e carnes e ossos, ração','Cachorro',true)
+		console.log(ti)
+			let ta = new gato('Shely','Marrom e dourado, preto','peixes e ratos, camundongo e ração','Gato',false)
+			console.log(ta)
+
+
+
+		/*class animal{
+			constructor(nome,cor, tamanho){
+				this.cor = cor
+				this.tamanho = tamanho
+				this.nome = nome
+			}
+		}
+		class bixin extends animal{
+			constructor(nome,cor,tamanho){
+			super(nome,cor,tamanho)
+			this.nome = 'Papagaio'
+			}
+		}
+		let b = new bixin('','verde','300gramas')
+		console.log(b)*/
+
+  	/*class Animal{
+  		constructor(nome,cor,tamanho,raca,dieta,altura){
+  			this.nome = nome
+  			this.cor = cor
+  			this.tamanho = tamanho
+  			this.raca = raca
+  			this.altura = altura
+  			// this.peso = peso
+  		}
+  		info(){
+  			console.log(`Nome do animal: ${this.nome}`)
+  			console.log(`Cor: ${this.cor}`)
+  			console.log(`Tamanho: ${this.tamanho}`)
+  			console.log(`Tipo de raça: ${this.raca}`)
+  			console.log(`Altura: ${this.altura}`)
+  			// console.log(`Peso: ${this.peso}`)
+  		}
+  	}
+
+  	class cachorro extends Animal{
+  		constructor(nome,cor,tamanho,raca,dieta,altura){
+  			super(nome,cor,tamanho,raca,dieta,altura)
+  			this.peso = peso
+  			console.log(`O peso do animal é: ${this.peso}`)
+  		}
+  	}
+  	let op = new cachorro('Nina','Marrom claro e marrom, cinza','40','pesticos, biscoitos, ossos e carnes','50cm','20')
+  	op.info()*/
+	</script>
+
+</body>
+</html>

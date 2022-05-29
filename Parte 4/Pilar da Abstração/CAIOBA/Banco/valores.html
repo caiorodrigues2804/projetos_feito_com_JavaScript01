@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		/*class caio{
+			constructor(tamanhos){
+				this.tamanhos=tamanhos
+			}
+			bixin(){
+
+				console.log('O tamanho é ' + this.tamanhos)
+			}
+		}*/
+	//SALDO
+		/*class saldos{
+			constructor(){
+				this.saldo = 100
+			}
+			retirar(tirar){
+				this.saldo -= tirar
+			}
+			w(){
+				return this.saldo
+			}
+		}		
+		let y = new saldos()
+		console.log(y.w())
+		y.retirar(50)
+		console.log(y.w())*/
+	// Adicionar
+		class caio{
+			constructor(){
+				this.saldo = 2000
+				console.log('O valor do saldo é: ' + this.saldo)
+			}
+			retirar(sacar){
+				this.saldo -= sacar
+			}
+			atualizar(){
+				return this.saldo
+			} 
+			adicionar(valor){
+				this.saldo += valor
+			}
+		}
+
+		let c = new caio()
+		c.retirar(20)
+		console.log(c.atualizar())
+		c.adicionar(400)
+		console.log(c.atualizar())
+		let y = new caio()
+		y.retirar(200)
+		console.log(y.atualizar())
+	</script>
+
+
+</body>
+</html>

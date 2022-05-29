@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.body.style.backgroundColor = "#ccc"	
+		//Título
+
+
+		var nomes = [
+    {
+        Nome: 'Nícolas',
+        dinheiro: 2
+    },
+    {
+       Nome: 'José',
+        dinheiro: 421.99
+    },
+    {
+      	Nome: 'Caio',
+        dinheiro: 2412.99
+    },
+    {
+       	Nome: 'Carol',
+        dinheiro: 322.99
+    }
+];
+nomes.sort(function(a, b) {
+    return a.dinheiro - b.dinheiro;
+});
+	</script>
+</body>
+</html>

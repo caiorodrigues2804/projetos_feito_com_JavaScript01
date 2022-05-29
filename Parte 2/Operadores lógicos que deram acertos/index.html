@@ -1,0 +1,240 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<!-- Bootstrap CSS3 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Matemática testes</title>
+</head>
+<body style="background: #ccc;">
+	<h1 class="text-center m-4">Matemática teste</h1>
+	<center>
+		
+<input type="button" class="btn btn-warning btn-lg" value="Inciar teste" onclick="testar()">
+	</center>
+	<script type="text/javascript">
+		let errados = 0 
+		let acertos = 0
+		let maximas = 0
+		// acertos = parseInt(acertos)
+		// errados = parseInt(errados)
+		//TESTE 1
+		function testar(){
+			if (acertos <= 4) {
+			window.alert('Olá TESTE 1')
+			acertos++;
+			window.alert('Total é: ' + acertos)
+				// let maximas = 5
+				// let acertos = 5
+				// window.alert('Total de máximas é: ' + maximas + 'Total de acertos é: ' + acertos )
+			testar()
+				// function testangem(){
+				// 		let maximas = 5
+				// 		let acertos = 5
+				// 		testar02()
+				// }
+
+		}else{
+				// testangem()
+				// let maximas = 5
+				testar02()
+			}
+
+		}
+
+ 		//TESTE 2
+ 		function testar02(){
+ 			let media = 5
+ 			let limite_maximas = 9
+ 			let simulador = 5
+
+ 			//DEEEEEEEU BBASTTANTE CERRRTO
+ 			if (acertos >= media && maximas <= limite_maximas ) {
+	 window.alert('Olá TESTE 2')
+	 if (acertos == maximas) {
+			acertos++;
+			maximas++;
+	 }else{	
+	 	// var maximas = prompt('Digite 5')
+	 	// maximas = parseInt(maximas)
+	 	// acertos = maximas
+	 	maximas = simulador
+	 }
+
+	window.alert('Total é: ' + acertos + ' ,máximas é: ' +maximas )
+	testar02()
+
+	}else{
+
+		}
+	}
+
+
+
+
+
+// if (acertos >= media && maximas <= limite_maximas ) {
+// 	 window.alert('Olá TESTE 2')
+// 	 if (acertos == maximas) {
+// 			acertos++;
+// 			maximas++;
+// 	 }else{
+	 	 
+// 	 }
+
+// 	window.alert('Total é: ' + acertos + ' ,máximas é: ' +maximas )
+// 	testar02()
+
+// 	}else{
+
+// 		}
+// 	}
+
+
+
+
+ 			//DEU MUITO E BASTANTE CERTO	
+ // if (acertos >= media && maximas <= limite_maximas ) {
+	//  window.alert('Olá TESTE 2')
+	//  if (acertos == maximas) {
+	// 		acertos++;
+	// 		maximas++;
+	//  }else{
+	//  	maximas++;
+	//  }
+
+	// window.alert('Total é: ' + acertos + ' ,máximas é: ' +maximas )
+	// testar02()
+
+	// }else{
+
+	// 	}
+	// }
+ 
+
+ 			//DEU CERTO
+		// if (acertos >= media && maximas <= limite_maximas ) {
+	 // 			window.alert('Olá TESTE 2')
+		// 		acertos++;
+		// 		maximas++;
+		// 		window.alert('Total é: ' + acertos + ' ,máximas é: ' +maximas )
+		// 		testar02()
+
+	 // 			}else{
+
+	 // 			}
+	 // 		}
+
+ 		// 	window.alert('Olá TESTE 2')
+			// acertos++;
+			// maximas++;
+			// window.alert('Total é: ' + acertos + ' ,máximas é: ' +maximas )
+			// testar02()
+
+ 		// 	}else{
+
+ 		// 	}
+ 		// }
+
+		//TESTE 2
+		// function testar02(){
+		// 	let media = 5
+		// 	let limite_maximas = 10
+		// 	if (acertos >= media && maximas  limites_maximas) {
+		// 	window.alert('Olá TESTE 2')
+		// 	acertos++;
+		// 	maximas++;
+		// 	window.alert('Total é: ' + acertos)
+		// 	testar02()
+		// 	}else{
+		// 		// window.alert('Já acabouu')
+		// 	}
+		// }
+
+
+
+ 			// let diminuidor = 10
+ 			// // let limite_maximas = 10
+ 			//  if (acertos >= media  && maximas <= diminuidor ) {
+ 			//  	window.alert('Olá TESTE 2')
+ 			//  	acertos++;
+ 			//  	maximas++;
+ 			//  	window.alert('Total é ' + acertos + ' ,total máximas é: ' + maximas)
+ 			//  		testar02()
+ 			//  }else{
+
+ 			//  }
+
+
+ 			//DEU ERRADO
+ 			// if (acertos >= media && maximas <= diminuidor) {
+		 	// 		window.alert('Olá TESTE 2')
+				// 	acertos++;
+				// 	maximas++;
+				// 	window.alert('Total é: ' + acertos + ' ,total da máximas é: ' + maximas)
+				// 	testar02()
+ 			// }else{
+
+ 			// }
+
+
+ 		//ESTUDO ESSE CÓDIGO
+ 		// 	if (acertos >= media && maximas <= limite_maximas ) {
+
+ 		// 	window.alert('Olá TESTE 2')
+			// acertos++;
+			// maximas++;
+			// window.alert('Total é: ' + acertos + ' ,máximas é: ' +maximas )
+			// testar02()
+
+ 		// 	}else{
+
+ 		// 	}
+ 		// }
+
+		//TESTE 2
+		// function testar02(){
+		// 	let media = 5
+		// 	let limite_maximas = 10
+		// 	if (acertos >= media && maximas  limites_maximas) {
+		// 	window.alert('Olá TESTE 2')
+		// 	acertos++;
+		// 	maximas++;
+		// 	window.alert('Total é: ' + acertos)
+		// 	testar02()
+		// 	}else{
+		// 		// window.alert('Já acabouu')
+		// 	}
+		// }
+		
+
+	</script>
+
+
+	<!--    <script>
+      var nota = prompt('Digite a nota do aluno:')
+      var faltas = prompt('Digite a quantidade de faltas:')
+
+      var media = 7
+      var faltas_maximas = 15
+
+      if (nota >= media && faltas <= faltas_maximas) {
+        document.write('Aprovado')
+      
+      } else { 
+        document.write('Reprovado')
+      
+      }
+
+    </script> -->
+
+
+</body>
+</html> 

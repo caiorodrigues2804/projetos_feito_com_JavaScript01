@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title></title>
+ </head>
+ <body>
+ 	<script type="text/javascript">
+ 		let produto = {categoria: 'Eletrodoméstico',descricao: 'Geladeira',preco: 1999}
+ 		let produtoJSON = `{"categoria": "Eletrodoméstico","descricao": "Geladeira", "preco": 1999.000}`
+
+ 		// Conversão de JSONS
+
+ 		//Parse serve para tirar o JSON
+ 		console.log(JSON.parse(produtoJSON))
+ 		//Stringify serve para converter em JSON
+ 		console.log(JSON.stringify(produto))
+ 			
+ 	</script>
+ </body>
+ </html>

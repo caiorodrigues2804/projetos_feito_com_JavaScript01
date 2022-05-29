@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<link rel="icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdzone.com%2Farticles%2Flogojs-%25E2%2580%2593-javascript-has-semi&psig=AOvVaw3q_INTBcZvENyRbBLSRiZv&ust=1630667123537000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDC98eS4PICFQAAAAAdAAAAABAD">
+<html lang="pt-br">
+<meta charset="pt-br">
+<title>Página JS</title>
+	</head>
+<body>
+<style type="text/css">
+*{font-family: arial;}
+/*h1{
+ text-align:center;
+}*/
+</style>
+<input 
+	type="button" 
+	onclick="atualizador()" 
+	value="Voltar" 
+	style="font-size: 20px;"/>
+<h3 class="bixin">Dia de hj</h3>
+<center>
+<h1 id="h_0s1w">Countdown</h1>
+</center>
+	<script>
+  let atualizador = function(){
+ window.location.assign("https://www.google.com")
+}
+
+//H1
+let titulo,aumentador_01_w,ds;
+aumentador_01_w = 0; ds = 0;
+titulo = document.getElementById('h_0s1w');
+titulo.style.fontSize = 200 + 'px';
+
+
+/// \\\
+let conversor_de_datas,meses_;
+datas_atuais_02 = new Date();
+ 
+
+	document.body.style.background = '#ccc';
+let in_b_01,in_b_02;
+in_b_01 = document.createElement('input');
+document.getElementsByTagName('center')[0].appendChild(in_b_01)
+in_b_01.type = 'button';
+in_b_01.value = 'Mostrar'
+in_b_01.style = `font-size: 25px;`
+let x,y,z_01,z_02;
+x = 0;y =0;z_01=0;z_02=0;
+let selecionador;
+selecionador = 0;
+in_b_01.onclick = () => {
+z_02 = 0;
+/*
+setInterval(() =>{
+ if(z_02 <= 0){
+	z_01 += 1;
+  in_b_01.style.fontSize = z_01 + 'px';
+	if(z_01 >= 60){
+		z_02 = 1;
+		 
+	}
+}
+	if(z_02 === 1){
+	z_01 -= 1;
+ in_b_01.style.fontSize = z_01 + 'px';
+	if(z_01 <= 25){
+		z_02 = 2
+	}
+	}
+}, 4)
+*/
+ switch(x){
+	case 0:
+	x += 1; y = 1;
+	in_b_01.value = 'Esconder'
+	break;
+	case 1:
+	x -= 1; y = 0;
+	in_b_01.value = 'Mostrar';
+	break;	
+}
+}
+
+let h_s01;
+h_s01 = document.createElement('h1');
+document.getElementsByTagName('center')[0].appendChild(h_s01);
+h_s01.style.fontSize = 0 + 'px';
+h_s01.innerHTML = '0';
+let bolota,countdown_01sw,divisor,countdown_02sw,conversor_01;
+countdown_02sw = new Date('april 28, 2022 16:18:00').getTime()
+bolota = 0;
+	 
+	setInterval(
+	() => {
+	if(y === 1){
+	bolota += 1;
+	h_s01.style.fontSize = bolota + 'px';
+		if(y >= 1 && bolota >= 80){
+			y = 2;
+		}
+	} if(y === 0){
+		bolota -= 1;
+	h_s01.style.fontSize = bolota + 'px';
+		if(y === 0 && bolota < 0){
+			y = 3;
+		}
+	}
+	countdown_01sw = new Date().getTime();
+	divisor = countdown_01sw -  countdown_02sw
+	if(divisor < 0){conversor_01 = Math.abs(divisor)}
+	let atualizador = function(){
+		let anos,dias,horas,minutos,segundos;
+		anos = Math.floor(conversor_01 / (365 * 24 * 60 * 60 * 1000))
+		dias = Math.floor(conversor_01 / (1000*60*60*24));horas = Math.floor(conversor_01 % (1000*60*60*24) / (1000*60*60))
+		minutos = Math.floor(conversor_01 % (1000*60*60) / (1000*60)); segundos = Math.floor(conversor_01 % (1000*60) / (1000));
+	 	h_s01.innerHTML = anos + ' anos ' + dias + 'd ' + horas + 'h ' + minutos + 'm ' + segundos + 's '; 
+	}
+	atualizador();
+	jose();
+	function jose(){
+if(ds <= 0){
+aumentador_01_w++;
+	 titulo.style.fontSize = aumentador_01_w + 'px';
+	if(aumentador_01_w >= 40){
+		ds += 1;
+	}
+}
+ 	
+	}
+	 
+})
+
+/*
+let jose_nina_bolota;
+jose_nina_bolota = document.createElement('h1');
+document.getElementsByTagName('body')[0].appendChild(jose_nina_bolota);
+jose_nina_bolota = 'Criado por Caio Rodrigues'
+*/
+document.write('<center><h4>Criado por Caio Rodrigues</h4></center>');
+	</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		let degrade;
+		degrade = 'radial-gradient(#ccc, #7d7d7d)'
+		document.body.style.background = degrade
+		document.body.style.backgroundAttachment = 'fixed'
+		let historicos,salvar;
+ 
+		historicos = Array()
+	 
+		if (localStorage.Armazenamento !== undefined) {
+			 salvar = JSON.parse(localStorage.getItem('Armazenamento')) 
+			 console.log(salvar)
+			 for(let xs = -1;xs <= salvar.length;xs++){
+			 	if (xs < salvar.length) {
+			 	historicos.push(salvar[xs])
+			 	}
+			 }	 	
+		}
+	 
+		let b,t1,t2;
+		let inps,boleto;
+		b = document.getElementsByTagName('body')[0]
+		t1 = document.createElement(`h1`)
+		b.appendChild(t1)
+		t1.innerHTML= 'Cadastro em LocalStorage'
+		inps = document.createElement(`input`)
+		b.appendChild(inps)
+		inps.type = 'button'
+		inps.value = 'Iniciar um novo cadastro'
+		inps.style.fontSize = 17 + 'px'
+
+		let hs,indicador,xo,xos;
+		xo = 0
+		xos = 0
+		indicador = 0
+		// indicador = localStorage.Indicadores
+		inps.onclick = () =>{
+			class Nomeadores{
+				constructor(nome, indicador){
+					this.nome = nome
+					this.indicador = indicador
+					if (indicador >= 1) {
+						localStorage.setItem(indicador,nome)
+	 				historicos.push(localStorage.getItem(indicador))
+					localStorage.setItem(`Armazenamento`, JSON.stringify(historicos))	 
+					}
+				}
+			}
+	 		
+			let nome = prompt(`Digite seu nome`)
+			hs = document.createElement(`h2`)
+			b.appendChild(hs)
+			hs.innerHTML = nome
+			++indicador;
+			console.log(indicador)
+			let teste = new Nomeadores(nome, indicador)
+		}
+		 
+		let repetidor;
+			repetidor = -1
+			let letras;
+	 	while(repetidor <= historicos.length){
+	 			repetidor = repetidor + 1
+	 			if (repetidor >= 1) {
+	 					if (repetidor < historicos.length) {
+				 			letras = document.createElement(`h2`)
+				 			b.appendChild(letras)
+				 	 		letras.innerHTML = historicos[repetidor]	
+				 		}
+	 			}
+	 	}
+	  
+	</script>
+</body>
+</html>

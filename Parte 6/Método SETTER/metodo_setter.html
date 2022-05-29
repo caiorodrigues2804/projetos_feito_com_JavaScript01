@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>	
+	<script type="text/javascript">
+			document.title = 'JavaScript testes'
+			document.body.style.background = '#ccc'
+			let b;
+			b = document.getElementsByTagName('body')[0]
+		 			let pessoas,historico;
+		 			historico = Array()		
+				class cadastroPessoas{
+					constructor(nome,dinheiro){
+						pessoas ={
+							nome,
+							dinheiro
+						}
+						historico.push(pessoas)
+						historico.sort(function(a,b) {
+							return b.dinheiro - a.dinheiro
+						})
+						console.log(historico)
+					}
+					get imprimir(){
+						let i;
+						for(i = 0;i <= historico.length;i++){
+							if (i < historico.length) {
+								 let hs;
+								 hs = document.createElement(`h2`)
+								 b.appendChild(hs)
+								 hs.innerHTML = `Nome: ${historico[i].nome} <br /> Preço: ${historico[i].dinheiro}`
+							}
+						}
+					}
+					// Método SETTTER AQUI 
+					set SetComb(x){
+						this.comb = x
+						console.log(this.comb)
+					}
+
+				} 
+				let n1,n2;
+				 n1 = new cadastroPessoas('Caio',200)
+				 n2 = new cadastroPessoas('Elizangela',2000)
+				 n3 = new cadastroPessoas('José',1300)
+				 n1.imprimir
+			 		n2.SetComb=200
+
+	</script>
+</body>
+</html>

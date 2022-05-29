@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript Testes</title>
+</head>
+<body style="background: #7d7d7d;">
+	<h1 class="text-center text-warning text-monospace m-4" style="font-size: 40px;">JavaScript Testes</h1>
+		<center>
+	<button
+	style="width: 400px;"
+	class="btn btn-outline-warning btn-lg"
+	onclick="registro(documentacao)"
+
+	>
+	Inciar o teste
+	</button>
+		</center>
+		<script type="text/javascript">
+let comunicador = Array(Array('Olá, visitante', Array('Antes de começar é recomendado preencher seus dados que serão exibidos quando finalizar o teste, e você terá como visualizar seu desempenho', (Array('Agora pode prosseguir o teste')))))
+let nomes = []
+// // nome['a'] = []
+// nome['a'] = ['Nome não inserido corretamente']
+let adevertencias = []
+adevertencias['a'] = ['nome não inserido corretamente']
+let sobrenome = []
+sobrenome['a'] = ['Qual é seu sobrenome?',['Sobrenome não inserido corretamente']]
+//control
+let control = ['Ops, você já registrou com esse nome', ['Deseja remover ou alterar?']]
+let control02 = ['Ops, você já registrou com esse sobrenome']
+			function registro(callback) {
+	 		(n1 => {
+	 		(n2 => {
+	 		(n3 => {
+		 			alert(comunicador[0][0])
+		 			alert(comunicador[0][1][0])
+		 			alert(comunicador[0][1][1])
+					callback(documentacao)
+	 				})()
+	 				 })()
+	 			})()
+			} function documentacao(documentacao) {
+				(function() {
+					nomeador('digite seu nome');
+					function nomeador(q) {
+					let nome = prompt(q)		 
+					if(nome != ''){
+						if (nomes.indexOf(nome) !== -1) {
+							alert(control[0])
+							control01()
+	function control01() {
+	let decisao = prompt(control[1][0])
+	if (decisao == 'remover') {
+		nomes.pop(nome)
+		alert('Foi removido com sucesso')
+		}else if (decisao == 'alterar') {
+			let nome = prompt('Digite a alteração do seu nome')
+			if (nome.length >= 2 && nome.length <= 8) {
+				nomes.pop(nome)
+				alert("Foi alterado com sucesso")
+				nomes.push(nome)
+				sobrenomes() 
+			}else{
+				let deuerrado = 'Seu nome deve ter no mínimo 2 até 8 caracteres, digite corretamente'
+				alert(deuerrado)
+				control01();
+			}
+		}else{
+			control01()
+		}
+	}
+						}else{
+							nomes.push(nome)
+				 			sobrenomes()
+						}
+						}else{
+							alert(adevertencias['a']) 	
+							nomeador(q)
+						}
+					}	
+					function sobrenomes() {
+					(k =>{
+					(k2 =>{
+						ultimonome()
+						function ultimonome() {
+					const proximonome = prompt(sobrenome['a'][0])
+					if (proximonome != '') {
+if (sobrenome.indexOf(proximonome) !== -1){
+	alert(control02[0])		
+	control002()
+	function control002() {
+		let decisao2 = prompt(control[1][0])
+		if (decisao2 == 'remover') {
+			sobrenome.pop(proximonome)
+			alert('foi removido com sucesso')
+		} else if (decisao2 == 'alterar') {
+			 let proximonome = prompt('Digite a alteração do seu sobrenome')
+			if (proximonome.length >= 2 && proximonome.length <= 8) {
+				sobrenome.pop(proximonome)
+				alert("Foi alterado com sucesso")
+				sobrenome.push(proximonome)
+		 
+			}else{
+				let deuerrado = 'Seu sobrenome deve ter no mínimo 2 até 8 caracteres, digite corretamente'
+				alert(deuerrado)
+				control002();
+			}
+		}else{
+			control002()
+		}
+	}
+
+}else{
+							sobrenome.push(proximonome)
+						}
+				
+						}else{
+							alert(sobrenome['a'][1])	
+							ultimonome()
+						}
+						}
+					})();
+					})();
+					}
+				})();
+			}
+
+
+			// ARROW FUNCTION
+			 // (nome =>{
+			 // 	alert('Olá ' + nome)
+			 // })('Caio')
+		</script>
+</body>
+</html>

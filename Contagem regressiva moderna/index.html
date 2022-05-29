@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contagem regressiva com JS</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/151/151770.png" type="image/svg+xml">
+</head>
+<body>
+	<style type="text/css">
+		div h3, h6{
+			font-family: arial;
+		}
+
+	</style>
+	<center>
+		<br>
+		<div style="margin: 3px;font-size: 40px;border:1px solid #fff;display: inline-block;width: 150px;border-radius: 10px;">
+				<h3 id="anos" style="color: white;" align="center">0 
+				<h6 style="color: white;font-size: 15px;">ANOS</h6>
+		</div>
+			<div style="margin: 3px;font-size: 40px;border:1px solid #fff;display: inline-block;width: 150px;border-radius: 10px;">
+				<h3 id="meses" style="color: white;" align="center">0 
+				<h6 style="color: white;font-size: 15px;">MESES</h6>
+		</div>
+ <div style="margin: 3px;font-size: 40px;border:1px solid #fff;display: inline-block;width: 150px;border-radius: 10px;">
+				<h3 id="dias" style="color: white;" align="center">0 
+				<h6 style="color: white;font-size: 15px;">DIAS</h6>
+		</div>
+ <div style="margin: 3px;font-size: 40px;border:1px solid #fff;display: inline-block;width: 150px;border-radius: 10px;">
+				<h3 id="horas" style="color: white;" align="center">0 
+				<h6 style="color: white;font-size: 15px;">HORAS</h6>
+		</div>
+ <div style="margin: 3px;font-size: 40px;border:1px solid #fff;display: inline-block;width: 150px;border-radius: 10px;">
+				<h3 id="minutos" style="color: white;" align="center">0 
+				<h6 style="color: white;font-size: 15px;">MINUTOS</h6>
+		</div>
+<div style="margin: 3px;font-size: 40px;border:1px solid #fff;display: inline-block;width: 150px;border-radius: 10px;">
+				<h3 id="segundos" style="color: white;" align="center">0 
+				<h6 style="color: white;font-size: 15px;">SEGUNDOS</h6>
+		</div>
+	</center>
+		<script type="text/javascript">
+		document.body.style.background = '#000'
+	 
+	 
+	
+document.write('<center><br><input class="data_mod" style="font-size: 20px;" type="date" /><input type="button" value="alterar"  style="font-size: 23px;margin: 5px;" onclick="data()"/></center>')
+
+var y;
+y = 0;
+		data = () => {
+	
+			if(y <= 0){
+						y += 1;
+	let data_mod,msg;
+	msg = []
+	data_mod = document.getElementsByClassName("data_mod")[0].value;
+				let dados = []
+			   for(let i = 0;i<data_mod.length;i++){
+				dados.unshift(data_mod[i])
+			   }
+			    
+			   dados = dados.reverse();
+			for(let z = 0;z <= dados.length;z++){
+				if (z < dados.length) {
+					const x = dados.lastIndexOf('-');
+					dados[x] = '/';
+				}
+			}
+				//AJUSTAR OS DADOS
+				for(let x_s = 0;x_s <= dados.length;x_s++){
+					msg += dados[x_s] || '';
+				}
+				let anos,meses,dias;
+				anos = parseInt(msg.slice(0,4))
+				const meses_d = meses = parseInt(msg.slice(5,7))
+				dias=parseInt(msg.slice(8,10))
+				// meses = ['','janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']
+				meses = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December ']
+				// new Date('april 28, 2001 16:00:00')
+	 data_atual = () => {
+		 datasS = new Date(`${meses[meses_d]} ${dias}, ${anos} 00:00:00`)
+	 	return datasS;
+	 }
+
+	 	setInterval(() => {
+			//console.log(diasAtuais().getTime())
+			let divisor,data_dw;
+			data_dw = new Date();
+			divisor = Math.abs(data_atual().getTime() - data_dw.getTime())
+			let anos,meses,dias,horas,minutos,segundos;
+			const d = anos=parseInt(divisor / (365 * 24 * 60 * 60 * 1000));
+			const d_02 = meses=parseInt(divisor / (30 * 24 * 60 * 60 * 1000));
+			const d_03 =  dias=parseInt(divisor / (24 * 60 * 60 * 1000));
+			 	const d_04 = horas=parseInt(divisor % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+			 	const d_05 =  minutos=parseInt(divisor % (60 * 60 * 1000) / (60 * 1000))
+				const d_06 =  segundos=parseInt(divisor % (60 * 1000) / (1000));
+			 (() => {
+			 		let anos,meses,dias,horas,minutos,segundos;
+			 		anos=document.querySelector('#anos');
+			 		meses=document.querySelector("#meses");
+			 		dias=document.querySelector("#dias");
+			 		horas=document.querySelector("#horas");
+			 		minutos=document.querySelector("#minutos");
+			 		segundos=document.querySelector("#segundos");
+			 		anos.innerText = d;
+			 		meses.innerText = d_02;
+			 		dias.innerText = d_03;
+			 		horas.innerText = d_04;
+			 		minutos.innerText = d_05;	
+			 		segundos.innerText = d_06;
+
+			 })();
+		})
+	
+	 //console.log(data_atual().getTime())
+ }else{
+ 	window.location.reload();
+ }
+ 		 
+		}
+/*	 const arr = [1,5,10, 6, 5];
+	let sohNumeros = arr.every(function(el){
+		//console.log(el);
+		return typeof el === "number" 
+	})
+		console.log(sohNumeros)*/
+
+		//FIND 
+		/*let arr = [4,5,10,20,35,4,5]
+
+		console.log(arr.find((el) => {
+		return el > 30
+		}))*/
+
+
+
+
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <html lang="pt-br">
+      <meta charset="utf-8">
+      <title>Datas</title>
+</head>
+<body>
+<script type="text/javascript">
+         var data = new Date()
+
+      //document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear())
+      //23 / 11 / 2017
+
+      //adicionar / remover dias
+      // document.write(data.toString())
+      // data.setDate(data.getDate() + 720)
+      // document.write('<hr />')
+      // document.write(data.toString())
+      // document.write('<br /><br /><hr />')
+      
+      // //adicionar / remover meses
+      // document.write(data.toString())
+      // data.setMonth(data.getMonth() + 1)
+      // document.write('<hr />')
+      // document.write(data.toString())
+      // document.write('<br /><br /><hr />')
+
+      // //adicionar / remover anos
+      // document.write(data.toString())
+      // data.setFullYear(data.getFullYear() + 1)
+      // document.write('<hr />')
+      // document.write(data.toString())
+
+</script>
+<script type="text/javascript">
+      //adicionar / remover dias
+      document.write('<h1> Dias </h1>')
+      document.write('<p><b> Dia atual </b></p>')
+      document.write(data.toString())
+      data.setDate(data.getDate() + 200) 
+      document.write('<hr />')   
+           document.write('<p><b> Dia do futuro </b></p>')
+      document.write(data.toString())  
+      document.write('<br /><br /><hr />')
+
+      //Adicionar / remover meses
+      document.write('<h1> Meses </h1>')
+         document.write('<p><b> Mês modificado </b></p>')
+      document.write(data.toString())
+      data.setMonth(data.getMonth() + 1 )
+      document.write('<hr />')
+        document.write('<p><b> Mês do futuro </b></p>')
+      document.write(data.toString())
+      document.write('<br /><br /><hr />')
+
+      document.write('<br />')
+
+      //Adicionar / remover anos
+            document.write('<h1> Ano </h1>')
+              document.write('<p><b> Ano modificado </b></p>')
+      document.write(data.toString())
+      data.setFullYear(data.getFullYear() + 6)
+      document.write('<hr />')
+           document.write('<p><b> Ano do futuro </b></p>')
+      document.write(data.toString())
+
+
+
+</script>
+
+</body>
+</html>

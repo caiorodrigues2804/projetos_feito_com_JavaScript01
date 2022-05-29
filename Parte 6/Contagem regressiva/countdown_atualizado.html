@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body onload="backgrounds('#c1c1c1')">
+	<script type="text/javascript">
+		let links,b,head;
+		b = document.getElementsByTagName('body')[0]
+		head = document.getElementsByTagName('head')[0]
+		links = document.createElement(`link`)
+		head.appendChild(links)
+		links.rel = 'icon'
+		links.href = 'https://image.flaticon.com/icons/png/128/2445/2445470.png'
+		document.title = 'Countdown Atualizado'
+		function backgrounds(cor) {
+				document.body.style.background = cor
+		}
+		// Centralizador
+			let ce;
+			ce =document.createElement(`center`)
+			b.appendChild(ce)
+			let hsw;
+			hsw = document.createElement(`h1`)
+			b.appendChild(hsw)
+			hsw.innerHTML = 'Countdowns atualizados'
+			// Countdown
+				let ts01;
+				ts01 = document.createElement('h2')
+				b.appendChild(ts01)
+				ts01.innerHTML = 'Countdown'
+				ts01.style.textAlign = 'center'
+						let contador;
+						contador = document.createElement(`h1`)
+						b.appendChild(contador)
+						let Countdown002,Countdown_reverso002;
+						Countdown002 = new Date('april 28, 2021 00:00:00').getTime()
+						setInterval(
+							function() {
+								Countdown_reverso002 = new Date().getTime()
+								let divisores;
+								divisores = Countdown002 - Countdown_reverso002
+								let dias,horas,minutos,segundos;
+								dias = Math.floor(divisores / (1000*60*60*24))
+								horas = Math.floor(divisores % (1000*60*60*24) / (1000*60*60))
+								minutos = Math.floor(divisores % (1000*60*60) / (1000*60))
+								segundos = Math.floor(divisores % (1000*60) / (1000))
+								contador.innerHTML = dias + 'd' + ' ' + horas + 'h' + ' ' + minutos + 'm' + ' ' + segundos + 's'
+								if (divisores < 0) {
+									contador.innerHTML = 'Acabou o tempo aí Amigão!!'
+								}   
+								}
+							)
+						document.write('<hr>')
+						let hsws;
+						hsws = document.createElement(`h2`)
+						b.appendChild(hsws)
+						hsws.style.textAlign = 'center'
+						hsws.innerHTML = 'Countdown reverso'
+			let count;
+			count = document.createElement(`h1`)
+			b.appendChild(count)
+			let Countdown,Countdown_reverso;
+					Countdown = new Date('december 10, 2020 10:40:00').getTime()
+			setInterval(
+				function() {
+					Countdown_reverso = new Date().getTime()
+					let divisor;
+					divisor = Countdown - Countdown_reverso
+					let counts;
+					if (divisor < 0) {
+						counts = Math.abs(divisor)
+					}
+					let dias,horas,minutos,segundos;
+					dias =  Math.floor(counts / (1000*60*60*24))
+					horas = Math.floor(counts % (1000*60*60) / (1000*60*60))
+					minutos = Math.floor(counts % (1000*60*60) / (1000*60))
+					segundos = Math.floor(counts % (1000*60) / (1000))
+					count.innerHTML = dias + 'd' + ' ' + horas + 'h' + ' ' + minutos + 'm' + ' ' + segundos + 's'
+				}
+			)
+			// Conversor 
+				let hs,x,t;
+				hs = document.getElementsByTagName('h1')
+				for(x = 0;x <= hs.length;x++){
+					if (x < hs.length) {
+						hs[x].style.fontFamily = 'arial'
+							hs[x].style.textAlign = 'center'
+					}
+				}	let xsw;
+				xsw = document.getElementsByTagName('h2')
+				for(t = 0;t <= xsw.length;t++){
+					if (t < xsw.length) {
+						xsw[t].style.fontFamily = 'arial'
+					}
+				}
+	</script>
+</body>
+</html>

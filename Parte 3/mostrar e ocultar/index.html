@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaSublime</title>
+</head>
+	<h1 class="text-center">JavaSublime</h1>
+	<center>
+		<style type="text/css">
+			#botão{
+				display: none;
+			}
+
+		</style>
+		<h3 id="exibidor" onclick="exibidores()"> Mostrar </h3>
+		<input 
+		type="button"
+		class="btn btn-outline-dark btn-lg"
+		value="Inciar" 
+		id="botão"
+		onclick="Inciar()" 
+		name="">
+	<script type="text/javascript">
+		let validador = 0
+		function exibidores(){
+			if (validador == 0) {
+				document.getElementById('exibidor').innerHTML = 'Ocultar'
+				document.getElementById('botão').style.display = 'block'
+				validador++;
+				// alert(validador)
+			}else if (validador >= 1) {
+		document.getElementById('exibidor').innerHTML = 'Mostrar'
+		document.getElementById('botão').style.display = 'none'
+				validador = 0 
+				// alert(validador)
+			}else{
+
+				}
+
+			}
+	</script>
+		<script type="text/javascript">
+			function Inciar(){
+				alert('Olá')
+			}
+		</script>
+
+
+<!-- 	<input 
+	type="button"
+	value="Teste 1" 
+	id="butao"
+	class="m-2" 
+	name=""
+	onclick="incia()" 
+	/>
+
+	<input
+	type="button"
+	value="Teste 2"
+	class="m-2"
+	style="display: none;" 
+	name=""
+	onclick="incia2()"
+	id="butao02">
+	<script type="text/javascript">
+		function incia(){
+
+			document.getElementById('butao').style.display = 'none'
+			document.getElementById('butao02').style.display = 'block'
+		} function incia2(){
+			document.getElementById('butao02').style.display = 'none'
+					}
+	</script> -->
+
+</body>
+</html>

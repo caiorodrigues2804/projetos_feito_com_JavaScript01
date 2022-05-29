@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>While caioba</title>
+</head>
+<body>	
+ 
+		
+	<label>Nome:</label>
+	<input type="text" id="caiobador" name="">
+ <button onclick="chamar()"> Clique aqui </button>
+ 	<h3 id="ks1" onclick="q4()"></h3>
+	<h3 id="ks2" onclick="q3()"></h3>
+	<h3 id="ks3" onclick="q2()"></h3>
+	<h3 id="ks4" onclick="q()"></h3>
+
+	<script type="text/javascript">
+	let historico = Array()
+	let daw = ''
+ 	let caioba = 0
+function chamar() {
+if (caioba == 0) {
+	caioba++;
+ 	daw = document.querySelector('#caiobador').value;
+ document.querySelector('#ks4').innerHTML = daw;
+ historico.push(daw)
+ 	document.querySelector('#caiobador').value = ''
+
+}else if(caioba == 1){
+	caioba++;
+ 		daw = document.querySelector('#caiobador').value;
+ 	 document.querySelector('#ks3').innerHTML = daw;
+ 	  historico.push(daw)
+ 	 	document.querySelector('#caiobador').value = ''
+} else if(caioba == 2){
+caioba++;
+ 		daw = document.querySelector('#caiobador').value;
+ 	 document.querySelector('#ks2').innerHTML = daw;
+ 	  historico.push(daw)
+ 	 			 document.querySelector('#caiobador').value = ''
+		} else if(caioba == 3){
+	caioba++;
+ 		daw = document.querySelector('#caiobador').value;
+ 	 document.querySelector('#ks1').innerHTML = daw;
+ 	  historico.push(daw)
+ 	 			 document.querySelector('#caiobador').value = ''
+		}else{
+		alert("já foram adicionados todos os nomes")
+		 document.querySelector('#caiobador').value = ''
+		}
+	} function q() {
+		caioba--;
+		document.querySelector('#ks4').innerHTML = ''
+	} function q2() {
+		caioba--;
+		document.querySelector('#ks3').innerHTML = ''
+	} function q3() {
+		caioba--;
+		document.querySelector('#ks2').innerHTML = ''
+	} function q4() {
+		caioba--;
+		document.querySelector('#ks1').innerHTML = ''
+	}
+	</script>
+</body>
+</html>

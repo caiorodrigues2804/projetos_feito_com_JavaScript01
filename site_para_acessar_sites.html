@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+	<head>
+<meta charset="utf-8">
+	<title>Página teste</title>
+<link rel="icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AUser_icon_2.svg&psig=AOvVaw1Jm4a348kWc9cPBXg5Ivu-&ust=1630608127484000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMD1kuW23vICFQAAAAAdAAAAABAD">
+</head>
+	<html>
+<body> 
+<script type="text/javascript">
+	document.body.style.backgroundColor = '#ccc';
+/*
+let h_sw_01;
+h_sw_01 = document.createElement('h1');
+document.getElementsByTagName('body')[0].appendChild(h_sw_01);
+let x; 
+x=10;
+setInterval(() => {x -= 1;
+	h_sw_01.innerHTML = x;
+	if(x < 0){
+	window.location.href = 'https://www.google.com'
+	}
+	}, 1000)
+
+
+let ins,ins_02,acesso_aos_sites,acessador;
+acesso_aos_sites = 'https://';
+//console.log(typeof(acesso_aos_sites))
+ins = document.createElement('input');
+document.getElementsByTagName('body')[0].appendChild(ins);
+ins.type= 'button'
+ins.style.fontSize = 20 + 'px';
+ins.value = 'Acessar site'
+ins_02 = document.createElement('input');
+document.getElementsByTagName('body')[0].appendChild(ins_02);
+ins_02.type = 'button';
+ins_02.style.fontSize = 20 + 'px';
+ins_02.value = 'Editar';
+ins_02.onclick = () => {
+	acessador = prompt('Digite o endereço do site');
+}
+  ins.onclick = () => {
+	window.location.href = acesso_aos_sites + acessador;
+}*/
+document.write('<style type="text/css">*{font-family: arial;}</style>');
+document.write('<center><h1>');
+document.write('Site para acessar sites');
+document.write('</center></h1>');
+
+//CAMPO DE DIGITAÇÃO
+let cam_p_d_digitacao,acessar_os_sites,dados_01,dados_02;
+dados_01 = 'https://';	
+cam_p_d_digitacao = document.createElement('input')
+	document.getElementsByTagName('center')[0].appendChild(cam_p_d_digitacao)
+	cam_p_d_digitacao.style.fontSize = 20 + 'px';
+	cam_p_d_digitacao.placeholder = 'Digite o endereço do site'
+	//Botão
+	acessar_os_sites = document.createElement('input');
+	document.getElementsByTagName('center')[0].appendChild(acessar_os_sites);
+	acessar_os_sites.type = 'button'; acessar_os_sites.style.fontSize = 20 + 'px'
+	acessar_os_sites.value = 'Acessar';
+	acessar_os_sites.onclick = () => {
+	 
+	window.location.href = dados_01 + cam_p_d_digitacao.value
+	}
+</script>
+</body>  
+	</html>
+</!DOCTYPE html>

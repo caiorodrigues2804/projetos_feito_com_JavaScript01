@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+	<body onload="backsg('linear-gradient(0deg, rgba(60,60,60,1) 0%, rgba(176,176,176,1) 21%, rgba(193,193,193,1) 48%, rgba(176,176,176,1) 70%, rgba(214,214,214,1) 100%')">
+		<script type="text/javascript">
+			function backsg(cor) {
+				document.body.style.background = cor
+				document.body.style.backgroundAttachment = 'fixed'
+			}
+			let hs,b;
+			b = document.getElementsByTagName('body')[0]
+			hs = document.createElement('h1')
+			b.appendChild(hs)
+			let acrescentar;
+			acrescentar = prompt('Digite um numero')
+			horasw = prompt('Digite um numero')
+			acrescentar = parseInt(acrescentar)
+			horasw = parseInt(horasw)
+			let countdown,countdown02;
+			countdown = new Date()
+			countdown.setDate(countdown.getDate() + acrescentar)
+			countdown.setHours(countdown.getHours() + horasw)
+
+				setInterval(
+					function() {
+						countdown02 = new Date()
+						let divisor;
+						divisor = countdown - countdown02
+						let dias,horas,minutos,segundos;
+						dias = Math.floor(divisor / (1000*60*60*24))
+						horas = Math.floor(divisor % (1000*60*60*24) / (1000*60*60))
+						minutos = Math.floor(divisor % (1000*60*60) / (1000*60))
+						segundos = Math.floor(divisor % (1000*60) / (1000))
+							hs.innerHTML = dias + 'd' + ' ' + horas + 'h' + ' ' + minutos + 'm' + ' ' + segundos + 's'
+						if (divisor < 0) {
+							hs.innerHTML = 'Acabou o tempo aí Amigão!!'
+						}
+					}
+				)
+		</script>
+	</body>
+</html>

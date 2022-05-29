@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		if (localStorage.visitas) {
+		localStorage.visitas=Number(localStorage.visitas)+1;
+		}
+		else{
+		  localStorage.visitas=1
+		}
+		document.write("Visitas: " + localStorage.visitas)
+			if (localStorage.visitas >= 5) {
+				console.log(`Você é um bixin`)
+			}
+	</script>
+
+</body>
+</html>

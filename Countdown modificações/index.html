@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title></title>
+	</head>
+	<body>
+<center>
+<input style="font-size: 20px" type="date"/>
+<h1 id="ninabolota"></h1>
+<center>
+<script type="text/javascript">
+	let d,in_b;
+	d = document.querySelectorAll('input')[0];
+	var d_s;
+	//console.log(d.replace('-',''));
+	//string.replace(searchvalue, newvalue)
+
+
+	in_b=document.createElement('input');
+	document.querySelectorAll('center')[0].appendChild(in_b);
+	in_b.type = 'button';
+	in_b.value = 'Clique aqui';
+	in_b.style.margin = 10 + 'px';
+	var arr;
+	in_b.onclick = () => {
+			//replace(/\[/g, '')
+			//console.log(d.value.replace(/\-/g, '')[0]);
+
+		var d01,ano,d02,meses,d03,dias;
+		d01= '';ano = '';
+		d02='';meses='';
+		d03='';dias='';
+		//console.log(d.value.replace(/\-/g, '').length + ' letras' + ' ' + d.value.replace(/\-/g, ''));
+		var lens;lens=0;
+		lens = d.value.replace(/\-/g, '').length;
+		for(var i = 0;i < lens;i++){
+			if(i < 4){
+			ano = d01 += d.value.replace(/\-/g, '')[i];
+			} if(i >=  4 && i < 6){
+			meses = d02 += d.value.replace(/\-/g, '')[i];
+			} if(i >= 6 && i < 8){
+			dias = d03 += d.value.replace(/\-/g, '')[i];	
+			}
+			
+		}; 
+		ano=Number(ano);
+		meses=Number(meses);
+		
+		dias=Number(dias);
+		//alert(typeof ano); 
+		let meses_do_ano = ['','January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
+		meses = meses_do_ano[meses];
+		console.log(dias + ' dias ' + meses + ' meses ' + ano + ' anos')
+		var data_mod;
+		//data_mod = new Date('april 28, 2001 16:00:00').getTime();
+		data_mod = new Date(`${meses} ${dias}, ${ano} 00:00:00`).getTime();
+		var h_s;
+		h_s = document.getElementById('ninabolota');
+ 		
+		setInterval(() => {
+			var data_final,divisor;
+			data_final = new Date().getTime();
+			divisor=Math.abs(data_mod - data_final);
+			let anos,meses,dias,horas,minutos,segundos,milissegundos;
+			anos=Math.floor(divisor / (365 * 24 * 60 * 60 * 1000));
+			meses=Math.floor(divisor / (30 * 24 * 60 * 60 * 1000));
+			dias=Math.floor(divisor / (24 * 60 * 60 * 1000));
+			horas=Math.floor(divisor % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+			minutos=Math.floor(divisor % (60 * 60 * 1000) / (60 * 1000));
+			segundos =Math.floor(divisor % (60 * 1000) / (1000));
+			milissegundos=divisor + ' mss ';
+		h_s.innerText = anos + ' anos ' + meses + ' meses ' + dias + ' dias ' + horas + ' horas ' + minutos + ' minutos ' + segundos + ' segundos ' + milissegundos;
+		},)
+	}
+ </script>
+
+	</body>
+</html>

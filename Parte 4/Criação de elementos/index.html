@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body style="background: #7d7d7d;">
+
+	<input type="" name="">
+	<div id="confirm">
+		
+	</div>
+
+
+<script type="text/javascript">
+
+	let c = document.querySelector('input')
+	c.type = 'button'
+	// c.className = 'm-2'
+	c.className = 'btn btn-outline-light m-3'
+	c.value = 'Inciar o teste'
+	c.style.height = 0 + 'px'
+	c.style.fontSize = 20 + 'px'
+	let width = 0
+	let height = 0
+	let limitador = 0
+	caiobador()
+ 	caiobador02()
+	function caiobador() {
+	width = 0
+		let x = setInterval(function() {
+			width += 5;
+			// height += 5;
+			c.style.width = width + 'px'
+			if (width >= 199) {
+				clearInterval(x)
+				width = 200
+				limitador = limitador + 1
+				width = 0
+			 
+			} 
+		}, 10)
+	} function caiobador02() {
+		let y = setInterval(function() {
+			if (limitador >= 1) {
+				height += 5;
+				c.style.height = height + 'px'
+				if (height > 50) {
+					clearInterval(y)
+					height = 0
+					limitador = 0 
+				}
+
+			}
+		}, 20)
+	}
+	let parador = 0
+	c.onclick = function() {
+	if (parador <= 0) {
+
+		try{
+	  		c.type = 'text'
+	  	 	parador += 1
+		  	var botoes = document.createElement('button')
+ 			var botoes2 = document.createElement('button')
+ 			document.querySelector('#confirm').appendChild(botoes)
+ 			document.querySelector('#confirm').appendChild(botoes2)
+			botoes.className = 'btn btn-outline-light ml-3'
+			botoes2.className = 'btn btn-outline-light ml-3'
+			botoes2.innerHTML = 'Remover'
+			botoes2.onclick = function() {
+				alert('Olá 2')
+			}
+			botoes.innerHTML = 'Confirmar'
+			botoes.onclick = function() {
+				alert('Olá')
+			}
+
+
+
+
+
+		}catch(erro){
+			janela = window.open('', 'MsgWindow', 'height=600,width=400', 'toolbar=1,status=1')
+			janela.document.write('<h1 style="font-family: arial;">Erros e Exceções</h1><hr><h3 style="font-family: arial;">O motivo do erro é: ' + erro.message + '</h3>')
+		}
+	}
+	}
+</script>
+
+
+</body>
+</html>

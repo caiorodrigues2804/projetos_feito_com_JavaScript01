@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.body.style.background = '#ccc'
+			let inputs,b;
+					let coletor;
+					coletor = []
+			//Campo principal
+			inputs = document.createElement(`input`)
+			b = document.getElementsByTagName('body')[0]
+			b.appendChild(inputs)
+			inputs.style.fontSize =18+'px'
+				// Adicionar
+					let cadastros_de_dados;
+					let bs=cadastros_de_dados = document.createElement(`input`)
+					b.appendChild(bs)
+					bs.type = 'button'
+					bs.value = 'Adicionar'
+					bs.style.fontSize=18+'px'
+					bs.onclick = onclick => {
+						let dados;
+						dados = coletor.indexOf(inputs.value)
+						if (dados !== -1) {
+							inputs.value = ''
+							alert(`Este objeto já foi adicionado`)
+						} else{
+							alert(`Foi adicionado com sucesso`)
+							coletor.push(inputs.value)
+							// console.log('Sem o ordenamento: ' + coletor)
+							inputs.value = ''	
+						}
+					
+					}
+				// Ordernar
+					let ordernacao
+					let ordem =ordernacao= document.createElement(`input`)
+					b.appendChild(ordem)
+					ordem.type = 'button'
+					ordem.value = 'Ordernar'
+					ordem.style.fontSize=18+'px'
+					ordernacao.onclick = () =>{
+						console.log(coletor.sort())
+					}
+
+	</script>	
+</body>
+</html>

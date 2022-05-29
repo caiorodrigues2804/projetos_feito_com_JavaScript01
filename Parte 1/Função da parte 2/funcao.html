@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Function</title>
+</head>
+<body>
+
+
+	 <script type="text/javascript">
+ 		function caioba(){
+ 			alert('Olá')
+ 			alert('Antes de começar é necessário fazer uma conta')
+ 			var soma = prompt('quanto é 5 + 4?')
+ 			var media = 9
+ 			soma = parseInt(soma)
+ 			media = parseInt(media)
+ 			if (soma == media) {
+ 				// alert('você passou')
+ 				ligados()
+ 				function ligados(){
+ 					alert('Ok, você passou do teste 2')
+ 					soma = prompt('quanto é 25 + 25?')
+ 					var media = 50
+ 					if (soma == media) {
+ 						alert('você passou!')
+ 						ligados002()
+ 						function  ligados002(){
+ 							alert('Beleza, agora o teste vai piorar')
+ 						 soma = prompt('quanto é 25 x 50?')
+ 						 var media = 1250
+ 						  if (media == soma) {
+ 						  	alert('você é fera!')
+ 						  	 	alert('mas antes nós precisamos se conhecer')
+ 						  	var nome = prompt('Digite seu nome')
+ 						  	alert('Olá, ' + nome)
+ 						  	alert(nome + ' ,então, os testes ficarão mais hardcore')
+ 						  	ligados003()
+ 						  	 function ligados003(){
+ 						  	 soma = prompt('quanto é 82152 x 2?')
+ 						 		var media = 164304
+ 						 		if (soma == media) {
+ 						 			alert('Passou')
+ 						 		} else{
+ 						 			alert('você não passou :(')
+ 						 			ligados003()
+ 						 		}
+ 						  	 }
+ 						  } else{
+ 						  	alert('Puts, você errou mas não se preocupe o teste será reinciado')
+ 						  	ligados002()
+ 						  }
+
+
+ 						}
+ 					} else{
+ 						  	alert('Puts, você errou mas não se preocupe o teste será reinciado')
+ 						 ligados()
+ 					}
+ 				}
+
+ 			} else{
+ 				alert('não passou')
+ 					caioba()
+ 			}
+ 		}  
+ 		// function caioba2{
+ 		//  	alert('olá')
+
+ 		//  }
+ 		caioba()
+
+    </script>
+    <!-- <script type="text/javascript">
+    	 function caioba2(){
+    	 	window.alert('tudo bem?')
+    	 }
+
+    </script>
+ -->
+
+</body>
+</html>

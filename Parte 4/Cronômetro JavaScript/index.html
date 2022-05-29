@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+ 	<html lang="pt-br">
+ 	<meta charset="utf-8">
+ 	<title>JavaScript Testes</title>
+ </head>
+ <body>	
+ 	<center>
+ 		<h1 class="ml-4">Cronômetro JavaScript</h1>
+<div class="ml-4 mt-5 mb-3">
+	<h1 id="dados6" style="display: inline;">0</h1>
+	<h1 id="dados5" style="display: inline;">0</h1>
+ 	<h1 style="display: inline;"> : </h1>
+ 	<h1 id="dados4" style="display: inline;">0</h1>
+ 	<h1 id="dados3" style="display: inline;">0</h1>
+ 	<h1 style="display: inline;"> : </h1>
+ 	<h1 id="dados2" style="display: inline;">0</h1>
+	<h1 id="dados" style="display: inline;">0</h1>
+</div>
+ <div id="pausar" style="display: inline;">
+<button class="ml-4 btn btn-warning" onclick="acao()">Pausar</button>
+ </div>
+
+<button class="btn btn-warning" onclick="zerar()">Zerar</button>
+<!-- <button class="btn btn-warning" onclick="marcar()">Marcar</button> -->
+<script type="text/javascript">
+//CRONÔMETRO
+let i = 0
+let k = 0
+let q = 0
+let x = 0
+let c = 0
+let m = 0
+
+//BOTÃO
+let caio = 0
+let caio2 = 0
+let pausador = 0
+
+function zerar() {
+	m = 0
+	c = 0
+	x = 0
+	q = 0
+	k = 0
+	i = 0
+	alert('Cronômetro zerado!')
+		document.querySelector('#dados').innerHTML = '0'
+		document.querySelector('#dados2').innerHTML = '0'
+		document.querySelector('#dados3').innerHTML = '0'
+		document.querySelector('#dados4').innerHTML = '0'
+			document.querySelector('#dados5').innerHTML = '0'
+		document.querySelector('#dados6').innerHTML = '0'
+
+
+}
+	 function acao() {
+	  switch(parseInt(caio)){
+	  	case 0:
+	  	caio++
+	  	pausador++;
+	   document.querySelector('#pausar button').innerHTML = 'Retornar'
+	  	break;
+	  	case 1:
+	  	caio++
+	  	pausador--;
+	  	document.querySelector('#pausar button').innerHTML = 'Pausar'
+	  	caio = caio2
+	  	break;
+	  	default:
+
+	  }
+
+	 }
+
+ 		setInterval(function() {
+ 			if (pausador == 0) {
+
+ 			i++;
+ 			document.querySelector('#dados').innerHTML = i
+ 			if (i > 9) {
+ 				i = 0
+ 				k++;
+ 				document.querySelector('#dados2').innerHTML = k
+ 				document.querySelector('#dados').innerHTML = '0'
+ 				 
+ 			} if (k > 5 ) {
+ 				q++;
+ 				k = 0
+ 				document.querySelector('#dados3').innerHTML = q
+ 				document.querySelector('#dados2').innerHTML = '0'
+ 			} if (q > 9) {
+q = 0
+x++;
+document.querySelector('#dados4').innerHTML = x
+document.querySelector('#dados3').innerHTML = '0'
+ 				 
+} if (x > 5) {
+x = 0
+c++;
+document.querySelector('#dados5').innerHTML = c
+document.querySelector('#dados4').innerHTML = '0'
+ 
+} if (c > 9) {
+c = 0
+m++;
+document.querySelector('#dados6').innerHTML =  m
+document.querySelector('#dados5').innerHTML = '0'
+} else if (m > 5) {
+	m = 0
+	c = 0
+	x = 0
+	q = 0
+	k = 0
+	i = 0
+	alert('Cronômetro zerado!')
+		document.querySelector('#dados').innerHTML = '0'
+		document.querySelector('#dados2').innerHTML = '0'
+		document.querySelector('#dados3').innerHTML = '0'
+		document.querySelector('#dados4').innerHTML = '0'
+			document.querySelector('#dados5').innerHTML = '0'
+		document.querySelector('#dados6').innerHTML = '0'
+}
+
+ 		} 
+ 			},100)
+
+ 	</script>
+ </body>
+ </html>

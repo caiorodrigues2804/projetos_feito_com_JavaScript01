@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript testes</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	let b = document.querySelector('body');
+	b.style.backgroundColor = '#ccc'
+
+// var exemplo = "Aprendendo JavaScript na DevMedia!";
+// var resultado = exemplo.replace("JavaScript", "PHP");
+/*let exemplos = '.'
+let resultado = exemplos.replace('.', 'José')
+*/
+
+	//Replace Local
+/*	let exemplos = prompt('digite alguma coisa')
+	let resultados = exemplos.replace('1', '')
+	alert(resultados)
+	*/
+		
+ 	//Replace Global
+	/*let exemplos = prompt('digite alguma coisa')
+	let resultados = exemplos.replace(/w/g, '')
+	console.log(resultados)*/
+	
+	let exemplos = prompt('digite alguma coisa')				
+	let resultados = exemplos.replace(/'/g, '').replace(/,/g, '')
+	alert(resultados)
+
+</script>
+
+</body>
+</html>

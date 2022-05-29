@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+ <script type="text/javascript">
+	// class contaBanco{
+	// 	constructor(){
+	// 		this.valor = 400
+	// 		console.log(this.valor)
+	// 	}
+	// 	get atualizar(){
+	// 		return this.valor
+	// 	}
+	// 	set sacar(diminuir){
+	// 		this.valor -= diminuir
+	// 	}
+	// 	set acrescentar(aumentar){
+	// 		this.valor += aumentar
+	// 	}
+	// }
+	// let b = new contaBanco()
+ // 	b.sacar=200
+ // 	console.log(b.atualizar)
+ // 	b.acrescentar=100
+ // 	console.log(b.atualizar)
+
+ // 	let a = new contaBanco()
+ // 	a.sacar=289
+ // 	console.log(a.atualizar)
+ // 	a.acrescentar=200
+ // 	console.log(a.atualizar)
+
+ /*	class nomeador{
+ 		constructor(nome){
+ 			this.nome = nome
+ 			console.log(`Olá, ${this.nome}, tudo bem?`)
+ 		}
+ 	}
+ 	let caioba = prompt('digite seu nome')
+ 	let c = new nomeador(caioba)*/
+
+
+ 	class contasBancos{
+ 		constructor(){
+ 			this.valor = 1000
+ 			console.log('O valor é: ' + this.valor)
+ 		}
+ 		set sacar(diminuir){
+ 			this.valor -= diminuir
+ 		} 
+ 		set depositar(aumentar){
+ 			this.valor += aumentar
+ 		}
+ 		get atualizar(){
+ 			return `O valor atualizado é: ${this.valor}`
+ 		}
+ 	}
+
+ 	let b = new contasBancos()
+ 	b.depositar=100
+ 	console.log(b.atualizar)
+ 	b.sacar=200
+ 	console.log(b.atualizar)
+ 	b.depositar=400
+ 	console.log(b.atualizar)
+
+ 	let a = new contasBancos()
+ 	a.depositar=200
+ 	console.log(a.atualizar)
+ 	a.sacar=1000
+ 	console.log(a.atualizar)
+
+ 	let c = new contasBancos()
+ 	c.depositar=100
+ 	console.log(c.atualizar)
+ 	c.sacar=1100
+ 	console.log(c.atualizar)
+ </script>
+</body>
+</html>

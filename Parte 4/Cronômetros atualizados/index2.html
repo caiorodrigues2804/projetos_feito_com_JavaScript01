@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Testes matemáticos</title>
+</head>
+<body>	
+	<center>
+		
+	<h1>Cronômetro simples</h1>
+	 
+			<h1 style="display: inline;" id="dadofim02">0</h1>
+			<h1 style="display: inline;" id="dadofim01">0</h1>
+			<h1 style="display: inline;" id="doispontos"> : </h1>
+			<h1 style="display: inline;" id="dados02">0</h1>
+			<h1 style="display: inline;"  id="dados03">0</h1>
+			<h1 style="display: inline;" id="doispontos02"> : </h1>
+			<h1 style="display: inline;" id="dados04">0</h1>
+			<h1 style="display: inline;" id="dados05">0</h1>
+			
+			<br>
+			<br>
+ 	<button style="font-size: 18px;" onclick="gravar()">
+ 		Marcar
+ 	</button>
+ 	<div style="display: inline;">
+ 	<button style="font-size: 18px;" onclick="pausador()">
+ 		Pausar
+ 	</button>
+ 	</div>
+
+	</center>
+	<script type="text/javascript">
+
+		/*
+ let caio = document.querySelector('#barra');
+ let width = 0 */
+ 	// caio.stye.width = width + '%';
+ // let x = setInterval(function() {
+ // 	width++;
+ // 	caio.style.width = width + '%';
+ // }, 1000)
+ let ll = 0
+function pausador() {
+	switch(parseInt(ll)){
+		case 0:
+		ll = ll + 1
+		document.querySelector('div button').innerHTML = 'Retornar'
+		break;
+		case 1:
+		ll = 0
+		document.querySelector('div button').innerHTML = 'Pausar'
+		break;
+		default:
+	}
+}
+
+
+// VARIÁVEIS DO Cronômetro
+ 
+
+let zerador = 0
+let x = 0 
+let i = 0
+let b = 0
+let c = 0
+let z = 0
+let u = 0
+let pop = []
+let caio 
+ 
+ 
+
+	let repetidor = 0
+	function gravar() {
+let observador = (u + '' + z + ':' + c + '' + b + ':' + i + '' + x)
+ pop.push(observador + '<br>')
+ let caio = window.open("", "MsgWindow", "width=500,height=500")
+ caio.document.write('<h1> Marcador Cronômetro </h1><hr><h1>' + pop.join('') + '</h1>')
+	}
+
+ 
+	setInterval(function() {
+		if (ll <= 0) {
+
+		x += 1;
+		document.querySelector('#dados05').innerHTML = x
+		if (x >= 10) {
+		 	x = 0
+			i += 1;
+ 
+			document.querySelector('#dados04').innerHTML = i;
+			document.querySelector('#dados05').innerHTML = '0'
+		} if (i >= 6) {
+			i = 0
+			b += 1;
+			document.querySelector('#dados03').innerHTML = b
+			document.querySelector('#dados04').innerHTML = '0'
+			} if (b >= 10) {
+			b = 0
+			c += 1;
+			document.querySelector('#dados02').innerHTML = c
+			document.querySelector('#dados03').innerHTML = '0'
+			} if (c >= 6) {
+			c = 0
+			z += 1;
+			document.querySelector('#dadofim01').innerHTML = z
+			document.querySelector('#dados02').innerHTML = '0'
+			} if (z >= 10) {
+			z = 0
+			u += 1;
+			document.querySelector('#dadofim02').innerHTML = u
+			document.querySelector('#dadofim01').innerHTML = '0'
+			} if (u >= 6) {
+				alert("O Cronômetro foi zerado")
+				z = 0
+				c = 0
+				u = 0
+				b = 0
+				i = 0
+				x = 0
+				document.querySelector('#dadofim01').innerHTML = '0'	
+				document.querySelector('#dadofim02').innerHTML = '0'
+				document.querySelector('#dados02').innerHTML = '0'
+				document.querySelector('#dados03').innerHTML = '0'
+				document.querySelector('#dados04').innerHTML = '0'
+				document.querySelector('#dados05').innerHTML = '0'
+			}
+
+		}
+	}, 100)
+		
+
+
+	</script>
+</body>
+</html>

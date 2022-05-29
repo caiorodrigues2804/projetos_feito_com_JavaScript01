@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+<!-- 	<select>
+		<option>Vídeo-Games</option>
+		<option>Imoveis</option>
+		<option>Eletrodomésticos</option>
+	</select> -->
+
+	<script type="text/javascript">
+		let b = document.querySelector('body')
+		b.style.background = '#ccc'
+
+	 	let t = document.createElement('h1')
+	 	document.querySelector('body').appendChild(t)
+	 	t.innerHTML = 'Registrar historicos'
+
+	 	// Input
+	 	let limitador = 0
+	 		let inp = document.createElement('input')
+	 		document.querySelector('body').appendChild(inp)
+	 		inp.type = 'button'
+	 		inp.value = 'Iniciar um novo registro'
+	 		inp.style.fontSize = 15 + 'px'
+	 		inp.onclick = () =>{
+	 			if (limitador <= 0) {
+	 			limitador += 1;		
+				let sw = document.createElement('select')
+				document.querySelector('body').appendChild(sw)
+				sw.id = 'Seleção'
+				sw.style.display = 'block'
+				sw.style.marginTop = 5 + 'px'
+				sw.style.fontSize = 17 + 'px'
+					inicial = document.createElement('option')
+					document.querySelector('#Seleção').appendChild(inicial)
+					inicial.text = 'Escolha a categoria'
+		 		 
+	 			}
+	 				switch(parseInt(limitador)){
+	 					case 1:
+	 					limitador += 1;
+					 sw2 = document.createElement('option')
+					document.querySelector('#Seleção').appendChild(sw2)
+					sw2.text = 'Imóveis'
+	 					// break;
+	 					case 2:
+	 				limitador += 1;
+	 				 sw2 = document.createElement('option')
+					document.querySelector('#Seleção').appendChild(sw2)
+					sw2.text = 'Vídeo-Games'
+	 					// break;
+	 					case 3:
+	 				limitador += 1;
+	 				 sw2 = document.createElement('option')
+					document.querySelector('#Seleção').appendChild(sw2)
+					sw2.text = 'Eletrodomésticos'
+	 					// break;
+	 					default:
+	 					limitador = 4
+	 				}
+	 		}
+	</script>	
+</body>
+</html>

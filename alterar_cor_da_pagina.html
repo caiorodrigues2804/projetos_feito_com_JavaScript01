@@ -1,0 +1,122 @@
+<DOCTYPE html>
+	<html>
+	<head>
+<meta charset="UTF-8">
+
+	<title>Página teste</title>
+	</head>
+<body>
+<center>
+<style type="text/css">
+	*{font-family: arial;}
+	#div_original{
+	border: 1px solid #000;
+	margin: 50px;
+	}
+	#titulo{
+	font-size: 50px;
+	} #sub_div_01{
+	border: 1px solid #000;
+	border-radius: 10px;
+	margin: 10px;
+	float: center;
+	} #sub_div_02{
+	border: 1px solid #000;
+	border-radius: 10px;
+	margin: 10px;
+	//float: left;
+	}#sub_div_03{
+	border: 1px solid #000;
+	border-radius: 10px;
+	margin: 10px;
+	//float: right;
+	} /*#div_original #pai{
+	float: center;
+	}*/
+	
+	#div_original #pai #sub_div_03 input{
+		font-size: 30px;
+		border-radius: 10px;
+	}
+</style>
+<div id="div_original">
+<div id="pai">
+	<div id="sub_div_01">
+	 <h1 id="titulo">Página teste</h1>
+	</div>
+	<tbody>
+	<div id="sub_div_02">
+	<h2>Descrição</h2>
+	</div>
+	<div id="sub_div_03">
+		<input type="button" id="buttons"onclick="clique_aqui()" value="Clique aqui para alterar a cor de fundo">	
+		<input type="color" id="buttons_02" style="font-size: 20px;">
+	</div>
+	</tbody>
+	</div>
+	</div>
+</div>
+</center>
+	<script type="text/javascript">
+	//BODY
+	let b;
+	b = document.getElementsByTagName('body');
+	console.log(b)
+
+		let x,y;
+		x = 0; y = 0;
+	//Button 01
+	let button_01s;button_01s = document.querySelector('#buttons')	
+	//Button 02
+	let button_02s;button_02s = document.querySelector('#buttons_02')
+
+	button_02s.style.display = 'none'
+
+	function clique_aqui(){
+	/*let b;
+	b = document.getElementsByTagName('body');
+	console.log(b)
+	*/
+
+
+	/* if(x <= 0){
+	x += 1;
+	button_01s.value = 'Fechar'
+	button_02s.style.display = 'inline-block';
+	} if(x >= 1){
+	x -= 1;
+	button_01s.value = 'Clique aqui';
+	button_02s.style.display = 'none';
+	} */
+	
+let string_textos;
+let texts = string_textos = 'Clique aqui para alterar a cor de fundo'
+
+	switch(x){
+ 	case 0:
+	x += 1;
+	button_01s.value = 'Fechar'
+	button_02s.style.display = 'inline-block';
+	//console.log(button_02s.value);
+		y++;		
+	setInterval(function(){
+		if(y >= 1){
+			document.querySelector('body').style.backgroundColor = button_02s.value;
+		}
+	})
+	
+	break;
+	case 1:
+	window.alert('Foi alterado com sucesso')
+	x -= 1;
+	button_01s.value = texts;
+	button_02s.style.display = 'none';
+		y--;
+	break;
+	}
+
+	}
+	
+	</script>
+</body>
+	</html>

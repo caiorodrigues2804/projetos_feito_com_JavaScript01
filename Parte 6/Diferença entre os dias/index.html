@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var data01 = new Date()
+		var data02 = new Date(2021,2,20)
+
+		document.write(data01.toString())
+		document.write(`<hr />`)
+		document.write(data02.toString())
+		document.write(`<br /><br /><hr />`)
+		document.write(data01.getTime())
+		document.write(`<hr />`)
+		document.write(data02.getTime())
+		document.write(`<br /><br /><hr />`)
+
+		var milissegundos_datas = Math.abs(data01.getTime() - data02.getTime())
+		document.write(milissegundos_datas)
+		document.write('<br /><hr />')
+		var milissegundos_dias = (1*24*60*60*1000)
+		document.write(' 1 dia tem ' + milissegundos_dias + ' milissegundos')
+		document.write('<br /><br /><hr />')
+		document.write('A diferença	entre Data 1 e Data 2 é de ' + Math.ceil(milissegundos_datas / milissegundos_dias) + 'dia(s)')
+
+
+	</script>
+</body>
+</html>

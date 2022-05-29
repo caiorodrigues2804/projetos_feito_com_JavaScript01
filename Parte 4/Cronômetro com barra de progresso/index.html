@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript testes</title>
+</head>
+<body style="background: #ccc;">
+	<h2 class="text-center">JavaScript testes</h2>
+	 <br>	
+
+ <div class="progress" style="margin-right: 300px;margin-left: 300px;">
+
+ 	
+
+  <div  id="barra" class="progress-bar bg-warning" role="progressbar" style="width: 0%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  
+  		 <div style="font-size:15px;">
+  		 	<div id="dados0" style="display: inline;">0
+  			</div>
+  		  	<div id="dados01" style="display: inline;"> 0
+  		  			</div>
+			<div id="caiop" style="display: inline;">:
+  					</div>
+  			<div id="dados1" style="display: inline;">0
+  			</div>
+  		  	<div id="dados2" style="display: inline;"> 0
+  		  			</div>
+  			<div id="caio" style="display: inline;">:
+  					</div>
+  			<div id="dados4" style="display: inline;"> 0
+  					</div>
+  			<div id="dados5" style="display: inline;"> 0
+  					</div>
+  			<div id="caio2" style="display: inline;">:
+  			</div>
+  			<div id="dados7" style="display: inline;"> 0
+  			</div>
+  			<div id="dados8" style="display: inline;"> 0			
+  		</div>
+   </div>	
+   	
+   
+
+  </div>
+</div>
+<center>
+	<div class="mt-3">
+	 
+<input type="button" id="botoes" onclick="acoes()" class="btn btn-warning text-monospace btn-sm" value="Pausar">
+
+<input id="zerar" type="button" class="btn btn-warning text-monospace btn-sm" value="Zerar">
+	</div>
+</center>
+<script type="text/javascript">
+	alert('Cronômetro zerado')
+	let acoes01 = 0
+	let ppause = 0
+ function acoes() {
+ 	 switch(parseInt(acoes01)){
+ 	 	case 0:
+ 	 	acoes01++;
+ 	  	ppause++;
+ 	 	document.querySelector('div #botoes').value = 'Retornar'
+ 	 	break;
+ 	 	case 1:
+ 	 	 ppause = zero
+ 	 	document.querySelector('div #botoes').value = 'Pausar'
+ 	 	acoes01 = zero
+ 	 	break;
+ 	 	default:
+ 	 }
+ }
+
+
+		let barras = document.querySelector('#barra');
+		let width = 1
+
+		
+let zero = 0
+let i = 0
+let n = 0
+let k = 0
+let a = 0
+let c = 0
+let y = 0
+let q = 0
+let x = 0
+let detonador = 0
+ 
+		setInterval(function() {
+		 if (ppause == 0) {
+
+			i++;
+			if (width >= 105) {
+				if (detonador >= 0) {
+					let z = setInterval(function() {
+						barras.style.width = width + "%";
+						width -= 4	
+						if (width <= -40) {
+							clearInterval(z)
+							detonador = 0
+							width = 0
+							barras.style.width = width + "%";
+					 		
+						}
+					}, 50)
+				}
+
+			}else{
+			 
+			width++;
+			barras.style.width = width + "%";
+			 
+			}
+			document.querySelector('#dados8').innerHTML = i
+			 if (i >= 10) {
+			 	i = zero
+			 	n += 1;
+			 	document.querySelector('#dados7').innerHTML = n
+			 	document.querySelector('#dados8').innerHTML = '0';
+			 } if (n >= 6) {
+
+			 	n = zero
+			 	k += 1;
+			 	document.querySelector('#dados5').innerHTML = k
+			 	document.querySelector('#dados7').innerHTML = '0';
+			 } if (k >= 10) {
+			 	k = zero
+			 	a += 1;
+			 	document.querySelector('#dados4').innerHTML = a
+			 	document.querySelector('#dados5').innerHTML = '0';
+			 } if (a >= 6) {
+			 	a = zero
+			 	c += 1;
+			 	document.querySelector('#dados2').innerHTML = c
+			 	document.querySelector('#dados4').innerHTML = '0';
+			 } if (c >= 10) {
+			 	c = zero
+			 	y += 1
+			 	document.querySelector('#dados1').innerHTML = y
+			 	document.querySelector('#dados2').innerHTML = '0'
+			 }  if (y >= 6) {
+			 	y = zero
+			 	q += 1
+			 	document.querySelector('#dados01').innerHTML = q
+			 	document.querySelector('#dados1').innerHTML = '0'
+			 } if (q >= 9) {
+			 	q = zero
+			 	x += 1
+			 	document.querySelector('#dados0').innerHTML = x
+			 	document.querySelector('#dados01').innerHTML = '0'
+			 } if (x >= 6) {
+			 	window.location.reload()
+	 
+			 }
+			}
+		 }, 100)
+
+	/*	*/
+	</script> 
+</body>
+</html>

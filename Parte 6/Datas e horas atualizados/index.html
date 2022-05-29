@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body style="background: #ccc;">
+ 	<script>
+ 		let dias_horasAtuais,ds;
+ 		ds = dias_horasAtuais = new Date()
+ 		// ds.setHours(ds.getHours() + 10)
+ 		var meses_atual; 
+	 	meses_atual = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']
+	document.write('<h1 >Data: ' + ds.getDate() + ' de ' + meses_atual[ds.getMonth()] +' de ' +ds.getFullYear())
+	let b;
+	b = document.body;
+	let dsd; dsd = document.createElement('h1'); b.appendChild(dsd)
+		setInterval(
+			function() {
+				let dsw;
+				dsw = new Date()
+
+	dsd.innerText = `Hora agora é: ${dsw.getHours()}:${dsw.getMinutes()}:${dsw.getSeconds()}`
+			}
+			)
+		let kds;kds= document.createElement('h1'); b.appendChild(kds);
+		if (ds.getHours() >= 18 && ds.getHours() < 24 ) {
+			kds.innerText = "Olá Caio, Boa noite!"
+			console.log(ds.getHours())
+		} if (ds.getHours() >= 0 && ds.getHours() <= 5) {
+			kds.innerText = "Olá Caio, Boa madrugada!"
+		}  if (ds.getHours() >= 6 && ds.getHours() < 12) {
+			kds.innerText = 'Olá Caio, Bom dia!'
+		}  if (ds.getHours() >= 12 && ds.getHours() < 18) {
+			kds.innerText = 'Olá Caio, Boa tarde!'
+		}  
+	</script>
+
+ </body>
+ </html>

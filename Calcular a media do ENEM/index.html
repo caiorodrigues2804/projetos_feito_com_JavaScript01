@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<head>
+	<title>Calcular media ENEM</title>
+	<meta charset="utf-8">
+<link rel="icon" href="data:image/png;base64,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">
+	</head>
+<style type="text/css">
+ *{
+	font-family: arial;
+}
+</style>
+<body style="background-color: #ccc;">
+ <center>
+ 
+<h1>Calcule a sua média do ENEM</h1>
+
+
+
+<!-- <div style="overflow: auto;border: 2px solid #000;width: 800px;border-radius: 2px;height: 1000px;background-color: #9d9d9d;color: white;text-align:center;">
+-->
+
+
+<!--- Matemática ---->
+<h2 style="text-indent: -290px;">Ciências exatas</h2>
+<img src="https://seeklogo.com/images/M/matematica-logo-092E6B5FB6-seeklogo.com.jpg" width="100px" style="border: 2px solid #000;border-radius: 5px;display: inline;">
+<h2 style="display: inline;">300</h2>
+<input class="matematica_01" type="range" min="355" max="1000" style="width: 250px;">
+
+<br>
+<br>
+<!--- Linguagens ---->
+<h2 style="text-indent: -280px;">Linguagens</h2>
+<img src="https://www.infoenem.com.br/wp-content/uploads/2011/12/LP-300x220.jpg" width="100px" style="border: 2px solid #000;border-radius: 5px;display: inline;">
+<h2 style="display: inline;">300</h2>
+<input class="linguagens_01" type="range" min="355" max="1000" style="width: 250px;">
+
+<br>
+<br>
+<!--- Ciências da natureza ---->
+<h2 style="text-indent: -250px;">Ciências da natureza</h2>
+<img src="https://img.elo7.com.br/product/main/3271DF0/matriz-de-ciencia-da-natureza-programador.jpg" width="100px" style="border: 2px solid #000;border-radius: 5px;display: inline;">
+<h2 style="display: inline;">300</h2>
+<input class="natureza_01"  type="range"  min="355" max="1000"  style="width: 250px;">
+
+<br>
+<br>
+<!--- Ciências humanas ---->
+<h2 style="text-indent: -280px;">Ciências humanas</h2>
+<img src="https://paraibaja.com.br/wp-content/uploads/2019/04/Ciencias-Humanas-e1556569153436.jpg" width="100px" style="border: 2px solid #000;border-radius: 5px;display: inline;">
+<h2 style="display: inline;">300</h2>
+<input class="humanas_01"  type="range"  min="355" max="1000"  style="width: 250px;">
+<br>
+<br>
+<!--- Redação ---->
+<h2 style="text-indent: -290px;">Redação</h2>
+<img src="http://www.tribunadeituverava.com.br/wp-content/uploads/2018/10/redacao.png" width="100px" style="border: 2px solid #000;border-radius: 5px;display: inline;">
+<h2 style="display: inline;" id="media_total">300</h2>
+<input class="redacao_01"  type="range"  min="355" max="1000" style="width: 250px;">
+
+<br>
+<h2 class="media_total_02"> A sua média é: </h2>
+
+<!-- </div> -->
+</center>
+ <script type="text/javascript">
+ let matematica,linguagens,natureza,humanas,redacao;
+setInterval(
+ function(){
+ matematica=document.querySelector('.matematica_01').value;
+ linguagens=document.querySelector('.linguagens_01').value;
+ natureza=document.querySelector('.natureza_01').value
+ humanas=document.querySelector('.humanas_01').value
+ redacao=document.querySelector('.redacao_01').value
+  
+//Matemática
+document.getElementsByTagName('h2')[1].innerHTML = matematica;
+//linguagens
+document.getElementsByTagName('h2')[3].innerHTML = linguagens;
+//Natureza
+document.getElementsByTagName('h2')[5].innerHTML = natureza;
+//Humanas
+document.getElementsByTagName('h2')[7].innerHTML = humanas;
+//Redacao
+document.getElementsByTagName('h2')[9].innerHTML = redacao;
+
+document.getElementsByTagName('img')[0].style.width = (matematica / 4) + 'px';
+document.getElementsByTagName('h2')[1].style.fontSize = (matematica / 30) + 'px';
+document.getElementsByTagName('h2')[0].style.fontSize = (matematica / 30) + 'px';
+//
+document.getElementsByTagName('img')[1].style.width = (linguagens / 4) + 'px';
+document.getElementsByTagName('h2')[3].style.fontSize = (linguagens/ 30) + 'px';
+document.getElementsByTagName('h2')[2].style.fontSize = (linguagens/ 30) + 'px';
+//
+document.getElementsByTagName('img')[2].style.width = (natureza / 4) + 'px';
+document.getElementsByTagName('h2')[5].style.fontSize = (natureza/ 30) + 'px';
+document.getElementsByTagName('h2')[4].style.fontSize = (natureza/ 30) + 'px';
+  //
+document.getElementsByTagName('img')[3].style.width = (humanas / 4) + 'px';
+document.getElementsByTagName('h2')[6].style.fontSize = (humanas/ 30) + 'px';
+document.getElementsByTagName('h2')[7].style.fontSize = (humanas/ 30) + 'px';
+    //
+document.getElementsByTagName('img')[4].style.width = (redacao / 4) + 'px';
+ document.getElementsByTagName('h2')[8].style.fontSize= (redacao / 30) + 'px';
+ document.getElementsByTagName('h2')[9].style.fontSize = (redacao / 30) + 'px';
+var total;
+matematica=parseInt(matematica);
+linguagens=parseInt(linguagens);
+natureza=parseInt(natureza);
+humanas=parseInt(humanas);
+redacao=parseInt(redacao);
+
+total = (matematica + linguagens + natureza + humanas + redacao) / 5;
+//console.log(total)
+/*MÉDIA*/
+ document.querySelector('.media_total_02').innerHTML = 'A sua média é: ' + total;
+
+ }
+)
+
+
+</script>
+</body>
+</html>
+
+

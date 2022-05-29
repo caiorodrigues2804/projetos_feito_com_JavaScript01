@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Math</h2>
+
+<p>Math.floor(Math.random() * 10) returns a random integer between 0 and 9 (both 
+included):</p>
+   <input
+    type="button"
+    style="font-size:20px;" 
+    onclick="ver()"
+    value="ver"
+    />
+<p id="demo"></p>
+
+<!-- script>
+
+
+ let caioba = (Math.floor(Math.random() * 10));
+ alert(caioba)
+       
+</script> -->
+	<input 
+	type="button"
+	style="font-size:20px;" 
+	value="Visualizar" 
+	name=""
+	onclick="visualizar()"
+	/>
+
+
+ <script type="text/javascript">
+  function ver(){
+
+	 let caioba = (Math.floor(Math.random() * 10));
+	 alert(caioba)
+ 	if ( caioba >= 3) {
+ 		alert('Olá')
+ 		let nome = prompt("Qual é seu nome?")
+ 		alert ("Olá, "+ nome)
+ 	}
+}
+ 
+ </script>
+
+</body>
+</html>

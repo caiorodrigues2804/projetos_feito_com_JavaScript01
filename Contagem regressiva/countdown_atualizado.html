@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+<link rel="icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonarchive.com%2Fshow%2Falphabet-icons-by-ariil%2FLetter-C-icon.html&psig=AOvVaw2Z7Bk40WzOn8JbDHNMwXyi&ust=1630338728505000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCICEq5jL1vICFQAAAAAdAAAAABAD">
+	<meta charset="utf-8">
+	<title>Contagem regressiva atualizda</title>	
+<style type="text/css">
+ *{font-family: arial;}
+</style>
+</head>
+<body>
+	<tbody>
+<script type="text/javascript">
+	document.getElementsByTagName('body')[0].style.backgroundColor = '#ccc';
+</script>
+<center>
+	<h1 style="font-size: 30px;">Contagem regressiva atualizada </h1>
+	<h1 style="font-size: 20px;">Contador </h1>
+	<input type="button" onclick="aumentar()" value="Aumentar"> <input type="button" onclick="diminuir()" value="Diminuir">
+	</tbody>
+	<tfoot>
+<br/><br/>
+Criado por Caio Rodrigues (Caioba)
+	</tfoot>
+<script type="text/javascript">
+	let tex_02;
+	tex_02 = document.getElementsByTagName('h1')[1]
+	var data_inicial,data_final;
+	data_inicial = new Date('april 28, 2001 16:18:00').getTime()
+	setInterval(
+	() => {
+	 data_final = new Date().getTime()
+	let divisor,bolota;
+	divisor = data_inicial - data_final;
+	if(divisor < 0){
+	bolota = Math.abs(divisor)
+	}
+	var atualizador = function(){
+		let anos,dias,horas,minutos,segundos;
+		anos = Math.floor(divisor / (365*24*60*60));
+		dias = Math.floor(divisor/ (1000*60*60*24));
+		horas = Math.floor(divisor % (1000*60*60*24) / (1000*60*60));
+		minutos = Math.floor(divisor % (1000*60*60) / (1000*60));
+		segundos = Math.floor(divisor % (1000*60) / (1000));
+	tex_02.innerHTML = anos + ' anos ' + dias + 'd ' + horas + 'h ' + minutos + 'm ' + segundos + 's ';
+	}
+	atualizador()
+	}
+	)
+let aumentador_diminuidor;
+aumentador_diminuidor = 0;
+ function aumentar(){
+  aumentador_diminuidor += 20;
+tex_02.style.fontSize = aumentador_diminuidor + 'px';
+	}
+ function diminuir(){
+aumentador_diminuidor  -= 20;
+tex_02.style.fontSize = aumentador_diminuidor + 'px';
+}
+</script>
+</center>
+</body>
+	</html>
+</!DOCTYPE html>

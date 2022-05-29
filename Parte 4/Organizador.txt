@@ -1,0 +1,7 @@
+Organizador
+
+CharAt(0)
+toUppercase()
+toLowerCase()
+trim()
+replace()

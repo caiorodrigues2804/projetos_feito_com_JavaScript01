@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   <title></title>
+ </head>
+ <body>
+          <script>
+            //IGNORE A BAGUNÇA DE CÓDIGO AÍ
+            let x;
+            if (localStorage.xd !== undefined) {
+              x = parseInt(localStorage.xd)
+            } else{
+            x = 0
+            }
+        let b;b = document.body; b.style.background = '#ccc'   
+        let inptus; inptus = document.createElement('input'),b.appendChild(inptus);
+        inptus.type = 'button'; inptus.value = 'Clique aqui',inptus.className= 'btn btn-dark';
+        inptus.style.marginLeft = 10 + 'px', inptus.style.marginTop = 10 + 'px'
+        let historicos; historicos = Array()
+        inptus.onclick = () =>{
+          x+=1;
+          localStorage.xd = x 
+          // Horas
+          var data_horas_dias;
+                    data_horas_dias = new Date()
+          let hs; hs =document.createElement('h1');b.appendChild(hs)
+               hs .style.marginLeft = 10 + 'px' 
+          setInterval(
+            function() {
+                 data_horas_dias = new Date()
+             hs.innerText = data_horas_dias.getHours() + ':' + data_horas_dias.getMinutes() + ':' + data_horas_dias.getSeconds() 
+                }
+            )
+          class Historicos{
+            constructor(xm,xm2){
+              localStorage.setItem(xm,xm2)
+            historicos.push(localStorage.getItem(xm))
+            localStorage.setItem('HD', JSON.stringify(historicos))
+            }
+          }
+          let ds 
+          ds = new Historicos(x,data_horas_dias.getHours() + ':' + data_horas_dias.getMinutes() + ':' + data_horas_dias.getSeconds()) 
+       }
+          // Puxar
+          let colecionador,conversor;
+          colecionador = localStorage.getItem('HD')
+          conversor = JSON.parse(colecionador)
+          let xy;
+          if (conversor !== null) {
+               for(xy = 0;xy <= conversor.length;xy++){
+              if (xy < conversor.length) {
+                let hds;hds = document.createElement('h1');b.appendChild(hds)
+                hds.innerText = conversor[xy]
+                hds.style.marginLeft = 10 + 'px' 
+                historicos.push(conversor[xy])
+                }
+                  }   
+                }
+          
+          </script>
+      
+ </body>  
+ </html>

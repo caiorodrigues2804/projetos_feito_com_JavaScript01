@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Controle seus habitos</title>
+</head>
+<body>
+	<h2> Controle seus hábitos </h2>
+	<h2 id="bixin"></h2>
+	<h2 id="niveis"></h2>
+	<script type="text/javascript">
+		document.body.style.backgroundColor = "#ccc"
+		///Título
+		// let t = document.createElement('h1')
+		// document.querySelector('body').appendChild(t)
+		// t.innerHTML = 'Controle seus habitos'
+
+			//Acrescentar
+			let inps = document.createElement('input')	
+			document.querySelector('body').appendChild(inps)
+			inps.type = 'button'
+			inps.value = 'Acrescentar'
+			let contador = localStorage.contador;
+		 	
+			inps.onclick = () => {
+
+				if (localStorage.desafios) {
+				localStorage.desafios=Number(localStorage.desafios)+1;
+
+				}
+				else{
+				  localStorage.desafios=1
+				}
+	 			var salvar = localStorage.desafios;
+	 			console.log(salvar)
+	 			let b = document.getElementById('bixin')
+	 			b.innerHTML = salvar
+	 					let n = document.getElementById('niveis')
+	 			 if (salvar >= 0) {
+	 			 	n.innerHTML = 'Base'
+	 			 }
+			}
+
+
+	</script>
+</body>
+</html>

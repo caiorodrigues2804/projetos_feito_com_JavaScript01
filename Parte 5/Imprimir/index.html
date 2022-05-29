@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.body.style.backgroundColor = "#ccc"
+
+		// Ordenamento
+		let a,hs,x,ls;
+		a = [20,33,583,51,26,46]
+		a.sort(ordenamentos)
+		ls = [`A`,`B`,`C`,`D`,`E`,`F`]
+		function ordenamentos(a,b) {
+			return b - a
+		}
+		for(let bixin = 0;bixin <= a.length;bixin++){
+			if (bixin < a.length) {
+				hs = document.createElement('H2')
+				document.querySelector('body').appendChild(hs)
+					hs.innerHTML = `${ls[bixin]}) ` + a[bixin]
+
+			}
+		}
+
+	</script>
+</body>
+</html>

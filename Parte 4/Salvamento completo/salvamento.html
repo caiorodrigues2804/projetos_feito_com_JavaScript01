@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+  <script type="text/javascript">
+ 	let b = document.querySelector('body')
+ 	b.style.backgroundColor = '#ccc	'
+
+ 	let centers = document.createElement('center')
+ 	document.querySelector('body').append(centers)
+
+ 	// Título
+ 	let t = document.createElement('h1')
+ 	document.querySelector('center').append(t)
+ 	t.innerHTML = 'Salvamento de Dados'
+ 	// Input
+ 	let inp = document.createElement('input')
+ 	document.querySelector('center').append(inp)
+ 	inp.style.fontSize = 1 + 'em'
+ 	inp.type = 'text'
+ 	inp.placeholder = 'Digite seu nome'
+ 	// Botões
+ 	let bs = document.createElement('input')
+ 	document.querySelector('center').append(bs)
+ 	bs.style.fontSize = 1 + 'em'
+ 	bs.type = 'button'
+ 	bs.value = 'Salvar Dado'
+ 	// Histórico
+ 	let historico = []
+ 	historico['nome'] = []
+ 	historico['sobrenome'] = []
+ 	historico['nome editado'] = []
+ 	historico['sobrenome editado'] = []
+ 	historico[1] = 'Seu nome não foi preenchido corretamente'
+ 	historico[2] = 'Seu sobrenome não foi preenchido corretamente'
+ 	historico[3] = []
+  	historico[3][1] = 'Foi adicionado com sucesso'
+   	let caiobador = 0
+ 	bs.onclick = function() {
+ 		switch(parseInt(caiobador)){
+ 			case 0:
+ 			let nome = document.querySelector('input').value
+ 			nomereal = nome.replace(/[&\/\\#,+()$=~%.'":*?<>{}]/g, '').replace(/\[/g, '').replace(/\]/g, '').replace(/[0-9]/g, '').replace(/\_/g, '').replace(/\-/g, '').trim()
+ 			textos(nomereal)
+ 			let caracters = document.querySelector('input').value
+ 			if (caracters.length >= 2 && caracters.length <= 16) {
+ 				if (textos(nomereal) != '') {
+ 					if (historico['nome'].indexOf(textos(nomereal)) !== -1) {
+ 						inp.value = ''
+ 						alert('Ops, esse nome já está sendo usado')
+ 						let decisoes = prompt('Deseja prosseguir? Digite Sim ou Não')
+ 						let resultados = (decisoes == 'Sim') ? 'Verdadeiro' : 'Falso'
+ 						if (resultados == 'Verdadeiro') {
+ 							alert('Ok')
+ 							caiobador += 1
+ 							inp.value = ''
+ 							inp.placeholder = 'Digite seu sobrenome'
+ 						}else if (resultados == 'Falso') {	
+ 							inp.value = ''
+ 						}
+
+ 					}else if (historico['nome'].indexOf(textos(nomereal)) !== 1) {
+ 						historico['nome'].push(textos(nomereal))
+ 						historico['nome editado'].push(`<h2 style="font-family: arial>${textos(nomereal)}</h2>`)
+ 						alert(historico[3][1])
+ 						caiobador += 1
+ 						alert(`Olá, ${textos(nomereal)}`)
+ 						inp.value = ''
+ 						inp.placeholder = 'Digite seu sobrenome'
+ 					}
+ 				}
+ 			}else{
+ 				alert(historico[1])
+ 				inp.value = ''
+ 			}
+ 			break;
+ 			case 1:
+ 			let caracters2 = document.querySelector('input').value
+ 			let sobrenome = document.querySelector('input').value
+ 			sobrenomereal = sobrenome.replace(/[&\/\\#,+()$=~%.'":*?<>{}]/g, '').replace(/\[/g, '').replace(/\]/g, '').replace(/[0-9]/g, '').replace(/\_/g, '').replace(/\-/g, '').trim()
+ 			textos(sobrenomereal)
+ 			if (caracters2.length >= 2 && caracters2.length <= 16) {
+ 				if (textos(sobrenomereal) != '') {
+ 					if (historico['sobrenome'].indexOf(textos(sobrenomereal)) !== -1) {
+ 						if (historico['nome'].indexOf(textos(nomereal) !== -1)){
+ 							alert('Já existe')
+ 							caiobador = 0
+				 			bs.value = 'Salvar Dados'
+				 			inp.style.display = 'inline'
+				 			inp.placeholder = 'Digite seu nome'
+				 			inp.style.fontSize = 1 + 'em'	
+				 			inp.value = ''
+				 			break;
+ 						}
+ 					}if (historico['sobrenome'].indexOf(textos(sobrenomereal)) !== 1) {
+ 						if (historico['nome'].indexOf(textos(nomereal)) !== 1) {
+ 							historico['sobrenome'].push(textos(sobrenomereal))
+ 							historico['sobrenome editado'].push(`<h2 style="font-family: arial;">${textos(sobrenomereal)}</h2>`)
+ 							caiobador = caiobador + 1
+ 							inp.value = ''
+ 							alert(historico[3][1])
+ 							inp.style.display = 'none'
+ 							bs.value = 'Salvar os dados novamente'
+ 						}
+ 					}
+ 				}
+ 			}else{
+ 				alert(historico[2])
+ 				inp.value = ''
+ 			}
+
+
+ 			// alert(textos(sobrenomereal))
+ 			break;
+ 			default:
+ 			caiobador = 0
+ 			bs.value = 'Salvar Dados'
+ 			inp.style.display = 'inline'
+ 			inp.placeholder = 'Digite seu nome'
+ 			inp.style.fontSize = 1 + 'em'
+ 		}
+ 	}
+
+ 	function textos(s) {
+ 		let caiobador = s.toLowerCase().replace(/(?:^|\s)\S/g, function(a) {
+		return a.toUpperCase();
+ 		})
+ 		return caiobador
+ 	}
+
+ </script>
+
+</body>
+</html>

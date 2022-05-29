@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+
+		<link rel="stylesheet" href="estilo.css" />
+		<script src="jogo.js"></script>
+	</head>
+	<body onresize="ajustaTamanhoPalcoJogo()">
+
+		<div class="painel">
+			<div class="vidas">
+				<img id="v1" src="imagens/coracao_cheio.png" />
+				<img id="v2" src="imagens/coracao_cheio.png" />
+				<img id="v3" src="imagens/coracao_cheio.png" />
+			</div>
+
+	<div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+		</div>
+
+		<script>
+			let limitadores = 0
+			var bixin = setInterval(function() {
+			if (limitadores <= 0) {
+				tempo -= 1;
+				document.querySelector('#cronometro').innerHTML = tempo
+				posicaoRandomica()
+				if (tempo < 0) {
+					 window.location.href = 'vitoria.html'
+					limitadores += 1;
+					clearInterval(bixin)
+				}
+			} 
+			}, 2000)
+			setInterval(function() {
+				if (limitadores == 1) {
+					tempo = 0
+				}
+			})
+				 
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<html lang="pt-br">
+ 	<meta charset="utf-8">
+ 	<title>Operador Rest</title>
+ </head>
+ <body>
+ 	<script type="text/javascript">
+ 	
+/*
+// 1) Contexto rest
+ function soma(...param) {
+		let resultado = 0
+		console.log(param)
+param.forEach(v => resultado += v)
+		return resultado
+ 	}
+
+ 	console.log(soma(3,8,5,7))
+ 
+ // 2) Contexto rest
+ function soma(...param) {
+ 	let resultado = 0
+ 	console.log(param)
+param.forEach(v => resultado += v)
+return resultado  	
+ }
+ console.log(soma(3,8,5,7, -8, 10,155))
+*/
+/*
+//Multiplicação
+function multiplicacao(m, ...p) {
+	console.log(m)
+	console.log(p)		
+}
+multiplicacao(5,7,12,3,49)
+*/
+function multiplicacao(m, ...p) {
+	// console.log(m)
+	let resultado = 0
+	// console.log(p)
+	p.forEach(v => resultado += m * v)
+	return resultado
+}
+console.log(multiplicacao(5,7,12,3,49))
+
+ 	</script>
+ </body>
+ </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>While caioba</title>
+</head>
+<body>	
+ 
+		
+	<label>Nome:</label>
+	<input type="text" id="caiobador" name="">
+ <button onclick="chamar()"> Clique aqui </button>
+ 
+
+	<script type="text/javascript">
+	let daw = ''
+
+	 	function chamar() {
+ 	 
+ 	daw = document.getElementById('caiobador').value;
+	document.getElementById('caiobador').value = ''
+		caioba()
+	 	}
+	</script>
+	<script type="text/javascript">
+		function caioba() {
+			let x = 0
+	 	
+			while(x < 10){
+				x++;
+				document.write('<h3>' + daw + '</h3>')
+			}
+				caiobas();
+		}
+		 
+	</script>
+</body>
+</html>

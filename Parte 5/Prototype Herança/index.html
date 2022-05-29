@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		 // Object.prototype.attr50 = 'Z' //cuidado, método global!
+
+   //  let animal = { 
+   //  	attr1: 'a' 
+   //  }
+
+   //  let vertebrado = { 
+   //  	__proto__: animal, 
+   //  	attr2: 'b' 
+   //  }
+
+   //  let ave = {
+	  //    __proto__: vertebrado, 
+	  //    attr3: 'c', 
+	  //    attr2: 'x' 
+ 		// }
+
+   //  console.log(ave.attr3, ave.attr2, ave.attr1, ave.attr50) 
+  
+   let animal = {
+   	att1: 'Animal'
+   }
+
+   let vertebrado = {
+   	__proto__: animal,
+   	att2: 'Ossos'
+   }
+   let cachorro = {
+   	__proto__: vertebrado,
+   	attr3: 'Cachorro frito'
+   }
+   console.log(cachorro.attr3, cachorro.att2, cachorro.att1)
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+			document.body.style.background = '#ccc'
+
+			let b;
+			b = document.getElementsByTagName('body')[0]
+				let hs;
+				hs = document.createElement('h1')
+				b.appendChild(hs)
+				hs.innerHTML = 'Cadastro de Vídeo Games'
+					
+					let testes_array = [32,24891,428,21,24,28,18,26,2,0,200,3819892,3237,-1]
+					testes_array.sort(function(a,b) {
+						return b - a
+					})	
+
+					let hsx;
+					let numerador;
+					numerador =0
+					testes_array.forEach(function(valor) {
+					hsx = document.createElement('h1')
+					b.appendChild(hsx)
+					numerador +=1;
+					hsx.innerHTML = numerador +') '+ valor
+					})
+	</script>
+</body>
+</html>

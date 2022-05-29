@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Escopo de variáveis</title>
+</head>
+<body>
+
+	<!-- EXEMPLO DE USO DE UMA VARIÁVEL GLOBAL -->
+	<!-- <script type="text/javascript">
+	// Variavel global		
+	var comida = "pizza";
+	function pedircomida(){
+		document.write(comida + "<br>")
+	}
+	pedircomida();
+	document.write('Eu quero uma ' + comida)
+
+	</script> -->
+
+	<!-- EXEMPLO DE USO DE UMA VARIÁVEL LOCAL -->
+	<script type="text/javascript">
+	// Variavel Local		
+	
+	function pedircomida(){
+		var comida = "pizza";
+		document.write(comida + "<br>")
+	}
+	pedircomida();
+	document.write('Eu quero uma ' + comida)
+
+	</script>
+
+
+
+</body>
+</html>

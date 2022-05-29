@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body onload="backgrounds('#ccc')">
+	<script type="text/javascript">
+		function backgrounds(cor) {
+			document.body.style.background = cor
+		}
+			let hs,b;
+			hs = document.createElement('h1')
+			b = document.getElementsByTagName('body')[0]
+			b.appendChild(hs)
+					let divs = document.createElement(`div`)
+					b.appendChild(divs)
+					divs.style = `
+					  height: 30px;
+					  background-color: #4CAF50;
+					  text-align: center; /* To center it horizontally (if you want) */
+					  line-height: 30px; /* To center it vertically */
+					  color: white;
+
+					`
+					divs.style.width = 0 + '%'
+						let hs2;
+						hs2 = document.createElement(`h2`)
+						divs.appendChild(hs2)
+
+				let countdown,newDates;
+				countdown = new Date('jan 04, 2021 10:40:00').getTime()
+
+				let limitador = 0;
+				setInterval(function() {
+				newDates = new Date().getTime()
+				let resultado;
+				resultado = countdown - newDates
+				let confere;
+				confere = Math.abs(resultado)
+				  
+
+					let dia,hora,minutos,segundos;
+					let horas001,horas002;
+					// console.log(horas002)
+					dia = Math.floor(confere / (1000*60*60*24))
+					hora = Math.floor(confere % (1000*60*60*24) / (1000*60*60))
+					minutos = Math.floor(confere % (1000*60*60) / (1000*60))
+					segundos = Math.floor(confere % (1000*60) / (1000))
+					hs.innerHTML = dia + 'd ' + '' + hora + 'h ' + '' + minutos + 'm ' + '' + segundos + 's' 	
+				})	
+				// Conversor
+					let hs1s
+					hs1s = document.getElementsByTagName('h1')
+					for(let x = 0;x <= hs1s.length;x++){
+						if (x < hs1s.length) {
+							hs1s[x].style.fontFamily = 'arial'
+						}
+					}
+
+	</script>
+</body>
+</html>

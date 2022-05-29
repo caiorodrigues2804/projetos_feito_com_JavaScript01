@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Testes matemáticos</title>
+</head>
+<body style="background: #ccc;">
+	<h1 class="text-center text-danger text-monospace m-4">Testes matemáticos</h1>
+	<center>
+		
+	<input 
+	type="button"
+	class="btn btn-outline-danger text-monospace btn-lg" 
+	value="Inciar o teste" 
+	name=""
+	onclick="comunicacao(documentos)" 
+	>
+	</center>
+
+	<script type="text/javascript">
+		// Comunicadores
+		let comunicadores = Array()
+		comunicadores['a'] = []
+		comunicadores['a']['b'] = 'Olá visitante'
+		comunicadores['a']['c'] = 'Antes de prosseguir é preencher seus dados antes de inciar o teste, e esses dados serão exibidos após a finalização'
+		// Documentacao
+		let documentacao = Array()
+		documentacao['a'] = []
+		documentacao['a'][0] = 'Qual é seu nome?'
+		documentacao['a'][1] = 'Seu nome não foi inserido corretamente'
+		documentacao['b'] = []
+		documentacao['b'][0] = 'Qual é seu sobrenome?'
+		documentacao['b'][1] = 'O seu sobrenome não foi inserido corretamente'
+		documentacao['Olá'] = []
+		documentacao['Olá'][0] = 'Olá, '
+		documentacao['historico'] = []
+		//OUTROS ITENS
+		let caioba = Array('Deseja continuar mesmo?, Sim ou Não')
+		// documentacao['historico']['a'] = []
+		// documentacao['historico']['b'] = []
+		function comunicacao(callback) {
+			(function() {
+			alert(comunicadores['a']['b'])
+			alert(comunicadores['a']['c'])			
+			callback(documentos)
+			})();
+		} function documentos(documentos) {
+	 		(function() {
+	 		  nomes()
+	 		  function nomes(){
+		 		  		let nome = prompt(documentacao['a'][0])
+		 		  		if (nome.length >= 2) {
+		 		  			documentacao['historico'].push(nome)
+		 		  			if (nome == documentacao['historico'][0]) {
+		 		  			alert("Tem um item com o mesmo nome")
+		 		  			decisoes()
+		 		  			function decisoes() {
+		 		  				 
+		 		  		 		let decisao = prompt(caioba[0])
+		 		  		 	 	if (decisao == 'Sim'){
+		 		  		 	 		alert('Tá ótimo')
+		 		  		 	 		sobrenomes()
+		 		  		 	 	} else if (decisao == 'Não') {
+		 		  		 	 			
+		 		  		 	 	}else{
+		 		  		 	 	 decisoes()	
+		 		  		 	 	}
+		 		  			}
+		 		  			}else{
+		 		  				alert(documentacao['Olá'][0] + nome)
+		 		  				sobrenomes() 
+		 		  			}
+		 		  		}else{
+		 		  		alert(documentacao['a'][1])
+		 		  		nomes();		
+		 		  		}
+		 		  		 
+	 		  		} 
+		 		   function sobrenomes(){
+		 		  		let sobrenome = prompt(documentacao['b'][0])
+		 		  		if (sobrenome.length >= 2) {
+		 		  			documentacao['historico'].push(sobrenome)
+		 		  			if (sobrenome == documentacao['historico'][1]) {
+		 		  			alert("Tem um item com o mesmo nome")
+		 		  			decisoes()
+		 		  			function decisoes() {
+		 		  				 
+		 		  		 		let decisao = prompt(caioba[0])
+		 		  		 	 	if (decisao == 'Sim'){
+		 		  		 	 		alert('Tá ótimo')
+		 		  		 	 	} else if (decisao == 'Não') {
+
+		 		  		 	 	}else{
+		 		  		 	 	 decisoes()	
+		 		  		 	 	}
+		 		  			}
+		 		  			}else{
+		 		  				 
+		 		  				alert("OK!")
+		 		  			}
+		 		  		}else{
+		 		  		alert(documentacao['b'][1])
+		 		  		sobrenomes();		
+		 		  		}
+		 		  		 
+	 		  		} 
+			})();
+		}
+ 
+  
+
+	</script>
+</body>
+</html>

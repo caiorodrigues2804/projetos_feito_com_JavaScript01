@@ -1,0 +1,231 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+ 	<html lang="pt-br">
+ 	<meta charset="utf-8">
+ 	<title>JavaScript testes</title>
+ </head>
+ <body>
+  
+ 	<script type="text/javascript">
+ 		let b = document.querySelector('body')
+ 	 	b.style.background = '#ccc'
+
+ 	 	// Centralizar
+ 	 	let centers = document.createElement('center')
+ 	 	document.querySelector('body').append(centers)
+ 	 	centers.style = `
+ 	 	margin-top: 20px;
+ 	 	`
+
+ 	 	// HORAS
+ 	 	let t = document.createElement('h2')
+ 	 	document.querySelector('center').append(t)
+ 	 	t.innerHTML = 0
+ 	 	t.style.display = 'inline'
+ 	 	let t2 = document.createElement('h2')
+ 	 	document.querySelector('center').append(t2)
+ 	 	t2.innerHTML = 0
+ 	 	t2.style.display = 'inline'
+
+ 	 	// PONTO E VÍRGULA
+ 	 	let vi = document.createElement('h2')
+ 	 	document.querySelector('center').append(vi)
+ 	 	vi.innerHTML = ':'
+ 	 	vi.style.display = 'inline'
+
+ 	 	// MINUTOS
+ 	 	let t3 = document.createElement('h2')
+ 	 	document.querySelector('center').append(t3)
+ 	 	t3.innerHTML = 0
+		t3.style.display = 'inline'
+  		let t4 = document.createElement('h2')
+ 	 	document.querySelector('center').append(t4)
+ 	 	t4.innerHTML = 0
+  		t4.style.display = 'inline'
+
+ 	 	// PONTO E VÍRGULA 2		
+  		let vi2 = document.createElement('h2')
+ 	 	document.querySelector('center').append(vi2)
+ 	 	vi2.innerHTML = ':'
+ 	 	vi2.style.display = 'inline'
+
+ 	 	// SEGUNDOS
+ 	 	let t5 = document.createElement('h2')
+ 	 	document.querySelector('center').append(t5)
+ 	 	t5.innerHTML = 0
+		t5.style.display = 'inline'
+  		let t6 = document.createElement('h2')
+ 	 	document.querySelector('center').append(t6)
+ 	 	t6.innerHTML = 0
+  		t6.style.display = 'inline'
+
+  		let divs = document.createElement('div')
+  		document.querySelector('center').append(divs)
+  		let pausar = document.createElement('input')
+  		document.querySelector('div').append(pausar)
+  		pausar.type = 'button'
+  		pausar.value = 'Pausar'
+  		pausar.style = `
+  		margin: 2px;
+  		`
+  		let pausador = 0
+  		pausar.onclick = function pausas() {
+  			switch(parseInt(pausador)){
+  				case 0:
+  				pausar.value = 'Retornar'
+  				pausador = pausador + 1
+  				break;
+  				case 1:
+  				pausar.value = 'Pausar'
+  				pausador = pausador - 1
+  				break;
+  				default:
+
+  			}
+  		}
+  		let marcador = document.createElement('input')
+  		document.querySelector('div').append(marcador)
+  		marcador.type = 'button'
+  		marcador.value = 'Marcar'
+  		marcador.style = `
+  		margin: 2px;
+  		`
+  		let zerar = document.createElement('input')
+  		document.querySelector('div').append(zerar)
+  		zerar.type = 'button'
+  		zerar.value = 'Zerar'
+  		zerar.style = `
+  		margin: 2px;
+  		`
+  		let hrs = document.createElement('hr')
+  		document.querySelector('div').append(hrs)
+
+  		zerar.onclick = function zerados() {
+  		let y = setInterval(function() {
+  				if (repetidor > 0) {
+  				repetidor = repetidor - 1 
+	  			historicos.pop()
+  					if (repetidor <= 0) {
+  						clearInterval(y)
+  						repetidor = 0
+  					}
+  				}
+  			})
+  				s = 0
+ 	 			p = 0
+ 	 			o = 0 
+ 	 			u = 0
+ 	 			i = 0
+ 	 			p2 = 0
+  			t.innerHTML = 0
+  			t2.innerHTML = 0
+  			t3.innerHTML = 0
+  			t4.innerHTML = 0
+  			t5.innerHTML = 0
+  			t6.innerHTML = 0
+  		}
+  	/*	let excluir = document.createElement('input')
+  		document.querySelector('div').append(excluir)
+  		excluir.type = 'button'
+  		excluir.value = 'Excluir'
+  		excluir.style = `
+  		margin: 2px;
+  		display: none;
+  		`*/
+  		let historicos = []
+  		let repetidor = 0
+  		let limitador = 0
+  		marcador.onclick = function marcadores() {
+  			switch(parseInt(limitador)){
+  				case 0:
+  		let historico = p2 + ' ' + i + ' : ' + u + ' ' + o + ' : ' + p + ' ' + s
+  		repetidor += 1
+  		historicos.push(`${`${repetidor}) ${historico}`} <br />`)
+  			janela = window.open("", "MsgWindow", "width=400,height=600");	
+  			janela.document.write(`<body style="background: #ccc;"><h1 style="font-family: arial;">Histórico de Marcações</h1><hr><h2 style="font-family: arial;">${historicos.join('')}`)
+  			limitador += 1
+  			break;
+  			case 1:
+  			limitador -= 1
+  			janela.close()
+  			break;
+  			}
+  		}
+ 	
+ let janela
+  	 setInterval(function(){
+  	 	  if (!janela || janela.closed) {
+            // alert('Popup fechada');
+            marcador.value = 'Marcar'
+        }else{
+            // alert('Popup aberta');
+            marcador.value = 'Clique aqui para fechar a janela de marcações'
+        }
+  	 })
+
+
+  		let s = 0
+  		let p = 0
+  		let o = 0
+  		let u = 0
+  		let i = 0
+  		let p2 = 0
+ 	 	setInterval(function() {
+ 	 		if (pausador <= 0) {
+
+ 	 	s += 1
+ 	 	t6.innerHTML = s
+ 	 		if (s > 8) {
+ 	 			s = 0
+ 	 			p += 1
+ 	 			t5.innerHTML = p
+ 	 		} if (p > 5) {
+ 	 			s = 0
+ 	 			p = 0
+ 	 			o += 1
+ 	 			t5.innerHTML = 0
+ 	 			t4.innerHTML = o
+ 	 		}  if (o > 8) {
+ 	 			s = 0
+ 	 			p = 0
+ 	 			o = 0
+ 	 			u += 1
+ 	 			t3.innerHTML = u
+ 	 			t4.innerHTML = 0
+ 	 		} if (u > 5) {
+ 	 			s = 0
+ 	 			p = 0
+ 	 			o = 0 
+ 	 			u = 0
+ 	 			i += 1
+ 	 			t2.innerHTML = i
+ 	 			t3.innerHTML = 0
+ 	 		} if (i > 8) {
+ 	 			s = 0
+ 	 			p = 0
+ 	 			o = 0 
+ 	 			u = 0
+ 	 			i = 0
+ 	 			p2 += 1
+ 	 			t.innerHTML = p2
+ 	 			t2.innerHTML = 0
+ 	 		} if (p2 > 5) {
+ 	 			s = 0
+ 	 			p = 0
+ 	 			o = 0 
+ 	 			u = 0
+ 	 			i = 0
+ 	 			p2 = 0
+ 	 			t.innerHTML = 0
+ 	 			alert('cronômetro foi zerado')
+ 	 			window.location.reload()
+ 	 		}
+ 	 		}
+ 	 	}, 100)
+
+ 	</script>
+ </body>
+ </html>

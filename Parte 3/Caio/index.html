@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Teste de repetição JavaScrit</title>
+</head>
+<body>
+	<h1>Teste de repetição JavaScrit</h1>
+	<input 
+	style="font-size: 20px;display: inline;" 
+	type="button" 
+	name=""
+	value="Inciar o teste" 
+	onclick="caioba()" 
+	/>	
+	<input 
+	type="button" 
+	style="font-size: 20px;" 
+	name=""
+	value="Parar o teste"
+	onclick="parar()" 
+	/>
+	<h1 id="caioba">0</h1>
+	<script type="text/javascript">
+		var i = 0
+		function caioba() {
+			while(i < 1000){
+					i++;
+				 document.getElementById('caioba').innerHTML = i
+			}
+		}
+	</script>
+
+</body>
+</html>

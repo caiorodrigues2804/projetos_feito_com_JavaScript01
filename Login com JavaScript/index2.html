@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript teste</title>
+</head>
+<body style="background: #7d7d7d;">
+	<h1>JavaScript teste</h1>
+	<fieldset>
+		<legend>Login javascript</legend>
+	 
+			
+			<label>Usuário:</label>
+			<input id="user" type="text" name="">
+
+			<label>Senha</label>
+			<input  id="senha" type="password" name="">
+		
+			<input type="submit" value="Entrar" onclick="entrar()">
+
+			<script type="text/javascript">
+				function entrar() {
+				media_caracter = 16
+				let usuario = document.querySelector('#user').value
+				let senhas = document.querySelector('#senha').value
+				if (senhas == dadosc['senha'] && usuario == dadosc['usuario']) {
+
+						alert('Acesso permitido')
+						document.querySelector('#user').value = ''
+						document.querySelector('#senha').value = ''
+document.querySelector('#logins').style.display = 'block'
+document.querySelector('#logins').innerHTML = dadosc['oi'] + dadosc['usuario']
+						}else{
+							alert('Acesso negado')
+						document.querySelector('#user').value = ''
+						document.querySelector('#senha').value = ''
+						}
+				 
+				}
+
+				let caio = 0
+				let caio2 = 0
+				let limitador = 0
+			let dadosc = Array()
+			dadosc['usuario'] = []
+			dadosc['senha'] = []
+			dadosc['oi'] = 'Olá, '
+				function cadastrar() {
+					caio++;
+					if (caio == 1) {
+
+document.querySelector('#registros button').innerHTML = 'Fechar'
+document.querySelector('#registros02').style.display = 'block'
+document.querySelector('#registros02').style.display = 'block'
+					} if (caio >= 2) {
+						caio = caio2
+document.querySelector('#registros button').innerHTML = 'Cadastrar'
+document.querySelector('#registros02').style.display = 'none'
+document.querySelector('#registros02').style.display = 'none'							
+					}
+				} function salvar() {
+
+if (limitador <= 0) {
+limitador += 1
+
+	let dados1 = document.querySelector('#user1').value
+	document.querySelector('#user1').value = ''
+	dadosc['usuario'].push(dados1)
+	let dados2 = document.querySelector('#senha2').value
+	document.querySelector('#senha2').value = ''
+	 dadosc['senha'].push(dados2)
+	alert('foi salvo com sucesso')
+	document.querySelector('#registros button').innerHTML = 'Cadastrar'
+	document.querySelector('#registros02').style.display = 'none'
+	document.querySelector('#registros02').style.display = 'none'
+}else{
+	alert('Você já se cadastrou')
+	caiorodrigues()
+	function caiorodrigues() {
+		
+ 	let caiobas = prompt('Deseja Remover ou Substituir os seus dados cadastrados, digite Remover ou Substituir com incial em maiúsculo')
+ 	if (caiobas == 'Remover') {
+ 			dadosc['usuario'].pop()
+ 			dadosc['senha'].pop()
+ 			alert("Foi removido com sucesso")
+ 			limitador -= 1
+ 		 	document.querySelector('#user1').value = ''
+		document.querySelector('#senha2').value = ''
+		document.querySelector('#logins').style.display = 'none'
+ 	}else if (caiobas == 'Substituir') {
+ 		alert('Ok')
+ 		limitador -= 1
+ document.querySelector('#logins').style.display = 'none'
+ 		document.querySelector('#user1').value = ''
+		document.querySelector('#senha2').value = ''
+ 		}else{
+		caiorodrigues()
+ 		}
+	}
+	}
+
+}	 
+	let descioes 
+			</script>
+	</fieldset>
+	<br> 
+		<div id="registros">
+			<button style="font-size: 18px;" onclick="cadastrar()">Cadastrar</button>
+		</div>
+
+	<div id="registros02" style="display: none;">
+			<br>
+<h3>2 caracteres no mínimo até 16 no máximo de caracteres </h3>
+			<label id="label01">Usuário:</label>
+			<input id="user1" type="text" name="">
+
+			<label id="label02">Senha</label>
+			<input  id="senha2" type="password" name="">
+				<input type="submit" value="Salvar dados" onclick="salvar()">
+		
+	</div>
+			<h1 id='logins'></h1>
+		 
+</body>
+</html>

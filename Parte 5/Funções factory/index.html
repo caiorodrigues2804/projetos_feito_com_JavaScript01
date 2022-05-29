@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*let Carros = function(cor, modelo, marca, velocidadeMaxima, preco) {
+			return{
+				cor, 
+				modelo,
+				velocidadeMaxima,
+				preco,
+				infos(){ 
+					console.log(`---------------------`)
+					console.log(`Cor do carro é: ${cor}`)
+					console.log(`Modelo do carro: ${modelo}`)
+					console.log(`velocidade máxima: ${velocidadeMaxima}`)
+					console.log(`Preço: ${preco}`)
+					console.log(`--------------------`)
+				}	
+			}
+		}
+		let carro01 = Carros('Vermelho','Uno','Fiat',`${120} Km`, `R$ ${6500}`)
+		console.log(carro01)
+		carro01.infos()
+			let carro2 = Carros('Prata','Corolla','Toyota',`${230} km`, `R$ ${34.990}`)
+					console.log(carro2)
+			carro2.infos()*/
+
+			// VídeoGames
+			let videoGames = function(marca,modelo,nome,preco,cor){
+				return{
+					marca,
+					modelo,
+					nome,
+					preco,
+					cor,
+					infor(){
+						console.log(`-----------------------`)
+						console.log(`Marca: ${marca}`)
+						console.log(`Modelo: ${modelo}`)
+						console.log(`Nome: ${nome}`)
+						console.log(`Preço: ${preco}`)
+						console.log(`Cor: ${cor}`)
+						console.log(`-----------------------`)
+					}
+				}
+			}
+			let xbox = videoGames('Microsft','ABC','Xbox series X',`R$: ${4500}`,'Preto')
+			console.log(xbox)
+			xbox.infor()
+				let playstation = videoGames('Sony','ZXV','Playstation 5',`R$: ${4300}`,'Preto')
+				console.log(playstation)
+				playstation.infor()
+	</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<html lang="pt-br">
+</head>
+<body>
+	<script type="text/javascript">
+		let consts;
+		consts = 'radial-gradient(#ccc,#7d7d7d)'
+		document.body.style.background = consts
+		document.body.style.backgroundAttachment = 'fixed'
+		document.title = 'Cadastro de Vídeo Games'
+			let hs,b;
+			b = document.getElementsByTagName('body')[0]
+			 hs = document.createElement(`h1`)
+			 b.appendChild(hs)
+			// function exibirArtigo(id,callbackSucesso, callbackErro) {
+			// 	if(true){
+			// 		callbackSucesso('Textos títulos','Descrição textos')
+			// 	}else{
+			// 		callbackErro('Ops, aconteceu um erro')
+			// 	}
+			// }
+			// var callbackSucesso = function(titulo,descricao) {
+			// 	document.write(`<h2>Título: ${titulo} <br />`)
+			// 	document.write(`Descrição: ${descricao}`)
+			// }
+			// var callbackErro =function(erro) {
+			// 	document.write(`Erro: ${erro}`)
+			// }
+
+			// exibirArtigo(1, callbackSucesso, callbackErro)
+	 			 let numerador,buttons,nome,hsw;
+	 			 numerador = 0 
+	 			 buttons = document.createElement(`input`)
+	 			 b.appendChild(buttons)
+	 			 buttons.type= 'button'
+	 			 buttons.value = 'Cadastrar um novo valor'
+	 			 buttons.style.fontSize = 17 + 'px'
+	 			 buttons.onclick = () => {
+	 			nome = prompt(`Qual é seu nome?`)
+	 			 numerador += 1;	
+	 			 exibirArtigo(numerador,callbackSucesso,callbackErro,nome)
+	 			 }
+
+	 			 function exibirArtigo(id,callbackErro,callbackErro,nome) {
+	 			 	if(false){
+	 			 		callbackSucesso(`Nome: ${nome}`)
+	 			 	}else{
+	 			 		callbackErro(`<h2> Houve um erro aí rapaz`)
+	 			 	}
+	 			 }	
+	 			 var callbackSucesso = function(titulo, descricao) {
+	 			 	hsw = document.createElement(`h2`)
+	 			 	b.appendChild(hsw)
+	 			 	hsw.innerHTML = nome
+	 			 }
+	 			 var callbackErro =function(erro) {
+	 			 		document.write(`${erro}`)
+	 			 }
+	 		
+	</script>
+</body>
+</html>

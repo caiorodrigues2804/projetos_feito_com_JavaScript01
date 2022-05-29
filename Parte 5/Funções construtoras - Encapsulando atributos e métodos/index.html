@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Público
+	/*	let carro = function() {
+			this.cor = 'Vermelho'
+			this.marca = 'Fiat'
+			this.modelo = 'Uno'
+			this.velocidadeAtual = 0
+			this.velocidadeMaxima = 180 
+			this.acelerar = function(){
+				 let velocidade = this.getVelocidadeAtual() + 50
+				if (velocidade > this.velocidadeMaxima) {
+					velocidade = velocidadeMaxima
+				}
+
+			this.getVelocidadeAtual = function(){
+				return this.velocidadeAtual
+			}
+			
+        this.setVelocidadeAtual = function(velocidadeAtual) {
+          this.velocidadeAtual = velocidadeAtual
+        }
+		}
+	}
+		let carros = new carro()
+		console.log(carros)
+		carros.acelerar()
+		*/
+
+		//Público
+		let bixin = function() {
+			this.publico = 'Olá'
+		}
+		let n = new bixin()
+		console.log(n)
+
+		//Privado
+		let bixin2 = function() {
+			let publico = 'Olá'
+			console.log(publico)
+		}
+		let n2 = new bixin2()
+		console.log(n2)
+	</script>                                       
+
+</body>
+</html>

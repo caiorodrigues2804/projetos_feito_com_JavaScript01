@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	 
+let funcionarios = [{nome: 'Fernanda', cargo: 'Analista de RH', salario: 3100, status: 'ativo'}, {nome: 'Miguel', cargo: 'Assistente adm', salario: 1700, status: 'ativo'}, {nome: 'Rosa', cargo: 'Auxiliar de contabilidade', salario: 1600, status: 'inativo'}, {nome: 'Roberto', cargo: 'Programador PHP', salario: 4500, status: 'ativo'}, {nome: 'Maria', cargo: 'Engenheira Mecânica', salario: 7500, status: 'ativo'}]
+console.log(funcionarios)
+
+// UTILIZANDO O FILTER
+// console.log(funcionarios.filter(function(f) {
+// 		return true
+// }))
+// console.log(funcionarios.filter(function(f) {
+// 		return false
+// }))
+
+// Controlando o filter
+// console.log(
+// 	funcionarios.filter(
+// 		function(f) {
+// 			return f.salario < 2000
+// 		}
+// 		)
+// 	)
+
+// Controlando o filter
+// console.log(
+// 	funcionarios.filter(
+// 		function(f) {
+// 			return f.salario > 2000
+// 		}
+// 		)
+// 	)
+
+// 2 Controlando o filter
+// console.log(
+// 	funcionarios.filter(
+// 		function(f) {
+// 		return f.salario < 2000
+// 		}
+// 		).filter(function(f) {
+// 			return f.status == 'ativo'	
+// 		})
+// 	)
+
+//Arrow Functions com o array filter 
+console.log(
+	funcionarios.filter(
+		f => f.salario < 2000
+		).filter(
+			f => f.status == 'ativo' 
+		)
+	)
+	</script>
+</body>
+</html>

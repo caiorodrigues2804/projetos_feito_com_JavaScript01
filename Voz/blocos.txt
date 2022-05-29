@@ -1,0 +1,6 @@
+var synth = window.speechSynthesis;
+var utterThis = new SpeechSynthesisUtterance("bom dia");
+synth.speak(utterThis);
+
+Rerefência:
+https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak

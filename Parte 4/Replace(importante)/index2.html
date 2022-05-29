@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body style="background: #ccc;">
+	<h1></h1>
+	<script type="text/javascript">
+		let i = document.querySelector('h1')
+
+	let tr = prompt('digite alguma coisa')
+let resultado = tr.replace(/[0-9]/g, "")
+resultado.charAt(0).toUpperCase() + resultado.slice(1);
+
+		i.innerHTML = resultado  
+
+// /\COLOQUE AQUI PARA SUBSTITUIR/
+// let resultado = tr.replace(/\[/g, '')
+
+// SUBSTITUIR NÚMEROS
+// let resultado = tr.replace(/[0-9]/g, "")
+
+//SUBSTITUIR LETRAS
+// let resultado = tr.replace(/[a-z]/g, "")
+
+//PARA LETRAS MAIÚSCULAS LETRAS
+// let resultado = tr.replace(/[a-z]/gi, "")
+
+//PARA LETRAS MAIÚSCULAS NÚMEROS
+// let resultado = tr.replace(/[0-9]/gi, "")
+
+	</script>
+
+</body>
+</html>

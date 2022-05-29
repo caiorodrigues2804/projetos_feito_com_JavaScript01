@@ -1,0 +1,234 @@
+ <!DOCTYPE html>
+	<html>
+	<head>
+	<title>Cronômetro JS</title>
+	<link rel="icon" href="https://lh3.googleusercontent.com/proxy/CThhapLk8-jkdi5hrjI46MCFKPKB0keNfW8J0aLyy5bAT-cAgvLSDzlbE5jtZYCeWF5MhXVJHW__EuKDEOsNPvm-Pyi1TqORHcadJWgZUVsPVG_F-Fla77X7OfNpO4U93hU0deb4Xu3n0IXHuns">
+	</head>
+	<body style="background-color: #ccc;">
+	<tbody>
+
+
+<!----- BOTÃO -------->
+	<input
+	id="mr_caioba"
+	type="button"
+	value="Cor de fundo"
+	style="font-size: 20px;"
+	onclick="caioba()"
+	/>
+<!-------- BOTÃO PARA ALTERAR A COR ---->
+	<input 
+	id="cor_caioba"
+	type="color"
+	style="display: none;"
+	>
+	
+
+
+<center>	
+<style>
+	*{font-family: arial;}
+	
+</style>
+<div id="pai">
+	<div>
+<h1><bolota style="font-size: 40px;">Cronômetro </bolota><b style="color: black;border: 1px solid #000;padding:10px;border-radius: 10px;background-image: linear-gradient(yellow, orange);font-size: 50px;">JS</b></h1>
+	</div>
+</div>
+	<input
+	type="button"
+	value="Iniciar o cronômetro"
+	style="font-size: 20px;"
+	onclick="iniciar_o_cronometro()"
+	class="mr_caiobas"
+	/>
+	
+	<input
+	type="button"
+	value="Marcar o cronômetro"
+	style="font-size: 20px;"
+	onclick="marcar_o_cronometro()"
+	class="mr_caiobas"
+	/>
+
+	 
+
+<div style="font-size: 40px;margin-top: 20px;">
+	 <h1 style="display: inline;">0</h1>
+	 <h1 style="display: inline;">0</h1>
+	 <h1 style="display: inline;">:</h1>
+	 <h1 style="display: inline;">0</h1>
+	 <h1 style="display: inline;">0</h1>
+	 <h1 style="display: inline;">:</h1>
+ 	 <h1 style="display: inline;">0</h1>
+	 <h1 style="display: inline;">0</h1>
+	 <h1 style="display: inline;">:</h1>
+ 	 <h1 style="display: inline;">0</h1>
+	 <h1 style="display: inline;">0</h1>
+</div>	
+
+
+	<script type="text/javascript">
+ 	var x,y,z; 
+	x = 0;y = 0; z = 0;
+	let buttons, buttons_cor; buttons = document.getElementById("mr_caioba"); buttons_cor = document.getElementById("cor_caioba");
+	 
+	function caioba(){
+		//alert('Olá usuário')
+		switch(x){
+		case 0:
+		x += 1;y += 1;
+		buttons.value = 'Fechar'; 
+		buttons_cor.style.display = 'inline-block';
+		break;
+		case 1:
+		x -= 1;	y -= 1;
+		buttons_cor.style.display = 'none';
+		buttons.value="Cor de fundo"; 
+		break;}
+
+	setInterval(function(){
+		if(y >= 1){
+	document.getElementsByTagName('body')[0].style.backgroundColor = buttons_cor.value;
+		}
+	})
+	}	
+	
+let nina_bolota,marcar_o_cronometros;
+		nina_bolota = 0;
+		marcar_o_cronometros=0;
+
+	document.getElementsByClassName('mr_caiobas')[0].value = 'Iniciar o cronômetro';
+
+	function iniciar_o_cronometro(){
+	switch(nina_bolota){
+	 	case 0:
+		nina_bolota += 1;
+		document.getElementsByClassName('mr_caiobas')[0].value = 'Pausar o cronômetro';
+		z += 1;
+		//console.log(z)
+		break;
+		case 1:
+		document.getElementsByClassName('mr_caiobas')[0].value = 'Iniciar o cronômetro';
+		nina_bolota -= 1;
+		z -= 1;
+		//console.log(z)
+		break;
+		}
+	}
+/*
+		let marcador_cronometros;
+		 marcador_cronometros = document.createElement('input')
+ 		 document.getElementsByTagName('body')[0].appendChild(marcador_cronometros)
+		marcador_cronometros.style.display = 'inline';
+ 	//Configurador
+//Quebrador de linhas
+	let br_brocks;
+br_brocks = document.createElement('br')
+	document.getElementsByTagName('center')[0].appendChild(br_brocks);
+	var x_s;x_s = 0;
+	setInterval(
+		() => {
+		if(x_s <= 9){
+		x_s += 1;
+		console.log(x_s)
+	let p_w;
+	p_w = document.createElement('h1')
+	document.getElementsByTagName('body')[0].appendChild(p_w)
+	p_w.innerHTML = '0'
+	p_w.style.display = 'inline-block'
+	p_w.style.fontSize = 80 + 'px'
+if(x_s === 2 || x_s === 4 || x_s === 6 || x_s === 8){
+	let separador;
+		separador = document.createElement("h1");
+		document.getElementsByTagName('body')[0].appendChild(separador);
+		separador.style.fontSize = 80 + 'px';
+		separador.innerHTML = ':';
+		separador.style.display = 'inline';
+	}
+		}
+	}
+	)
+*/
+
+	let h_s;
+	h_s = document.querySelectorAll('h1')
+
+
+let n_01,n_02,n_04,n_05,n_07,n_08,n_09,n_10;
+let a,b,c,d,e,f,g,h,i;
+a=0;b=0;c=0;d=0;e=0;f=0;g=0; i=0;
+n_01 = document.querySelectorAll('h1')[1]; n_02 = document.querySelectorAll('h1')[2];
+n_04 = document.querySelectorAll('h1')[4];
+n_05 = document.querySelectorAll('h1')[5]; n_07 = document.querySelectorAll('h1')[7];
+n_08 = document.querySelectorAll('h1')[8]; n_09 = document.querySelectorAll('h1')[10];
+n_10 = document.querySelectorAll('h1')[11];
+
+	setInterval(function(){
+	if(z >= 1){
+	 //N_01 = A, N_02 = B, N_04 = C , N_05 = D , N_07 = E ,N_08 = F , N_09 = G, N_10 = I
+		i += 1;
+		if(i > 9){
+		  g += 1;
+		  i = 0;
+		} if(g > 5){
+		g = 0;i =0;
+		f += 1;
+		} if(f > 9){
+		g =0;i=0;f=0;
+		e += 1;
+		}if(e > 5){
+		g=0;i=0;f=0;e=0;
+		d += 1;
+		} if(d > 9){
+		g=0;i=0;f=0;e=0;
+		d+=1;
+		} if(c > 5){
+		g=0;i=0;f=0;e=0;d=0;
+		c += 1;
+		} if(b > 9){
+		g=0;i=0;f=0;e=0;d=0;c=0;
+		b+=1;
+		} if(b > 5){
+		g=0;i=0;f=0;e=0;d=0;c=0;
+		a +=1;
+		}
+		} 
+	n_01.innerHTML = a; n_02.innerHTML = b;n_04.innerHTML = c;  
+	n_05.innerHTML = d; n_07.innerHTML = e;
+	n_08.innerHTML = f; n_09.innerHTML = g;n_10.innerHTML = i
+	 
+	},10)
+
+let colecionador;
+	colecionador= Array()
+
+function marcar_o_cronometro(){
+	/* */
+
+	let marcador_cronometrosw;
+	marcador_cronometrosw = (a + '' + b + ':' + c + '' + d + ':' + e + '' + f + ':' + g + '' + i)
+	//Marcador de datas e horas
+	let marcador_datas_horas,selecionador;
+	marcador_datas_horas = new Date();
+	selecionador = (marcador_datas_horas.getHours() + 'h' + marcador_datas_horas.getMinutes() + 'm' + marcador_datas_horas.getSeconds() + 's')
+	//alert(marcador_cronometrosw)
+	colecionador.push(marcador_cronometrosw + ' ' + selecionador + '<br>')
+ 		let janela;
+	 janela = window.open("", "", "width=200,height:300");
+		janela.document.write('<body style="background-color: lightgrey"><center><h1 style="font-family:arial;">Marcador de cronômetro</h1><hr>' + '<h1 style="font-family: arial;font-size: 50px;">' + colecionador.join('') + '</h1></center>');
+
+}
+
+	console.log(h_s)
+	</script>
+</center>
+	</tbody>
+	<tfoot>
+	<center>
+		<p><b>Criado por Caio Rodrigues (Caioba)</b></p>
+	</center>
+	</tfoot>
+	</body>
+	</html>
+ </!DOCTYPE html>

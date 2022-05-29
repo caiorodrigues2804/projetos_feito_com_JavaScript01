@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ 	<script type="text/javascript">
+ 	 	let b; b =document.getElementsByTagName('body')[0]
+ 	 	b.style.background = '#ccc'
+ 	 	let historico,armazem;
+ 	 	historico = ['José','Caio','Elizangela','Nina','Bolota']
+ 	 		armazem = []
+ 	  	historico.forEach(function(valor) {
+				armazem.push(valor)
+				localStorage.HD = JSON.stringify(armazem)	
+ 	  	})
+ 	  	let indicador;
+ 	  	indicador = JSON.parse(localStorage.HD)
+ 	  		
+ 	</script>
+ </body>
+ </html>

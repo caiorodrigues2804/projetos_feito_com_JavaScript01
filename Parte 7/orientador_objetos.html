@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title></title>
+ </head>
+ <body onload="backs('#ccc')">
+              <script>
+function backs(cor) {
+  document.body.style.background = cor
+}
+              class animais{
+                constructor(nome,idade,sexo){
+                  this.nome = nome;
+                  this.idade = idade;
+                  this.sexo = sexo;
+                  this.conta = 20;
+                }
+                inform(){
+                  console.log(this.nome,this.idade,this.sexo)
+                }
+                set caioba(v){
+                  this.conta = v
+                  console.log(this.conta)
+                }
+              }
+              class Cachorro extends animais{
+                constructor(){
+                  super()
+                }
+                inform(){
+                  console.log('Olá, meu consagrado')
+                }
+              }
+              let ds,ds_02;
+              ds = new animais('Nina',13,'Fêmea')
+              ds_02 = new animais('Bolota', 8, 'Fêmea')
+              ds_02.caioba = 3
+              ds.inform()
+              ds_02.inform()
+
+              </script>
+ </body>
+ </html>

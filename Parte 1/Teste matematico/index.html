@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Bootstrap CSS3 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- Bootstrap Javascript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Teste matematico</title>
+	<link rel="icon" href="https://iconarchive.com/download/i14573/iconarchive/red-orb-alphabet/Letter-M.ico">
+</head>
+<body>
+	<h1 class="text-center">Teste Matemático</h1>
+	<br>
+	<center>
+		
+	<input type="button" class="btn btn-outline-warning bt-lg" value="Inciar teste"style="width: 200px;height: 40px;" onclick="caioba02()" >
+	</center>
+		<script type="text/javascript">
+
+			function caioba02(){
+				alert('Oi visitante!')
+				alert('Antes de inciar precisamos de seu dados que serão exibidos no final dos testes')
+				 cadastro()
+				 function cadastro(){
+				 	var nome = prompt('Qual é seu nome?')
+				 	if (nome.length >= 2) {
+				 			alert('Olá, ' + nome)	
+						 	alert('Agora só falta o sobrenome')
+				 			sobrenome()
+				 			function sobrenome(){
+						 		var sobrenome = prompt('qual é seu sobrenome?')
+						 		 if (sobrenome.length >= 2) {
+						 		 	alert('Ok')
+						 		 	// document.write(sobrenome)
+
+						 		 	matematica()
+				 			 }else{
+				 			 	alert('sobrenome não preenchido')
+				 			 	cadastro02()	
+				 			 	function cadastro02(){
+				 			 		var sobrenome = prompt('qual é seu sobrenome?')
+				 			 		if (sobrenome.length >= 2) {
+				 			 			alert('Ok')
+				 			 				 	// document.write(sobrenome)
+										matematica()
+
+				 			 		}else{
+				 			 			alert('sobrenome não preenchido')
+				 			 			cadastro02()
+				 			 		}
+				 			 	}
+				 			 }
+				 			}
+				 	}else{
+				 		alert('Nome não preenchido corretamente')
+				 		cadastro()
+						 	}
+								 }
+								}
+				function matematica(){
+					var simnao = prompt('Antes de inciar, você deseja alterar nome e sobrenome, Sim ou Não');
+						if (simnao == 'Sim') {
+							alert("Ok")
+							cadastro()
+						}else if(simnao == 'Não'){
+							alert("Ok")
+							matematicamente()
+						}else{
+							matematica()
+						}
+				}
+				function matematicamente(){
+					// window.alert('')
+					window.alert('vamos inciar o teste vai ser simples')
+					facil()
+					function facil(){
+				var soma = prompt('quanto é 4 + 4?')
+				var media = 8
+				soma = parseInt(soma)
+				media = parseInt(media)
+				  switch(parseInt(soma)){
+				  	case 8:
+				  	window.alert('Você passou!')
+				  	break;
+				  	default:
+				  	window.alert('Você não passou!')
+				  	facil()	
+				  }
+					}
+				
+				}
+		</script>
+<!-- <script type="text/javascript">
+	function matematica(){
+
+	}
+
+
+</script>
+ -->
+
+	<!-- 	<script type="text/javascript">
+
+			function matematica(){
+				alert('vamos inciar os testes matematicos')
+				alert('na medida os testes ficarão dificeis de serem resolvidos')
+			}
+
+		</script> -->
+</body>
+</html>

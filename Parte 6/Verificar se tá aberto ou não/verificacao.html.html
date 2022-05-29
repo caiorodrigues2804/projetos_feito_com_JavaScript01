@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<html lang="pt-br">
+ 	<meta charset="utf-8">
+ 	<title></title>
+ </head>
+ 	<button onclick="abrir()">Abrir a janela</button>
+ <body onload="backs('#ccc')">
+ 		 <script type="text/javascript">
+ 		 	var janela
+ 		 	janela = window.open('','MsgWindow','width=500,height=500')
+
+	 	var hs1,b;
+	 		b = document.getElementsByTagName('body')[0]
+	 	 hs1 = document.createElement('h1')
+	 	 b.appendChild(hs1)
+	 	setInterval(
+	 		function() {
+	 		 if (!janela || janela.closed) {
+            // alert('Popup fechada');
+            hs1.innerHTML = 'Fechada'
+	        }else{
+	           hs1.innerHTML = 'Aberta'
+	        }
+	 		}
+	 	)
+	 		function abrir() {
+	 			janela = window.open('','MsgWindow','width=500,height=500')
+
+	 		}
+ 	</script>
+ </body>
+ </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript OO</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	//MODELO DE OBJETO
+	class ContaBancaria{
+	 // Agencia
+	 // NumeroConta
+	 // Saldo
+	 // Limite
+	 constructor(){
+	 	this.agencia = 2020
+	 	this.numeroConta = 8351125
+	 	this.saldo = 50
+	 	this.limite = 450
+	 }
+	 depositar(valorDeposito){
+	 	this.saldo += valorDeposito
+	 }
+	  sacar(valorSaque){
+	  	this.saldo -= valorSaque
+	  }
+	  consultarSaldo(){
+	  	return this.saldo
+	  }
+	}
+/*
+NEW
+É um interpretador que indicar para o javascript que eu quero na prática transformar esse modelo em um objeto, ou seja, transformar essa classe em objeto que possa ser utilizado dentro meu código.
+
+*/
+	let x = new ContaBancaria()
+	let y = new ContaBancaria()	
+	console.log(x.consultarSaldo())
+	x.depositar(200)
+	console.log(x.consultarSaldo())
+	x.sacar(200)
+	console.log(x.consultarSaldo())
+
+
+	console.log(y.consultarSaldo())
+	y.depositar(500)
+	console.log(y.consultarSaldo())
+/*
+O ponto nos permite acessar os objetos
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>ForEach</title>
+</head>
+<body onload="backgrounds('#ccc')">
+	<script type="text/javascript">
+		function backgrounds(color) {
+				document.body.style.background = color
+		}
+			let pessoas;
+			pessoas = []
+			pessoas[0] = 'Caio'
+			pessoas[1] = 'José'
+			pessoas[2] = 'Elizangela'
+			pessoas[3] = 'Marcelo'
+			
+			// Sem as variáveis
+			pessoas.forEach(function(valor, indice, array) {
+				console.log('Índice: ' + indice + ' | Nome: ' + valor)
+				// console.log(array)
+			})
+
+			//Com as variáveis
+			/*
+			var f = function(valor,indice) {
+				console.log(valor, indice)
+			}
+			pessoas.forEach(f)
+		 	*/
+	</script>
+</body>
+</html>

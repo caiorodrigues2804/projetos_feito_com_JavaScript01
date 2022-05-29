@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Revisa Z</title>
+</head>
+<!-- <style>
+div {
+  background-color: #eee;
+  width: 400px;
+  height: 500px;
+  border: 1px dotted black;
+  overflow: scroll;
+}
+</style> -->
+<body>
+	<div></div>
+		<script type="text/javascript">
+	 	let b = document.querySelector('body')
+	 	b.style.background = '#ccc'
+
+	 	// Input
+	 	let inp2 = document.createElement('input')
+	 	document.querySelector('body').appendChild(inp2)
+	 	inp2.type = 'text'
+	 	inp2.placeholder = 'Digite alguma coisa'
+
+	 	// Botão
+	 	let inp = document.createElement('input')
+	 	document.querySelector('body').appendChild(inp)
+	 	inp.type = 'button'
+	 	inp.value = 'Enviar'
+	 	inp.style.fontSize = 15 + 'px'
+	 	inp.onclick = function() {
+	 		let c = inp2.value
+	 		inp2.value = ''
+	 		let h = document.createElement('h1')
+	 		document.querySelector('#bixin').appendChild(h)
+	 		h.innerHTML = c
+
+	 	}
+	 		// Div
+	 		let divs = document.createElement('div')
+	 		document.querySelector('body').appendChild(divs)
+	 		divs.style = `
+		  background-color: #eee;
+		  width: 300px;
+		  height: 500px;
+		  border: 1px dotted black;
+		  overflow: scroll;
+
+	 		`
+	 		divs.id = 'bixin'
+		</script>
+</body>
+</html>

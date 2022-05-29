@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<button onclick="speak();">Clique aqui</button>
+<script>
+function speak() {
+	let nome;
+	nome = prompt('Qual é seu nome');
+        speechSynthesis.speak(new SpeechSynthesisUtterance("Olá, " + nome));
+}
+ 
+</script>

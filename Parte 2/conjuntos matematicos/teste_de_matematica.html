@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Bootstrap CSS3 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Bootstrap JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Teste de matemática</title>
+</head>
+<body style="background: #d7d7d7;">
+	<h1 class="text-center m-4"> Teste de matemática </h1>
+	<center>
+		
+	<input 
+	type="button"
+	 class="btn btn-outline-dark btn-lg"
+	 value="Inciar"
+	 onclick="inciar()"
+	 style="width: 400px;">
+	</center>
+		<!-- <script type="text/javascript">
+			let errados = 0
+			let acertos = 0
+			function inciar(){
+				alert('Olá visitante!');
+				alert('Antes de começar é recomendado preencher seus dados que serão exibidos quando terminar os testes')
+				nomes()
+				// var nome = prompt()
+				function nomes(){
+					let nome = prompt('Qual é seu nome, visitante?')
+					if (nome.length >= 2) {
+						alert('Olá, ' + nome)
+						sobrenomes()
+					}else{	
+						alert('Nome não preenchido')
+						nomes()
+					}
+				}
+				function sobrenomes(){
+					let sobrenome = prompt('Qual é  seu sobrenome?')
+					if (sobrenome.length >= 2) {
+						alert('Ok')
+						 teste01()
+					}else{
+						alert('Sobrenome não preenchido')
+						sobrenomes()
+					}
+				}
+				
+			}
+			// function teste01(){
+			// 	if (acertos <= 9) {
+			// 	let somas = prompt('Quanto é 20 + 10?')
+			// 	// const media = 30
+			// 	switch(parseInt(somas)){
+			// 		case 30:
+			// 		acertos++;
+			// 		window.alert('você passou, e seu total de acertos é: ' + acertos)
+			// 		break
+			// 		default
+			// 		errados++;
+			// 		window.alert('Não passou no teste, e seu total de erros é: ' + errados)	
+			// 		teste01()
+			// 	}
+			// 	}else{
+
+			// 	}
+			// }
+		</script> -->
+		<script type="text/javascript">
+			acertos = 0
+			errados = 0
+		 
+			document.onkeydown = teclado; 
+			function teclado(e){ 
+			if (e.keyCode == 65) { 
+			 // alert('ACERTOS')
+			let faltas = prompt('Qual quantidade de faltas')
+			let notas = prompt('Qual é a nota?')
+			let media = 5
+			let faltas_quantidades = 25
+			if (notas >= media && faltas <= faltas_quantidades) {
+				document.write('<h1 style="color: green; text-align: center;"> Aprovado </h1>')
+			}else{
+				document.write('<h1 style="color: red;text-align: center"> Reprovado </h1>')
+				// document.write("<h3 style="color: red;> Reprovado </h3>")
+				// alert('Não foi preenchido corretamente')
+			}
+
+
+			       } 
+			else if (e.keyCode == 40) { 
+			 // alert('dsadaw')
+			         } 
+			else if (e.keyCode == 37) { 
+			 // alert('dwadwa')
+			        } 
+			else if (e.keyCode == 39) { 
+			 // alert('dwadawds')
+			       } 
+			}
+
+</script>
+</body>
+</html>

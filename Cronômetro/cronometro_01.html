@@ -1,0 +1,250 @@
+ <!DOCTYPE html>
+	<html>
+<head>
+	<meta charset="utf-8">
+	<html lang="pt-br">
+	<title>Cronômetro</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+	<body>
+	
+		<!-- <div id="pai">
+		<div id="principal_menu_original">
+			<i class="fas fa-bars"></i>
+			<br>		
+			<l style="font-size: 30px;">Sobre</l>
+			<br>
+			<l style="font-size: 30px;">Alterar cor</l>
+		</div>
+		</div> -->
+		
+
+ 		<style>
+	#pai{
+		/*background-color: white;*/
+		padding: 20px;
+		position: fixed;
+		height: 800px;
+		width: 200px;
+		}
+	 #pai #principal_menu_original{
+		color: white;
+		position: fixed; 	
+		font-size: 40px;
+		left: 25px;
+		top: 20px;
+	}
+	</style>			
+		<script>
+	/*	 let option_01,option_02;
+	var z;
+	z = 0;
+document.querySelector('l').style.display = 'none';
+	document.getElementById('principal_menu_original').onclick = function(){
+		 switch(z){
+			case 0:
+			z += 1;
+			document.getElementById('principal_menu_original').style.color = 'black';
+	 		document.querySelector('#pai').style.background = 'white';
+			document.querySelector('l').style.display = 'inline-block';
+	//document.querySelector('l').onclick = () => {
+		window.open('https://www.google.com.br');
+	}
+			break;
+			case 1:
+ 			document.getElementById('principal_menu_original').style.color = 'white';
+ 			document.querySelector('#pai').style.background = '#000';
+	 		document.querySelector('l').style.display = 'none';
+			z -= 1;
+			break;
+		}
+
+	}
+*/
+	 
+		</script>
+
+	<style>
+	h1{
+	color: white;font-size: 40px;font-family: arial;
+	}
+	*{
+	font-family: Consolas;
+	} a:hover{
+			/*background-color: yellow;*/
+			font-size: 25px;	
+		 	transition: 0.2s;
+	}	
+	</style>
+	<center>
+	<h1 style="display: inline"> 0 </h1>
+	<h1 style="display: inline"> 0 </h1>
+	<h1 style="display: inline"> : </h1>
+	<h1 style="display: inline"> 0 </h1>
+	<h1 style="display: inline"> 0 </h1>
+	<h1 style="display: inline"> : </h1>
+	<h1 style="display: inline"> 0 </h1>
+	<h1 style="display: inline"> 0 </h1>
+	<br><br>
+<div id="original" style="display: inline;">
+<i id="button_01" class="fas fa-pause" style="font-size: 20px;background-color: #000;border: 1px solid #fff;color: white;border-radius: 10px;padding: 15px;">
+<k><a>Pausar</a> </k>
+</i> 
+<i id="button_02" class="fas fa-play" style="font-size: 20px;background-color: #000;border: 1px solid #fff;color: white;border-radius: 10px;padding: 15px;display: none;">
+<k><a>Iniciar</a></k>
+</i> 
+</div> 
+
+<i id="marcar" class="fas fa-marker" style="font-size: 20px;background-color: #000;border: 1px solid #fff;color: white;border-radius: 10px;padding: 15px;">
+<k><a>Marcar</a></k>
+</i>  
+ 
+	</center>
+	</body>
+
+	<script type="text/javascript">
+		document.body.style.background = '#000';	
+		
+	 	let b_01,b_02,x,y,y_z;
+		x = 0;y = 1;y_z=1;
+		b_01=document.querySelector('#button_01');
+		b_02=document.querySelector('#button_02');
+		document.querySelector('#original').onclick = () => {
+			switch(x){
+			case 0:
+			x += 1;y -= 1;	
+			y_z -= 1;
+		b_01.style.display = 'none';
+		b_02.style.display = 'inline-block';
+			break;
+			case 1:
+			x -= 1; y += 1;
+			y_z += 1;
+		b_01.style.display = 'inline-block';
+		b_02.style.display = 'none';
+			break;
+			default:
+			}
+		}
+		
+	//VARIÁVEIS GERAIS
+	var numeros,x_001,x_002,x_003,x_004,x_005,x_006,letras,h_01,h_02,h_03,h_04,h_05,h_06;
+	//NÚMEROS VARIÁVEIS
+	x_001=0;x_002=0;x_003=0;x_004=0;x_005=0;x_006=0;
+	h_01=document.getElementsByTagName('h1')[0];h_02=document.getElementsByTagName('h1')[1];
+	h_03=document.getElementsByTagName('h1')[3]; h_04=document.getElementsByTagName('h1')[4]
+	h_05=document.getElementsByTagName('h1')[6]; h_06=document.getElementsByTagName('h1')[7]
+		setInterval(
+		() => {
+			if(y >= 1){
+			// console.log('Olá')
+
+			x_001+=1;
+			h_06.innerText = x_001; 
+			if(x_001 >= 9){
+			x_002 = x_002 + 1;
+			x_001=0;
+			h_05.innerText = x_002;
+			} if(x_002 >= 6){
+			x_003 = x_003 + 1;
+			x_002=0;
+			x_001=0;
+			h_06.innerText = x_001;
+			h_05.innerText = x_002;
+			h_04.innerText = x_003;
+			} if(x_003 >= 9){
+			x_004 = x_004 + 1;
+			x_003 = 0;
+			x_002 = 0;
+			x_001 = 0;
+			h_06.innerText = x_001;
+			h_05.innerText = x_002;
+			h_04.innerText = x_003;
+			h_03.innerText = x_004;
+			} if(x_004 >= 6){
+				x_005 = x_005 + 1;
+				x_004=0;
+				x_003=0;
+				x_002=0;
+				x_001=0;
+			h_06.innerText = x_001;
+			h_05.innerText = x_002;
+			h_04.innerText = x_003;
+			h_03.innerText = x_004;
+			h_02.innerText = x_005;
+			}  if(x_005 >= 9){
+				x_006 = x_006 + 1;
+				x_005=0;
+				x_004=0;
+				x_003=0;
+				x_002=0;
+				x_001=0;
+			h_06.innerText = x_001;
+			h_05.innerText = x_002;
+			h_04.innerText = x_003;
+			h_03.innerText = x_004;
+			h_02.innerText = x_005;
+			h_01.innerText = x_006;
+			}
+			}
+			}, 100)
+		 var aumentador;
+		aumentador = 0;
+		setInterval(function(){
+		if(y_z >= 1 && y >= 1){
+ 		 	aumentador += 2;
+			h_01.style.fontSize = aumentador + 'px';
+			h_02.style.fontSize = aumentador + 'px';
+	document.getElementsByTagName('h1')[2].style.fontSize = aumentador + 'px';
+			h_03.style.fontSize = aumentador + 'px';
+			h_04.style.fontSize = aumentador + 'px';
+	document.getElementsByTagName('h1')[5].style.fontSize = aumentador + 'px';
+			h_05.style.fontSize = aumentador + 'px';		
+			h_06.style.fontSize = aumentador + 'px';
+		//console.log(aumentador)
+			if(aumentador >= 180){
+			aumentador = 180;
+			}}
+		if(y_z === 0 && y === 0){
+		//console.log('Funcionou');
+			aumentador -= 2;
+			h_01.style.fontSize = aumentador + 'px';
+			h_02.style.fontSize = aumentador + 'px';
+	document.getElementsByTagName('h1')[2].style.fontSize = aumentador + 'px';
+			h_03.style.fontSize = aumentador + 'px';
+			h_04.style.fontSize = aumentador + 'px';
+	document.getElementsByTagName('h1')[5].style.fontSize = aumentador + 'px';
+			h_05.style.fontSize = aumentador + 'px';		
+			h_06.style.fontSize = aumentador + 'px';
+			if(aumentador <= 60){
+			aumentador = 60;
+			}
+		}})
+	/*
+	for(var x_i = 0;x_i < 100;x_i++){
+		document.write('<br>');
+	}*/
+
+		//MARCAÇÃO
+		let k_01,y_01_s,array_01;
+		y_01_s = 0;
+		array_01 = [];
+		k_01=document.getElementById('marcar');
+		k_01.onclick = () => {
+y_01_s += 1;
+	var selcionador,datas_atuais,meses;
+meses = Array(1,2,3,4,5,6,7,8,9,10,11,12)
+datas_atuais = new Date()
+	selecionador = (x_006 + '' + x_005 + ':' + x_004 + '' + x_003 + ':' + x_002 + '' + x_001)
+var dados = datas_atuais.getDate() + '/' + meses[datas_atuais.getMonth()] + '/' + datas_atuais.getFullYear();
+	array_01.push('<h3 style="color: white;font-size: 30px;font-family: arial;">' + y_01_s + ') cronômetro: '+ selecionador + ' data: ' +  dados + ' horas: ' + datas_atuais.getHours() + ':' + datas_atuais.getMinutes() + ':' + datas_atuais.getSeconds() + '<hr>')
+	//console.log(array_01)
+	//alert(selecionador)
+		 var myWindow = window.open("", "", "width=1000,height400");
+		myWindow.document.write('<body style="background-color: #000"><center><div style="overflow: auto;height: 800px;width: 1100px;"> ' + array_01.join('') + '</div></center></body>');
+		}
+
+	document.write('<center><p style="font-family: consolas;color: white;"> Criado por Caio Rodrigues (Caioba) </p></center>');
+	</script>	
+	</html>
+ </!DOCTYPE html>

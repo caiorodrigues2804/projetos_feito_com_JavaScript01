@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body onscroll="teste()">
+
+	<p style="margin-top:10000px;">Testes</p>
+	 <script>
+	 	let hs,numerador;
+	 	numerador = 0
+	 	hs = document.createElement(`div`)
+	 	let b = 	 	document.getElementsByTagName('body')[0] 
+	 	document.getElementsByTagName('body')[0].appendChild(hs)
+ 						
+	 	hs.style = `
+	 	background: #ccc;
+	 	border: 1px solid #000;
+	 	height:30px;
+	 	position: fixed;
+	 	top: 20px;
+	 	`
+	 	hs.style.width = numerador + 'px'
+	  		let numbers;
+	  		numbers = document.createElement(`h2`)
+			b.appendChild(numbers)
+				numbers.style = `
+				position: fixed;
+				top: 20px;
+				`
+	 	function teste() {
+ 			numerador +=8;
+ 			hs.style.width = numerador + 'px'
+	 	 		numbers.innerHTML = numerador
+	 	 		 
+	 	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+ 	let nome = 'Caio'
+	let idade = 20
+	let sexo = 'Masculino'
+	let profissao = 'Estudante de programação'
+
+	let objeto = {
+		nome: nome,
+		idade: idade,
+		sexo: sexo,
+		profissao: profissao,
+		Caiobada: function() {
+			console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+		}
+	}
+	console.log(objeto)
+	objeto.Caiobada()
+
+	let objeto2 = {
+		nome,
+		idade,
+		sexo,
+		profissao,
+		Caiobada(){
+			console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+		}
+	}
+	console.log(objeto2)
+	objeto2.Caiobada()
+	</script>
+</body>
+</html>

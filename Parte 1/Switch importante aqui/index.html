@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Switch</title>
+</head>
+<body>
+	<!-- <script type="text/javascript">
+	 var caioba = prompt('digite um nome');
+
+	 switch(caioba){
+	 	case"caioba"
+	 	document.write('caioba')
+	 }
+
+	</script>
+ -->
+
+<!-- CÓDIGO RECOMENDADO -->
+<!-- <script type="text/javascript">
+  var caioba = prompt('digite um nome')
+     switch(caioba){
+            case "caioba":
+                document.write('caioba')
+                break
+            default:
+                document.write('Default')
+        }
+   	</script>  -->
+
+   <!-- 	<script type="text/javascript">
+  		var caioba = prompt('digite um nome')
+      	switch(caioba){
+    	 	 case "caioba":
+    	 	document.write('caioba')
+    	 	break
+    	 	default:
+    	 	document.write('Default')
+    	 } 
+
+
+   	</script>
+ -->
+ <script type="text/javascript">
+ 	 // str.length
+ 	function caioba(){
+ 		alert('Olá seja bem vindo')
+ 		var nome = prompt('Digite seu nome:')
+ 		
+ 		alert('Olá, ' + nome ) 
+ 		var sobrenome = prompt('Digite seu Sobrenome')
+ 		var estado = prompt('Me informe seu estado que você mora')
+ 		alert('Ok')
+ 		caioba02()
+ 		function caioba02(){
+
+ 			alert(nome + ' ,mas você terá que fazer os testes para concluír')
+			var soma = prompt('Quanto é 20 + 20?')
+			var media = 40
+			soma = parseInt(soma)
+			media = parseInt(media)
+			// switch(soma){
+			// 		case (soma === media):
+		 //    	 	document.write('você passou');
+		 //    	 	break;
+		 //    	 	case (soma != media):
+		 //    	 		document.write('você não passou');
+			//     	default:
+			//     	document.write('você não passou');
+
+			// }  
+
+		        switch(parseInt(soma)){
+		            case 40:
+		            	caioba03()
+		                function caioba03(){
+		                	alert('Legal,' + nome + ' você conseguiu passa o teste simples')
+		                }
+		                break
+		            default:
+		                document.write('Não passou')
+		       		 } 
+
+
+ 		}
+ 	}	
+ 	caioba()
+
+ </script>
+
+</body>
+</html>

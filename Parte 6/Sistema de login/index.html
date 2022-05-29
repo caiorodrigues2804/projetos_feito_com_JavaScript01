@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title></title>
+ </head>
+ <body onload="backs('#ccc')">
+ 	<script type="text/javascript">
+	 		function backs(cor) {
+	 				document.body.style.background = cor
+	 		}
+
+	 		let historicos;
+	 		historicos= []
+	 		let b; b = document.body;
+	 		let x,numerador; x = numerador = 0
+	 		if (localStorage.Numeradores !== undefined) {
+	 			x = parseInt(localStorage.Numeradores)
+	 		}
+	 		// Centralizador
+	 		let cen; cen = document.createElement('center'); b.appendChild(cen)
+	 		let hs; hs = document.createElement('h1'); cen.appendChild(hs); hs.innerHTML = 'Sistema de Login'
+	 		// Email
+	 		let ds; ds = document.createElement('input'); cen.appendChild(ds)
+	 		ds.style.fontSize = 20 + 'px'; ds.placeholder = 'Digite seu E-mail'
+	 		ds.style.display = 'block'
+	 		let ds02; ds02 = document.createElement('input'); cen.appendChild(ds02)
+	 		ds02.style.fontSize = 20 + 'px'; ds02.placeholder ='Digite sua senha'; ds02.type = 'password'
+
+			ds02.style.display = 'block'
+			ds02.style.marginTop = 2 + 'px'
+			// Entrar
+			let ds03; ds03 = document.createElement('input'); cen.appendChild(ds03)
+			ds03.type = 'button'
+			ds03.style.fontSize = 20 + 'px'
+			ds03.style.width = 251 + 'px'
+			ds03.value = 'Entrar'
+		 	
+		 	let conversor,debugging,i;
+		 	// i = 0
+		 	conversor = localStorage.HD
+		 	if (conversor !== undefined) {
+		 	debugging = JSON.parse(localStorage.HD)
+		 	let indicador;
+		 		indicador = Array()
+		 	for(i = 0;i <= debugging.length;i++){
+		 		if (i < debugging.length) {
+		 			historicos.push(debugging[i])
+		 		}
+		 	}
+		 	}
+		 
+			ds03.onclick = () =>{
+				if (historicos.indexOf(ds.value) !== -1) {
+					if (historicos.indexOf(ds02.value) !== -1) {
+						alert('Já está em uso')
+						ds02.value = ''
+						ds.value = ''	
+					}
+				}else{
+					x +=1;
+				localStorage.Numeradores = x 
+				class armazem{
+					constructor(x,v,v02){
+						 historicos.push(v,v02)
+						 localStorage.setItem(x, JSON.stringify(historicos))
+						 localStorage.setItem('HD', localStorage.getItem(x))
+						 let janela;
+						 janela = window.open('','MsgWindow','width=500,height=700')
+						 janela.document.write('<h1> Foi logado com sucesso')	
+					}	
+				}
+				let testes = new armazem(x,ds.value,ds02.value)
+				ds02.value = ''
+				ds.value = ''	
+				}
+			
+			}
+ 
+		 
+			  
+ 	</script>
+ </body>
+ </html>

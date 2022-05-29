@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<html lang="pt-br">
+<meta charset="utf-8">
+<title>Criar contagem regressiva</title>
+	</head>
+<body>
+<script>
+		var datas,meses,meses_dia;
+		datas = new Date();
+		meses = Array('janeiro','ferveiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro');
+		meses['dias_da_semana'] = ['','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo']
+		document.write('<h3>' + datas.getDate() + ' de ' + meses[datas.getMonth()] + ' de ' + datas.getFullYear());
+		document.write('<br>');
+		document.write('Hoje é ' + meses['dias_da_semana'][datas.getDay()]);
+		document.write('<br>');
+		document.write('Criado por Caio Rodrigues (Caioba) </h3>')
+</script>
+<center>
+	<h1>Criar contagem regressiva</h1>
+
+	<input 
+	type="button"
+	value="Criar"
+	style="font-size: 20px;width: 200px;"
+	onclick="acao()"
+	/>
+	<br>	<br>
+<!-- DIV PRIMÁRIA --->
+<div style="background: grey;display: none;padding: 20px;border: 2px double #000;border-radius: 10px;" class="div_pai">
+	<!-- DIV SECUNDÁRIA --->
+	<div style="background: lightgrey;display: inline-block;padding: 15px;border: 1px solid #000;border-radius: 10px;">
+<!-- Mês --->
+	<input
+	id="mes"
+	type="number"
+	min="1"
+	max="12"
+	placeholder="Mês"
+	style="font-size: 20px;"
+	/>
+<!-- Dia --->
+	<input
+	id="dia"
+	type="number"
+	min="1"
+	max="31"
+	placeholder="Dia"
+	style="font-size: 20px;"
+	/>
+<!-- Ano --->
+	<input
+	id="ano"
+	type="number"
+	placeholder="ano"
+	style="font-size: 20px;width: 100px;"
+	/>
+<!-- HORAS --->
+	<input
+	id="horas"
+	type="number"
+	min="0"
+	max="24"
+	placeholder="horas"
+	style="font-size: 20px;width: 100px;"
+	/>
+<h1 style="display: inline;">:</h1>
+<!-- MINUTOS --->
+	<input
+	id="minutos"
+	type="number"
+	min="0"
+	max="60"
+	placeholder="minutos"
+	style="font-size: 20px;width: 100px;"
+	/>
+<h1 style="display: inline;">:</h1>
+<!-- SEGUNDOS --->
+	<input
+	id="segundos"
+	type="number"
+	min="0"
+	max="60"
+	placeholder="segundos"
+	style="font-size: 20px;width: 100px;"
+	/>
+	</div>
+<br>
+<br>
+<input 
+type="button"
+value="Criar"
+style="font-size: 20px;width: 200px;"
+class="criador"
+/>
+</div>
+<br>
+<br>
+	<div class="reprodutor" style="overflow: auto;display: inline-block;background:  #ccc;padding: 10px;width: 700px;height: 600px;">
+	</div>
+<!-- var data = new Date('april 28, 2001 16:00:00').getTime()-->
+	<script type="text/javascript">
+	document.getElementsByTagName('body')[0].style.background="#ccc";
+	document.getElementsByTagName('h1')[0].style.fontFamily = 'arial';
+	
+var x,br_s,selecionador;
+x=0;
+var d;
+d =0;
+selecionador=document.querySelector('.criador');
+ 
+	function acao(){
+ 	switch(x){
+	case 0:
+x+=1;
+document.getElementsByClassName('div_pai')[0].style.display="inline-block"
+document.getElementsByTagName('input')[0].value="Esconder"
+ selecionador.onclick = () => {
+	d+=1;
+	console.log(d)
+	 //
+	var meses,dias,anos,horas,minutos,segundos;
+	meses=document.getElementById('mes').value;
+	dias=document.getElementById('dia').value;
+	anos=document.getElementById('ano').value; 
+	horas=document.getElementById('horas').value;
+	minutos=document.getElementById('minutos').value; 
+	segundos=document.getElementById('segundos').value;
+	//H1
+	var h_s,h_s_2;
+	h_s_2=document.createElement('h2')
+	document.getElementsByClassName('reprodutor')[0].appendChild(h_s_2);
+	h_s_2.innerHTML = d + ') ' + ' Contagem regressiva';
+	h_s_2.style.fontFamily = 'arial';
+	h_s=document.createElement('h1');
+	document.getElementsByClassName('reprodutor')[0].appendChild(h_s);
+var datas_atuais,data_estabelecida,subtraindo;
+//data_estabelecida = new Date('april 28, 2001 16:00:00').getTime()
+//data_estabelecida = new Date(meses + ' '+ dias + ', 2001 16:00:00').getTime()
+data_estabelecida = new Date(meses + ' '+ dias + ', ' + anos + ' ' + horas + ':' + minutos + ':' + segundos).getTime()
+	setInterval(()=>{datas_atuais= new Date().getTime();subtraindo=Math.abs(datas_atuais - data_estabelecida);atualizador();})
+	function atualizador(){
+	var anos,meses,dias,horas,minutos,segundos,mss;
+	anos=Math.floor(subtraindo / (365 * 24 * 60 * 60 * 1000));meses=Math.floor(subtraindo / (24 * 30 * 60 * 60 * 1000));
+	dias=Math.floor(subtraindo / (24 * 60 *60 * 1000));horas=Math.floor(subtraindo % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+	minutos=Math.floor(subtraindo % (60 * 60 * 1000) / (60 * 1000));segundos=Math.floor(subtraindo % (60 * 1000) / (1000));
+	mss = subtraindo;
+h_s.innerHTML='<h3 style="font-family: arial;font-size: 30px;">'  + anos + ' anos ' + meses + '  meses ' + dias + 'd ' + horas + 'h ' + minutos + 'm ' + segundos + 's ' + mss + 'mss </h3>';
+/*var h_1_sw;
+h_1_sw =[];
+h_1_sw.push(document.getElementsByTagName('h3'));
+//console.log(h_1_sw)
+for(let i = 0;i <= h_1_sw.length;i++){
+	h_1_sw[i].style.fontFamily = 'arial';
+}*/
+}}	
+	break;
+	case 1:
+x-=1;
+document.getElementsByClassName('div_pai')[0].style.display="none"
+document.getElementsByTagName('input')[0].value="Criar"
+	break;
+	}}
+ 
+	
+ 
+
+
+//(function(){alert('Olá usuário')})();
+	</script>
+</center>	
+</body>
+</html>
+</!DOCTYPE html>

@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+  	<script type="text/javascript">
+  		document.body.style.background = '#ccc'
+  		let b; 
+  		b = document.body
+  			let hs; hs = document.createElement('h1'); b.append(hs)
+  			hs.innerHTML = 'Salvar os dados'
+  			// Input
+  				let inputs;inputs= document.createElement('input'); b.append(inputs)
+  				inputs.type ='text'; inputs.placeholder = 'Digite alguma coisa aqui'
+	 			inputs.style.fontSize = 17 + 'px'
+	 			let numerador;
+	 			if (localStorage.Numerador !== undefined ) {
+	 				numerador = parseInt(localStorage.Numerador)
+	 			}else{
+	 			numerador = 0
+
+	 			}
+
+	 			// Inputss Button
+				let inputs_button,inds; 
+					let historicos;
+					if(localStorage.armazem !== undefined){
+						historicos = JSON.parse(localStorage.getItem(`HD`))
+					}else{
+						historicos = Array()
+					}
+				inds = inputs_button = document.createElement('input');b.appendChild(inds)
+	 		 	inds.type = 'button'
+	 		 	inds.value = 'Salvar o dado'
+	 		 	inds.style.fontSize = 17 + 'px'
+				inds.onclick = () => {
+					let testes = () =>{
+						numerador +=1;
+						localStorage.Numerador = numerador
+						console.log(localStorage.Numerador)
+						let x; 
+					/*		localStorage.setItem(indicador,nome)
+	 				historicos.push(localStorage.getItem(indicador))
+					localStorage.setItem(`Armazenamento`, JSON.stringify(historicos))	*/ 
+						x = inputs.value 
+						let hdws; hdws = document.createElement('h1');b.appendChild(hdws)
+						hdws.innerText = x
+					 	inputs.value = ''
+						if(x !== '' || x !== undefined){
+							class dados{
+								constructor(id,valor){
+									localStorage.setItem(id, valor)
+									historicos.push(localStorage.getItem(id))
+									localStorage.setItem(`HD`, JSON.stringify(historicos))
+								}
+							}
+							let 
+							testes_new = new dados(numerador, x)
+						}
+
+					}
+					testes()
+				}
+				let salvar_dados,climatizador,z;
+				climatizador = localStorage.getItem(`HD`)
+				salvar_dados = JSON.parse(climatizador)
+				for(z = 0;z <= salvar_dados.length;z++){
+				 	 if (z < salvar_dados.length) {
+				 	 	console.log(z)
+						let hds;
+						hds = document.createElement('h1'); b.append(hds)
+						hds.innerText = salvar_dados[z]
+				 	 }
+					
+					 
+				}
+
+
+  	</script>
+ </body>
+ </html>

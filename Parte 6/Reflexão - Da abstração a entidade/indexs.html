@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<html lang="pt-br">
+ 	<meta charset="utf-8">
+ 	<title>javaScript</title>
+ </head>
+ <body onload="backgrounds('#ccc')">
+ 	<script type="text/javascript">
+ 		function backgrounds(cor) {
+ 			document.body.style.background = cor
+ 		}
+ 			class Sofas{
+ 				constructor(lugares,reclinavel,cor){
+ 					this.lugares = lugares
+ 					this.reclinavel= reclinavel
+ 					this.cor = cor
+ 				}
+ 				sofas_reclinavel(){
+ 					if (this.reclinavel === true) {
+ 						console.log('O sofá é reclinável')
+ 					} else{
+ 						console.log('O sofá não é reclinável')
+ 					}
+ 				}
+ 			}
+ 			let sofas,sofas2;
+ 				sofas = new Sofas(4, false, 'Cinza')
+ 				sofas.sofas_reclinavel()
+ 				sofas2 = new Sofas(5, true, 'Marrom')
+ 				sofas2.sofas_reclinavel()
+ 	</script>
+ </body>
+ </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta charset="utf-8">
+<html lang="pt-br">
+<title>Contagem regressiva</title>
+	</head>
+	<body>
+<style>
+	body{
+		background-color: #ccc;
+	} #id_01{
+		border: 1px solid #000;
+		display: inline-block;
+		padding: 30px;
+		border-radius: 10px;
+		text-align: center;
+		width: 100px;
+		margin: 5px;
+ 
+	} #id_02{
+		font-size: 15px;
+	} * h1{
+		font-family: Microsoft JhengHei;
+ 		font-size: 40px;
+		}
+</style>
+	<center>
+	<div class="meses" id="id_01">
+	<!-- <h1>april <br><k id="id_02">mes</k></h1> -->
+	</div>
+	<div class="dias"  id="id_01">
+	<!-- <h1>28 <br><k id="id_02"> dias</k></h1> -->
+	</div>
+	<div class="anos"  id="id_01">
+	<!-- <h1>16 <br><k id="id_02">anos</k></h1> -->
+	</div>
+
+	<div class="horas" id="id_01">
+	<!-- <h1>16 <br><k id="id_02">horas</k></h1> -->
+	</div>
+	<div class="minutos" id="id_01">
+	<!-- <h1>00 <br><k id="id_02">minutos</k></h1> -->
+	</div>
+	<div class="segundos" id="id_01">
+	<!-- <h1>00 <br><k id="id_02">segundos</k></h1> -->
+	</div>
+
+
+<h1 id="output"/></h1>
+	</center>
+	<script type="text/javascript">
+		let meses,dias,anos,horas,minutos,segundos;
+		meses = document.querySelector('.meses'); dias = document.querySelector('.dias')
+		anos = document.querySelector('.anos'); horas = document.querySelector('.horas');
+		minutos = document.querySelector('.minutos'); segundos = document.querySelector('.segundos');
+		
+
+		//LETRAS
+		let h_s,h_s_02,h_s_03,h_s_04,h_s_05,h_s_06;
+		h_s=document.createElement('h1');
+		meses.appendChild(h_s);
+	
+		h_s_02=document.createElement('h1');
+		dias.appendChild(h_s_02);
+		
+		h_s_03 = document.createElement('h1');
+		anos.appendChild(h_s_03)
+	
+		h_s_04 = document.createElement('h1');
+		horas.appendChild(h_s_04);
+
+		h_s_05 = document.createElement('h1');
+		minutos.appendChild(h_s_05);
+
+		h_s_06 = document.createElement('h1');
+		segundos.appendChild(h_s_06)
+		
+
+	let dias_horas_atuais,data,divisor;
+	data = new Date('april 28, 2001 16:00:00').getTime();
+setInterval(() => atualizador())
+		function atualizador(){
+		let meses,dias,horas,minutos,segundos,anos;
+		dias_horas_atuais = new Date().getTime();
+	divisor = dias_horas_atuais - data;
+	meses = Math.floor(divisor / (30 * 24 * 60 * 60 * 1000));
+	anos = Math.floor(divisor / (365 * 24 * 60 * 60 * 1000));
+	dias = Math.floor(divisor / (24 * 60 * 60 * 1000));
+	horas = Math.floor(divisor % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+	minutos = Math.floor(divisor % (60 * 60 * 1000) / (60 * 1000));
+	segundos = Math.floor(divisor % (60 * 1000) / (1000));
+	//console.log(segundos)
+		h_s.innerHTML = '<h1> ' +  meses + '  <br><k id="id_02">mes</k></h1>'
+		h_s_02.innerHTML = '<h1> '  + dias + ' <br><k id="id_02"> dias</k></h1>'
+		h_s_03.innerHTML = '<h1> ' + anos + '<br><k id="id_02">anos</k></h1>' 
+		h_s_04.innerHTML = ' <h1>' + horas + '<br><k id="id_02">horas</k></h1>'
+		h_s_05.innerHTML = '<h1> ' + minutos + ' <br><k id="id_02">minutos</k></h1> '
+		h_s_06.innerHTML = '<h1> ' + segundos + ' <br><k id="id_02">segundos</k></h1>'
+		}
+	/*
+	let output,x,valor_usuario;
+	x = 0;
+	output = document.getElementById('output');
+ 
+	let atual = function(){
+		valor_usuario = prompt('Digite um valor');
+		if(valor_usuario >= 1000){
+		alert('Valor inválido');
+		atual();
+		}
+	}
+	atual()
+ 
+	let inp;
+	inp = document.createElement('input');
+	document.getElementsByTagName('body')[0].appendChild(inp);
+	inp.value = 'Clique aqui';
+	inp.type = 'button'
+	inp.style.fontSize = 20 + 'px';
+	inp.onclick = () => bixin();
+	let arrays;
+	arrays = Array();	
+	function bixin(){
+		var valor;
+		valor = prompt('Digite alguma coisa');
+	if(arrays.indexOf(valor) !== -1){
+	let dados;
+	dados = arrays.indexOf(valor);	
+	alert('Já existe ' + dados)
+	window.open('https://www.google.com.br');
+		
+	} if(!(arrays.indexOf(valor) !== -1)){
+		arrays.push(valor)
+	}
+		
+	}
+	//alert(typeof valor_usuario)
+	//alert(typeof Number(valor_usuario));
+	var msg = '';
+	while(x < Number(valor_usuario)){
+	x += 1;
+	//msg += x + '<br>'
+		if(x != 6 && (x % 2 === 0)){
+		msg += x + '   Par <br>';
+		} 
+		if(x != 11 && !(x % 2 === 0)){	
+			msg += x + ' ímpar <br>';
+		} 
+		 
+	}
+	
+	let dados,dados_02,somas;
+	dados = Array(2,2,4,8,10,14,200,10000);
+	somas = 0;
+	for(let i = 0;i < dados.length;i++){
+		//console.log('Olá')	
+		somas += dados[i]
+	}
+	console.log((somas))
+	
+
+	output.innerHTML = msg
+*/
+	</script>
+	
+	<!--- new Date('mes dias, anos horas:minutos:segundos') --->
+	</body>
+</html>
+</!DOCTYPE html>

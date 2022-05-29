@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	class carros{
+		constructor(marca,modelo,cor){
+			this.marca = marca
+			this.modelo = modelo
+			this.cor=cor
+			this.ligado=false
+			this.km=0
+			this.comb = 50
+		}
+		info(){
+			console.log("Marca........: " + this.marca)
+			console.log("Modelo.......: " + this.modelo)
+			console.log("Cor..........: " + this.cor)
+			console.log("Ligado.......: " + (this.ligado ? 'Sim' : 'Não'))
+			console.log("Km...........: " + this.km)
+			console.log("Combustível..: " + this.comb)
+			console.log("..........................")
+		}
+		ligar(){
+			this.ligado=true
+		}
+		desligar(){
+			this.ligado=false
+		}
+		set setComb(v){
+			if (v<0 || v>100) {
+				alert('valor inválido')
+			}else{
+
+			this.comb=v
+			console.log("Combustível alterado, valor atual: " + this.comb)
+			}
+		}
+		get getComb(){
+			return this.comb
+		}
+	}
+
+	let c1 = new carros('Honda','HRV','Prata')
+	let c2 = new carros('VW','Golf','Branco')
+	let c3 = new carros('GM','Camaro','Preto')
+	let c4 = new carros('Ford','Mustang','Vermelho')
+
+	c1.setComb=120
+	console.log(c1.getComb)
+
+ 		c1.ligar()
+		c1.info()
+	</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+<meta charset="utf-8">	
+	<title>JavaScript testes</title>
+</head>
+<body style="background-color: #ccc;">
+	<center>
+	<h1>JavaScript cronômetro </h1>
+	 
+<h1 id="dados08" style="display: inline;">0</h1>		
+<h1 id="dados07" style="display: inline;">0</h1>
+<h1 style="display: inline;">:</h1>	
+
+<h1 id="dados06" style="display: inline;">0</h1>		
+<h1 id="dados05" style="display: inline;">0</h1>
+<h1 style="display: inline;">:</h1>
+ 		
+<h1 id="dados04" style="display: inline;">0</h1>		
+<h1 id="dados03" style="display: inline;">0</h1>
+<h1 style="display: inline;">:</h1>
+
+		
+<h1 id="dados02" style="display: inline;">0</h1>		
+<h1 id="dados01" style="display: inline;">0</h1>
+
+<br>
+<br>
+ 
+<button onclick="window.location.reload()" style="font-size: 15px;">
+	Refazer o teste novamente
+</button>
+
+</center>
+ <script type="text/javascript">
+ 
+
+
+let caio = 0
+try{
+ let i = 0
+ let y = 0
+ let o = 0
+ let m = 0
+ 	// let i = prompt('digite os milissegundos')
+ 	// let y = prompt('digite os milissegundos novamente')
+ 	// let o = prompt('digite os segundos')
+ 	// let m = prompt('digite os segundos novamente')
+ 	let n = prompt('digite a minutos')
+ 	let zz = prompt('digite a minutos novamente')
+ 	let ii = prompt('digite a hora')
+ 	let ll = prompt('digite a hora novamente')
+
+ let x = setInterval(function() {
+ 	 document.querySelector('#dados01').innerHTML = i
+	 document.querySelector('#dados02').innerHTML = y
+	 document.querySelector('#dados03').innerHTML = o 
+	 document.querySelector('#dados04').innerHTML = m
+	 document.querySelector('#dados05').innerHTML = n 
+	 document.querySelector('#dados06').innerHTML = zz
+	  document.querySelector('#dados07').innerHTML = ii 
+	 document.querySelector('#dados08').innerHTML = ll
+ 			 })
+ 
+	
+
+  let x1 = setInterval(function() {
+  let x2 = setInterval(function() {
+ if (i <= 0 && y <= 0  && o <= 0 && m <= 0 && n <= 0 && zz <= 0 && ii <= 0 && ll <= 0) {
+  	caio += 1
+  	if (caio >= 1) {
+  		caioba()
+  		clearInterval(x1)
+  		clearInterval(x2)
+  	 
+  	}
+ }
+ 
+ 		if (i > 9 && i < 0) {
+ 			i = 10
+ 		} if (y > 5 && y < 0) {
+ 			y = 5
+ 		} if (o > 9 && o < 0) {
+ 			o = 9
+ 		} if (m > 5 && m < 0) {
+ 			m = 5
+ 		} if (n > 9 && n < 0) {
+ 			n = 9
+ 		} if (zz > 5 && zz < 0) {
+ 			zz = 5
+ 		} if (ii > 9 && ii < 0) {
+ 			ii = 5
+ 		} if (ll > 5 && ll < 0) {
+ 			ll = 5
+ 		}
+ 		})
+
+
+ 		 i -= 4
+ 		 if (i < 0) {
+ 		 	y -= 1
+ 		 	i = 9
+ 		 } if (y < 0) {
+ 		 	o -= 1
+ 		 	y = 5
+ 		 	i = 9
+ 		 } if (o < 0) {
+ 		  	m -= 1
+ 		  	o = 9
+ 		  	y = 5
+ 		  	i = 9
+ 		 } if (m < 0) {
+ 		 	n -= 1	
+ 		 	m = 5
+ 		 	o = 9
+ 		 	y = 5
+ 		 	i = 9
+ 		 } if (n < 0) {
+ 		 	zz -= 1
+ 		 	n = 9
+ 		 	m = 5
+ 		 	o = 9
+ 		 	y = 5
+ 		 	i = 9
+ 		 } if (zz < 0) {
+ 		 	ii -= 1
+ 		 	zz = 5
+ 		 	n = 9
+ 		 	m = 5
+ 		 	o = 9
+ 		 	y = 5
+ 		 	i = 9
+ 		 } if (ii < 0) {
+ 		 	ll -= 1
+ 		 	ii = 9
+ 		 	zz = 5
+ 		 	n = 9
+ 		 	m = 5
+ 		 	o = 9
+ 		 	y = 5
+ 		 	i = 9
+ 		 } 
+ 	}, 8)
+ 
+}  catch(erro){
+	janela = window.open("", "Janela", "width=400,height=600")
+	janela.document.write('<h1>Erros e exceções </h1><hr><h2>O motivo do erro: ' + erro.message + '</h2>')
+}
+let ops = 0
+function caioba() {
+	if (ops <= 0) {
+	ops += 1;
+	alert('O cronômetro foi zerado')
+	}
+}
+</script>
+</body>
+</html>

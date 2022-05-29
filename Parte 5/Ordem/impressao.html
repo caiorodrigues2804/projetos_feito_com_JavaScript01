@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<html lang="pt-br">
+ 	<meta charset="utf-8">
+ 	<title>JavaScript</title>
+ </head>
+ <body>
+		 <script type="text/javascript">
+		 	document.body.style.backgroundColor = "#ccc"
+				 	let object,arrays;
+				 	arrays = []
+		 	let teste =  function (nome,dinheiro) {
+		 		let caio;
+				 	object = {
+				 		nome,
+				 		dinheiro
+				 	}
+				 	arrays.push(object)
+				 	arrays.sort(function(a,b) {
+				 		return b.dinheiro - a.dinheiro
+				 	})
+				  
+			
+		 	}
+ 				let n1 = new teste(`Elizangela`,2300)
+		 		let n2 = new teste(`José`,900)	
+		 			let n3 = new teste(`Marcelo`,20)
+		 		let n4 = new teste(`Caio`,1300)		 
+		 		let n5 = new teste(`Carol`,500)		 
+  		
+  		
+ 		 		let hs,hs2;
+ 		 			for(let bixin = 0;bixin <= arrays.length;bixin++){
+ 		 				if (bixin < arrays.length) {
+ 		 				console.log(arrays[bixin].nome, arrays[bixin].dinheiro)
+ 		 				hs = document.createElement(`h2`)
+ 		 				document.querySelector('body').appendChild(hs)
+ 		 				hs.innerHTML = `Nome: ${arrays[bixin].nome} <br /> Dinheiro:${arrays[bixin].dinheiro}`
+ 		 				}
+ 		 			}
+		 </script>
+ </body>
+ </html>

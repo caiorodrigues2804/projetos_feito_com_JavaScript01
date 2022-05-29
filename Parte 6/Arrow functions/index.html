@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	//1) Sem as Arrow Function 
+	let quadrado = function(x = 5) {
+			return x * x
+	}
+	*/
+
+	/*
+	//2) Utilizando as Arrow Functions
+	let quadrado = (x) => {
+		return x * x
+	}
+	*/
+
+	/*	
+	//3) Utilizando as Arrow Functions com o returno implícito
+	let quadrado = x => x * x //Return implícito
+	document.write( quadrado(3) )
+	*/
+
+	//Par e ímpar
+	/*let parOuImpar = function(numero) {
+		// 8 % 2 = 0
+		//5 % 2 = 1
+		if(numero % 2 === 0)
+	}
+	*/
+
+	//Par e ímpar 2 
+	/*let parOuImpar = function(numero) {
+		let calculo = numero % 2
+		if (calculo === 0) {}
+	}*/
+
+	//Par e ímpar 3
+	/*
+	let parOuImpar = function(numero) {
+		if (numero % 2 === 0) {
+			return 'par'
+		}else{
+			return 'ímpar'
+		}
+	}
+	document.write(parOuImpar(7))
+	*/
+
+	//Utilizando Arrow functions com Par e ímpar 
+	/*
+	let parOuImpar = numero => {
+		if(numero % 2 === 0){
+			return 'par'
+		}else{
+			return 'ímpar'
+		}
+	}
+	document.write(parOuImpar(7))
+	*/
+
+	//Utilizando Arrow Functions com par e ímpar com os operadores ternários
+	let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'ímpar' //return implicito
+	document.write(parOuImpar(2))
+	
+	</script>
+</body>
+</html>

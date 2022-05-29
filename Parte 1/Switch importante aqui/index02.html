@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Teste</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var errado = 0
+		function caioba(){
+		alert('Olá visitante, antes nós precisamos conhecer você')	
+		var nome = prompt('Digite seu nome')
+		alert('Olá ' + nome)
+		var sobrenome = prompt('qual é seu sobrenome')
+		alert('Ok')
+		alert( nome + ', você terá que fazer os testes')
+		 caioba02()
+		 function caioba02(){
+		 	var soma = prompt('2 + 2')
+		 	var media = 4
+		 	soma = parseInt(soma)
+		 	media = parseInt(media)
+		 	switch(parseInt(soma)){
+		 		case 4:
+		 		var acerto = 1
+		 		alert('Parábens ' +nome)
+		 			caioba03()
+		 			function caioba03(){
+		 				alert('Agora vai teste intermediário')
+			 			 var soma = prompt('16 x 4')
+			 			 var media = 64
+		 			 	switch(parseInt(soma)){
+		 			 		case 64:
+		 			 		var acerto = 2
+		 			 		alert('você passou no teste')
+		 			 		  // alert('um teste matemático nível dificil')
+		 			 		   caioba04()
+		 			 		   function caioba04(){
+		 			 		   	 var soma = prompt(" raiz quadrada de 49 multiplicado por 2")
+		 			 		   	 var media = 14
+		 			 		   	 switch(parseInt(soma)){
+		 			 		   	 	case 14:
+		 			 		   	 	var acerto = 3
+		 			 		   	 	alert('Parábens, ' + nome + ' você é fera')
+		 			 		   	 		alert('Agora vem a etapa final')
+		 			 		   	 		caioba05() 
+		 			 		   	 		function caioba05(){
+		 			 		   	 		var soma = promt('Quanto é 8484 x 2')
+		 			 		   	 		var media = 16968
+		 			 		   	 		 switch(parseInt(soma)){
+		 			 		   	 		 	case 16968:
+		 			 		   	 		 	alert('você passou')
+		 			 		   	 		 	break;
+		 			 		   	 		 	default:
+		 			 		   	 		 	errado++; 
+		 			 		   	 		 	alert("você errou ")
+		 									alert('Total de erros ' + errado)
+		 									caioba05()	
+		 			 		   	 		 }
+		 			 		   	 		}
+		 			 		   	 		
+		 			 		   	 	break;
+		 			 		   	 	default:
+		 			 		   	 	errado++; 
+		 			 		   	 	alert("você errou ")
+		 							alert('Total de erros ' + errado)
+		 							caioba04()
+		 			 		   	 }
+
+
+		 			 		   }
+		 			 		break;
+		 			 		default:
+		 			 		errado++; 
+		 			 		alert("você errou ")
+		 					alert('Total de erros ' + errado)
+		 					caioba03()
+
+		 			 	}		
+		 			}
+		 		break
+		 		default:
+		 		errado++; 
+		 		alert("você errou ")
+		 		alert('Total de erros ' + errado)
+		 		caioba02()
+
+		 	}
+		 }
+
+
+		 }
+		caioba()
+	</script>
+</body>
+</html>

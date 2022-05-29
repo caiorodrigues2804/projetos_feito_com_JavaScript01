@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let carro = function() {
+			this.cor = 'Vermelho'
+			this.modelo = 'Uno'
+			this.velocidadeAtual = 0
+			this.velocidadeMaxima = 180
+			this.acelerar = function() {
+				let velocidade = this.getVelocidadeAtual() + 10
+				this.setVelocidadeAtual(velocidade)
+			}
+			this.getVelocidadeAtual = function() {
+				return this.velocidadeAtual
+			}
+			this.setVelocidadeAtual = function(velocidadeAtual){
+				this.velocidadeAtual = velocidadeAtual
+			}
+		}
+		let carros = new carro()
+
+   		//  	carros.acelerar()
+		   // console.log(`A velocidade atual é ${carros.getVelocidadeAtual()}`)
+		   // carros.acelerar()
+		   // carros.acelerar()
+		   // carros.acelerar()
+		   // carros.acelerar()
+		   // console.log(`A velocidade atual é ${carros.getVelocidadeAtual()}`)
+
+		  //ESTUDE ESSE CÓDIGO
+
+		  //  let animalia = function() {
+		  //  	this.cor = 'Cinza, marrom, marrom claro, marrom escuro'
+		  //  	this.dieta = `Ossos e carnes, petiscos, ração, capim`
+		  //  	this.tamanho = `${50} centimetros`
+		  //  	this.sexo = `Fêmea`
+		  //  	this.especie = `Cachorro`
+		  //  	this.raca = `Vira-Lata`
+		  //  	this.nome = `Nina`
+		  //  	this.informacoes = function() {
+		  //  		console.log(`----------------------`)
+		  //  		console.log(`Nome: ${this.nome}`)
+		  //  		console.log(`Raça: ${this.raca}`)
+		  //  		console.log(`Especie: ${this.especie}`)
+		  //  		console.log(`Sexo: ${this.sexo}`)
+		  //  		console.log(`Tamanho: ${this.tamanho}`)
+		  //  		console.log(`Dieta: ${this.dieta}`)
+		  //  		console.log(`Cor: ${this.cor}`)
+		  //  		console.log(`----------------------`)	
+		  //  	}
+		  //  }
+		  // let dog = new animalia()
+		  // console.log(dog)
+		  // dog.informacoes()
+
+  			// Marcenaria
+  			let Marcenaria = function(material, cor, tamanho, nome, giratoria) {
+  				this.material = material
+  				this.cor = cor
+  				this.tamanho = tamanho
+  				this.nome = nome
+  				this.giratoria = ( giratoria === true ) ? 'Sim' : 'Não'
+  				this.info = () =>{
+  					console.log(`Nome: ${this.nome}`)
+  					console.log(`Material: ${this.material}`)
+  					console.log(`Cor: ${this.cor}`)
+  					console.log(`Tamanho: ${this.tamanho}`)
+  					console.log(`Giratoria: ${this.giratoria}`)
+  				}
+  			}
+  			let mesa = new Marcenaria('Madeira','marrom',`${60} cm`, false)
+  			console.log(mesa)
+  			mesa.info()
+	</script>
+
+
+</body>
+</html>

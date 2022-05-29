@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ <html lang="pt-br">
+<link rel="icon" href="https://i.pinimg.com/favicons/eca20f6a6acf277ea590887a1f4e76bf72d8f19b2074a6f0f85a2cc6.png?8feb27fda22c4dd08f06de0f2c3a72b0">
+<meta charset="pt-br">
+	<title>JavaScript teste</title>
+	</head>
+<body>
+	<style>
+	body{
+	background-color: #ccc;
+	} h1{
+	font-family: arial;
+	} #button{
+		font-size: 20px;
+		border: 1px solid #000;
+		border-radius: 4px;
+		margin: 1px;
+	} #inputs{
+			font-size: 20px;
+			border: 1px solid #000;
+			border-radius: 2px;
+			margin: 2px;
+	}
+	</style>
+
+<center>
+<h1>Já existe esse CPF?</h1>
+</center>
+<script>
+	document.write('<center>')
+	document.write('<input type="button" onclick="cadastrar()" value="Cadastrar CPF" id="button">')
+	document.write('<input type="button" onclick="listar_cpf()" value="Lista de CPF cadastrados" id="button">')
+	document.write('</center>')
+//DATA DE CRIAÇÃO
+let data_d,data_dd;
+data_d = () => {
+	return new Date();
+}
+
+let y  = 0;
+
+const arr = new Array();
+	function cadastrar(){
+		let cpf_d = '';
+		let dados = prompt('Digite o seu CPF');
+		if(!(arr.indexOf(dados) != -1)){
+		if(dados.length === 11){
+		y += 1;
+		//000.000.000-94
+		//console.log(dados.length)
+		const nina= new Array();
+		for(let i = 0;i <= dados.length;i++){
+			if(i < dados.length){
+			nina.push(dados[i])
+			 if(i === 2 || i === 5){
+				nina.push('.')
+			} if(i === 8){
+				nina.push('-')
+			}
+			}
+		}
+		let cpf_d = '';
+	 	for(let x = 0;x < nina.length;x++){
+			cpf_d = cpf_d += nina[x];
+		}
+			//console.log(cpf_d)
+///<h2 style="font-family: arial;">'+ y + ') CPF..: '+   Data..: ' + 
+		dados = ('<tr><td><h2 style="font-family: arial;padding: 10px;">' + cpf_d + '</h2></td><td><h2 style="font-family: arial;padding: 10px;">' + data_d().getDate() + '/' + (data_d().getMonth() + 1) + '/' + data_d().getFullYear() + '</h2></td></tr>')
+		dados = dados += '<br>'
+		arr.push(dados)
+		alert('Foi cadastrado com sucesso')
+		}else{
+		alert('O CPF deve possuir 11 caracteres');
+		}
+		}else{
+			window.alert('Já existe esse CPF cadastrado');
+		}
+		
+	}
+
+	listar_cpf = () => {
+let dom;
+dom = window.open('','_blank','location=yes,height=600,width=700,scrollbars=yes,status=yes')
+dom.document.write(`<center><h2 style="font-family: arial;">Lista de CPF cadastrados</h2> <hr> <div style="overflow: auto"><table border="2"><tr><th><h1 style="font-family: arial;">CPF</h1></th><th><h1 style="font-family: arial;">Data</h1></th></tr>${arr.join('')}</table> </center></div>`)	
+	}
+</script>
+</body>
+</html>

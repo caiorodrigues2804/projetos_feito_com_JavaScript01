@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JavaScript consultas</title>
+</head>
+<body style="background: #7d7d7d">
+	<h3 class="text-center text-monospace text-warning m-3">JavaScript Consultas</h3>
+	
+	<!-- 	<style type="text/css">
+			#caioba input{
+				text-align: center;
+			}
+		</style>
+		<div class="caioba"> -->
+		<center>
+	<input 
+	style="display: inline;"	 
+	type="button"
+	value="Criar" 
+	name=""
+	onclick="criar()" 
+ 	class="btn btn-outline-warning btn-lg" 
+	/>
+			
+	<input 
+	style="display: inline;"	 
+	type="button"
+	value="Consultar" 
+	name=""
+ 	class="btn btn-outline-warning btn-lg" 
+	/>
+
+		</center>	
+	 <script type="text/javascript">
+	 	let anotacao = Array()
+	 	anotacao['historico'] = []
+
+	 	function criar() {
+	 	 	let nome = prompt('Qual é seu nome?')
+	 	 	if (nome != anotacao['historico']) {
+	 	 	anotacao['historico'].push(nome)
+	 	 		
+	 	 	}
+	 	 	else if(nome == anotacao['historico']) {
+	 	 		alert("Já tem um item com esse nome")
+	 	 	}
+	 	}
+	 </script>
+	 
+</body>
+</html>

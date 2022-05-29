@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pilar do Polimorfismo</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class cabecaDeOvo{
+			constructor(nome){
+				this.nome = nome
+			}	
+			get info(){
+				console.log(`${this.nome} é um careca`)
+			}
+		}
+
+		let i = new cabecaDeOvo('Caio')
+		i.info
+
+			class bixin extends cabecaDeOvo{
+				constructor(nome){
+					super()
+					this.nome = nome
+				} 
+				get info(){
+					console.log(`${this.nome} é um cabeludo`)
+				}
+			}
+		let p  = new bixin('Caio')
+		p.info
+		
+	</script>
+</body>
+</html>

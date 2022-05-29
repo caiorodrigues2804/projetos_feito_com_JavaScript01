@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<html lang="pt-br">
+<meta charset="utf-8">
+	<title>Tabuada</title>
+	</head>
+	<body>
+<style type="text/css">
+
+ *{
+	font-family: arial;
+}
+</style>
+	<script type="text/javascript">
+	var x,y,z;
+	y=parseInt(prompt('Me informe um valor aí'))
+	x=0;z=0;
+	while(x < 1000){
+		x += 1;z = z + 1;
+		if(z >= 11){
+		z =0;
+		document.write('<hr>');
+		}
+		document.write(`${y} * ${x} = ${(x * y)} <br>`)
+	}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Funções CallBack</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function exibirartigo(id, callbackSucesso, callBackErro){
+			if (true) {
+				callbackSucesso('Meu pai é um careca', 'Função CallBack é bastante usada')
+			}else{
+				callbackErro('Erro ao recuperar os dados')
+			}
+		}
+		var callbackSucesso = function(titulo, descricao){
+			document.write('<h1>' + titulo + '</h1>')
+			document.write('<hr />')
+			document.write('<p>' + descricao + '</p>')
+		}
+		var callbackErro = function(erro){
+			document.write('<p><b>Erro:<br>' + erro + '</p>')
+		}
+		exibirartigo(1, callbackSucesso, callbackErro)
+
+
+	</script>
+
+</body>
+</html>

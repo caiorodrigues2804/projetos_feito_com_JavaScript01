@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title></title>
+ </head>
+ <body onload="backs('#ccc')">
+ 	<script type="text/javascript">
+ 			function backs(cor) {
+ 				// body...
+ 				document.body.style.background = cor
+ 			}
+ 			document.title = 'Countdown atualizado'
+ 			let b;
+ 			 b = document.getElementsByTagName('body')[0]
+ 			 // Centralizador
+ 			 let cen;
+ 			  cen = document.createElement('center')
+ 			  b.appendChild(cen)
+ 			let hs,hsx,dw;
+ 			hsx = document.createElement('h1'), hs = document.createElement('h1')
+ 				cen.appendChild(hs), cen.appendChild(hsx)
+ 			dw = document.createElement('h1'), cen.appendChild(dw)
+ 			dws = document.createElement('h1'), cen.appendChild(dws)
+ 				hs.innerHTML = 'Countdown atualizado'
+ 				let porcentagens;
+ 				porcentagens = document.createElement('h1'), cen.appendChild(porcentagens)
+ 				let countdown_001,countdown_002,countdown_atual;
+ 				countdown_001 = new Date('december 10, 2020 10:40:00').getTime()
+ 						countdown_002 = new Date('jan 04, 2021 10:40:00').getTime()
+ 				setInterval(
+ 					function() {	
+ 						countdown_atual = new Date().getTime()
+ 						let divisor,resultantes,divisor02,resultantes02;
+ 						divisor = countdown_001 - countdown_atual
+ 						divisor02 = countdown_002 - countdown_atual
+ 						if(divisor < 0){
+ 							resultantes02 = Math.abs(divisor02)
+							resultantes = Math.abs(divisor)
+ 						}
+ 						// COUNTDOWN 001
+ 						let dias,horas,minutos,segundos;
+ 						dias = Math.floor(resultantes / (1000*60*60*24))
+ 						horas = Math.floor(resultantes % (1000*60*60*24) / (1000*60*60))
+ 						minutos = Math.floor(resultantes % (1000*60*60) / (1000*60))
+ 						segundos = Math.floor(resultantes % (1000*60) / (1000))
+ 						hsx.innerHTML = dias + 'd' + ' ' + horas + 'h' + ' ' + minutos + 'm' + ' ' + segundos + 's'
+ 						// COUNTDOWN 002
+ 							let dias02, horas002, minutos002, segundos002;
+ 							dias02 = Math.floor(resultantes02 / (1000*60*60*24))
+ 						horas002 = Math.floor(resultantes02 % (1000*60*60*24) / (1000*60*60))
+ 						minutos002 = Math.floor(resultantes02 % (1000*60*60) / (1000*60))
+ 						segundos002 = Math.floor(resultantes02 % (1000*60) / (1000))
+ 						dw.innerHTML = dias02 + 'd' + ' ' + horas002 + 'h' + ' ' + minutos002 + 'm' + ' ' + segundos002 + 's'
+ 						setInterval(
+ 							function() {
+ 							 // Divisor Geral
+ 						let divisor_geral,divisor_geral_100,resultantes002;
+ 							divisor_geral = countdown_001 - countdown_002
+ 							divisor_geral_100 = Math.floor(countdown_001 / countdown_002 * 100)
+ 							porcentagens.innerHTML = 'Porcentagem: '+ divisor_geral_100 + '%'
+
+
+ 							
+ 							if(divisor_geral < 0){
+ 								resultantes002 = Math.abs(divisor_geral)
+ 							}
+ 							// console.log(resultantes002)
+ 							// Countdown003;
+ 							let dias03, horas003, minutos003, segundos003;
+ 							dias03 = Math.floor(resultantes002 / (1000*60*60*24))
+ 							horas003 = Math.floor(resultantes002 % (1000*60*60*24) / (1000*60*60))
+ 							minutos003 = Math.floor(resultantes002 % (1000*60*60) / (1000*60))
+ 							segundos003 = Math.floor(resultantes002 % (1000*60) / (1000))
+ 							dws.innerHTML = `A diferença entre os dias é: ${dias03}d ${horas003}h ${minutos003}m ${segundos003}s`
+ 						})
+ 						
+ 					}
+ 					)
+ 	</script>
+ </body>
+ </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+	<html>
+<head>
+	<title>Página teste</title>
+	<meta charset="utf-8">
+ 	<html lang="pt-br">
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB7ZZ4tvBlfOGOGZBdr8FNv87EUPeFXUS1cw&usqp=CAU">
+</head>
+<body style="background-color: lightgrey;">
+<center>
+<style type="text/css">
+ /*#jose{
+border: 3px solid #000;
+//display: inline;
+width: 230px;
+height: 400px;
+margin-left: 20px;
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 125px;
+padding-bottom: 300px;
+}*/
+
+</style>
+<br/>
+<br/>
+	<div style="border: 3px solid #000;display: inline-block;padding:20px;">
+		<div style="border: 3px solid #000;display: inline-block;width: 300px;height: 200px;">
+<br><br>
+		<mrcaioba>Clique aqui</mrcaioba>
+		</div> 
+	</div> 
+<br/>
+	<div style="border: 3px solid #000;display: inline-block;padding:20px;height: 50px;">
+ 	</div>
+
+	<!-- <div style="border: 3px solid #000;display: inline-block;padding: 10px;width: 200px;">
+	</div>-->
+ 	<!--<div style="border: 3px solid #000;display: inline-block;padding: 10px;width: 200px;">
+	</div>-->
+
+ 	<div style="border: 3px solid #000;display: block;width: 300px;padding: 10px;">
+		</div>  
+	
+	
+
+	<div style="border: 3px solid #000;display: inline-block;padding: 10px;width: 900px;height: 70px;">
+		<div style="border: 3px solid #000;padding: 10px;height: 40px;display: inline-block;padding-right:100px;padding-left:100px;"> 
+		<div style="border: 3px solid #000;display: inline;padding-left:10px;padding-right:10px;">
+		</div>
+		</div>
+	</div>
+<br>
+	<div style="border: 3px solid #000;display: inline-block;padding: 10px;width: 569px;height: 400px;">
+ 
+	</div>
+	<div style="border: 3px solid #000;display: inline-block;padding: 10px;width: 300px;height:400px;">
+	 
+	</div>
+<br>
+	<div style="border: 3px solid #000;display: inline-block;padding: 10px;width: 20px;height:2px;margin-right:750px;height:300px;">
+	</div>
+	<div style="border: 3px solid #000;display: inline-block;padding: 10px;width: 20px;height:2px;height:300px;">
+	</div>
+	<script type="text/javascript">
+	document.getElementsByTagName('mrcaioba')[0].style.fontSize = 20 + 'px';
+	let selecione = document.getElementsByTagName('mrcaioba')[0];
+
+let dias_da_semana,meses,notificacao;
+setInterval(
+	function(){
+		 	datas_e_horas = new Date();
+			if(datas_e_horas.getHours() >= 12 && datas_e_horas.getHours() <= 17){
+			notificacao = '<br>Boa tarde'
+			}
+			else if(datas_e_horas.getHours() >= 18 && datas_e_horas.getHours() <= 23){
+			notificacao = '<br>Boa noite'
+			}else if(datas_e_horas.getHours() >= 23 && datas_e_horas.getHours() <= 05){
+			notificacao = '<br>Boa noite'
+			}else if(datas_e_horas.getHours() >= 06 && datas_e_horas.getHours() <= 11){
+			notificacao = '<br>Bom dia'
+			}
+	}
+)
+meses = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']
+datas_e_horas = new Date();
+let x,y;
+x = 0;y=0;
+
+	selecione.onclick = () => {
+	  switch(x){
+		case 0:
+		x = 1;y=0;
+	//console.log(x)
+selecione.innerHTML = '<h2>Data de hoje é <br>'+ datas_e_horas.getDate() + ' de ' + meses[datas_e_horas.getMonth()] + ' de ' + datas_e_horas.getFullYear() + '</h2>';
+		break;
+		case 1:
+		x = 2;y=1;
+	setInterval(
+		() => {
+		 if(y === 1){
+	 	datas_e_horas = new Date();
+	selecione.innerHTML = '<h1>'+ datas_e_horas.getHours() + ':' + datas_e_horas.getMinutes() + ':' + datas_e_horas.getSeconds() + notificacao + '</h1>';
+		} if(y === 0){
+	selecione.innerHTML = datas_e_horas.getDay()
+	}
+		})
+	console.log(x)
+		break;
+		case 2:
+		x = 0;y =0;
+		console.log(x)
+	 
+		break;
+		}	
+	}
+	</script>
+<center>
+</body>
+</html>

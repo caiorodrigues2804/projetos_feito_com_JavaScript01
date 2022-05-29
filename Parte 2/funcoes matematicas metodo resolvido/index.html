@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Bootstrap CSS3 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- Bootstrap JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!-- Normalize CSS3 -->
+	<link rel="stylesheet" type="text/css" href="normalize/normalize.css">
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Funções matemáticas</title>
+</head>
+<body style="background: #ccc;">
+	<h1 class="text-center"> Funções matemáticas </h1>
+	<center>
+		<input type="button"  class="btn btn-secondary btn-lg" value="Inciar teste" onclick="teste()">
+	</center>
+	<script type="text/javascript">
+		let errado = 0
+		let acerto = 0
+		let maximas = 0
+
+		//TESTE 01
+		// function teste(){
+		// 	if (acertos == 0) {
+		// 		window.alert('Olá')
+		// 		acertos:++;
+		// 		window.alert('total de acertos é: ' + acertos)
+		// 		teste()
+		// 	}else{
+
+		// 	}
+		// }
+
+		//TESTE 01
+		function teste(){
+			window.alert('Olá visitante!')
+			alert('Antes de inciar esse teste é recomendado preencher seus dados, eles serão exibidos quando você finalizar o teste')
+			nomes()
+			function nomes(){
+				var nome = prompt('Qual é seu nome?')
+				if (nome.length >= 2) {
+					window.alert('Olá, ' + nome)
+					sobrenomes()
+				}else{	
+					alert('Nome não preenchido')
+					nomes()
+				}
+			}
+			function sobrenomes(){
+				var sobrenome = prompt('Qual é seu sobrenome?')
+				if (sobrenome.length >= 2) {
+					window.alert('Ok')
+					var simnao = prompt('Desejar alterar seu sobrenome e nome? Sim ou Não')
+					switch(simnao.toString()){
+						case 'Sim':
+						// alert('Beleza')
+						nomes()
+						break
+						default:
+						// alert('Não beleza')
+						teste001()
+					}
+				}else{
+					alert('Sobrenome não preenchido')
+					sobrenomes()
+				}
+			}
+		}
+		// let errado = 0
+		// let acerto = 0
+		// let maximas = 0
+
+		///TESTE 1
+		function teste001(){
+			if (acerto <= 10) {
+				var soma = prompt('Quanto que é 4 + 5?')
+				switch(parseInt(soma)){
+					case 9:
+					acerto++;
+					window.alert('Você acertou!')
+					alert('Quantidade de acertos é: ' + acerto)
+//TESTE 1
+ teste1()
+	function teste1(){
+		// var soma = promptt('Quanto que é 4 + 5?')
+		var soma = prompt('Quanto que é 28 + 51')
+		switch(parseInt(soma)){
+			case 79:
+			acerto++;
+			window.alert('Você acertou!')
+			alert('Quantidade de acertos é: ' + acerto)
+teste01()
+function teste01(){
+	var soma = prompt('Quanto que é 30 + 20 + 100');
+	switch(parseInt(soma)){
+		case 150:
+		acerto++;
+		window.alert('Você passou!')
+		alert('Quantidade de acertos é: ' + acerto)
+		// teste01()
+
+		//TESTE 001
+		teste001()
+			function teste001(){
+				var soma = prompt('Quanto que é 42 x 4?')
+switch(parseInt(soma)){
+case 168:
+acerto++;
+window.alert('Você passou!')
+alert('Quantidade de acertos é: ' + acerto)
+
+	//TESTE 0001
+	teste0001()
+	function teste0001(){
+		var soma = prompt('Quanto que é raiz quadrada de 49 multiplicado por 2 e divido 4?')
+		switch(parseFloat(soma)){
+			case 3.5:
+			acerto++;
+			window.alert('Você passou!')
+			alert('Quantidade de acertos é: ' + acerto)
+			teste1()
+			default:
+			errado++;
+			window.alert('Você errou')
+			alert('A quantidade de erros é: ' + errado)
+			teste001()
+		}
+	}
+break	
+default:
+window.alert('Você errou')
+alert('A quantidade de erros é: ' + errado)
+teste001()
+				}
+			}
+		default:
+		window.alert('Você errou')
+		alert('A quantidade de erros é: ' + errado)
+		teste01()
+
+	}
+}
+			break
+			default:
+			errado++;
+			window.alert('Você errou')
+			alert('A quantidade de erros é: ' + errado)
+			teste1()
+		}
+
+}
+					break
+					default:
+					errado++;
+					window.alert('Você errou')
+					alert('A quantidade de erros é: ' + errado)
+					teste001()
+				}
+
+
+				// acerto++;
+				// window.alert('Quantidade de acertos é: ' + acerto)
+				// teste001()
+			}else{
+
+			}
+		}
+		
+	</script>
+</body>
+</html>

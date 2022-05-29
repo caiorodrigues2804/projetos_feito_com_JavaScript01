@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<!-- Bootstrap CSS3 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Bootstrap Javascript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Testes matemáticos</title>
+	<link rel="icon"  href="https://iconarchive.com/download/i14573/iconarchive/red-orb-alphabet/Letter-M.ico">
+</head>
+<body style="background: #ccc">
+	<h1 class="text-center m-4">Testes matemáticos</h1>
+	<center>
+		
+	<input type="button" class="btn btn-warning btn-lg"value="começar teste" style="width: 300px;" id="butão" onclick="matematica()">
+	<style type="text/css">
+		button{
+
+			} #butão:hover{
+				border:2px groove #000;
+				transition: 0.2s
+			}
+	</style>
+	</center>
+	<script type="text/javascript">
+		var errado
+		function matematica(){
+			alert('Olá visitante!');
+			alert('Antes de começar os teste é recomendado preencher alguns dados que serão exibidos quando você finalizar os testes.')
+			cadastro()
+
+			function cadastro(){
+				var nome = prompt('Qual é seu nome?')
+				if (nome.length >= 2) {
+				 alert('Olá, ' + nome)	
+				 	sobrenome02()
+				 	function sobrenome02(){
+				 	var sobrenome = prompt('Qual é seu sobrenome?')
+					 	if (sobrenome.length >= 2) {
+					 		alert('Ok')
+					 		matematicamente()
+					 	}else{
+						alert('Sobrenome não preenchido corretamente')	
+							sobrenome02()
+					 	}
+
+				 	}
+				 	
+				}else{
+					alert('O nome não foi preenchido corretamente')
+					cadastro()
+				}
+			}
+		}
+		function matematicamente(){
+			var simnao = prompt('Desejar alterar seu sobrenome e nome novamente? Sim ou Não')
+			// switch(simnao){
+			// 	case 'Sim':
+			// 	cadastro()
+			// 	break;
+			// 	default:
+
+			// }
+			if (simnao == 'Sim') {
+				cadastro02()
+		// 		function cadastro02{
+		// 	var nome = prompt('Qual é seu nome?')
+		// 	if (nome.length >= 2) {
+		// 		 alert('Olá, ' + nome)	
+		// 		 sobrenome02()
+		// 	}else{
+		// 		alert('Nome não preenchido corretamente')
+		// 		cadastro02()
+		// 	}
+		// }
+			}else{
+				alert('Sobrenome e nome confirmado')
+			}
+		}
+		// function cadastro02(){
+		// 		var nome = prompt('Qual é seu nome?')
+		// 		if (nome.length >= 2) {
+		// 		 alert('Olá, ' + nome)	
+		// 		 	sobrenome02()		
+		// 	}
+
+
+	</script>
+	<!-- <script type="text/javascript">
+		var errado
+		// caioba()
+		function caioba(){
+			alert('Olá visitante!')
+			alert('Mas antes de começar os testes é recomendado inciar o processo identifição')
+			alert('O processo de identificação é maneira de exibir a quantidade de erros e acertos, e seus nome e sobrenomes serão exibidos quando terminar o teste.')
+
+			// function caioba02(){
+			// var nome = prompt('Qual é seu nome?')
+			// switch(nome.lenght){
+			// 	case >= 4:
+			// 	alert('passou');
+			// 	break
+			// 	default:
+			// 	alert('Não pasosu')
+			// }
+
+			// }
+			// 	nomes()
+			// 	function nomes(){
+			// 		var nome = prompt('Qual é seu nome?')
+			 
+			// 		if (nome.lenght >= 2) {
+			// 			alert('Ok');
+
+			// 		}else{
+			// 			document.write('quantidade é' + nome.lenght)
+			// 			// nomes()
+			// 		}
+			// 	}
+			// }
+			
+			// nomes()
+			// function nomes(){
+			// 	var nome = prompt('Qual é seu nome?')
+			// 	if (nome.length >= 2) {
+
+			// 	}else{
+			// 		alert('Nome não preenchido corretamente')
+			// 		nome()
+			// 	}
+			// }
+
+
+	</script> -->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>JS</title>
+</head>
+<body>
+	<style type="text/css">
+		body{background-color: lightgrey;}
+	</style>
+<h1></h1>
+	<script type="text/javascript">
+	let d_01;
+		d_01 = document.getElementsByTagName('h1')[0]
+
+let me_informe;
+	me_informe = prompt('Digite seu mes')
+let datas,datas_atuais,resultado;
+	datas_atuais = new Date().getTime()
+	datas = new Date(me_informe + ' 28, 2001 16:00:00').getTime()
+	alert(datas)
+resultado = datas_atuais - datas;
+
+let anos,dias,horas,minutos,segundos;
+anos=Math.floor(resultado / (365 * 24 * 60 * 60 * 1000))
+dias = Math.floor(resultado / (1000*60*60*24))
+horas = Math.floor(resultado % (1000*60*60*24) / (1000*60*60));
+minutos = Math.floor(resultado % (1000*60*60) / (1000*60))
+segundos = Math.floor(resultado % (1000*60) / (1000))
+
+d_01.innerHTML = `${anos} anos ${dias}d ${horas}h ${minutos}m ${segundos}s`
+	</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<html lang="pt-br">
+ 	<meta charset="utf-8">
+ 	<title></title>
+ </head>
+ <body onload="sd('black')">
+ 	<script type="text/javascript">
+ 		function sd(color) {
+ 			document.body.style.background = color
+ 			document.body.style.backgroundAttachment = 'fixed'
+ 		}
+ 		let b;
+ 		b = document.querySelector('body')
+ 		let hs;
+ 		 hs = document.createElement(`h1`)
+ 		 b.appendChild(hs)
+ 		 hs.style.color = 'lightgreen'
+ 		 let numerador;
+ 		 numerador=0;
+ 		 let stop = setInterval(function() {
+ 		 		numerador+=1;
+ 		 		hs.innerHTML = numerador + '%'
+ 		 		if (numerador > 99) {
+ 		 			numerador = 0
+ 		 			clearInterval(stop)
+ 		 			hs.innerHTML = 'Nasa foi hackeado com sucesso'
+ 		 				let numerador_ok;
+ 		 				numerador_ok = 0
+ 		 			setInterval(function() {
+ 		 				numerador_ok += 1;
+ 		 				if (numerador_ok > 50) {
+ 		 					window.location.reload()
+ 		 				}
+ 		 			}, 100)
+ 		 		}
+ 		 }, 100)
+ 		// let nomes;
+ 		// nomes = []
+ 		// nomes[0] = 'Nina'
+ 		// nomes[1] = 'Bolota'
+ 		// nomes[2] = 'Elizangela'
+ 		// nomes[3] = 'Marcelo'
+ 		// let coletor;
+ 		// coletor = []
+ 		// nomes.forEach(x)
+ 		//  function x(valor,indice,array) {
+ 		//  	coletor.push(`índice: ${indice} || nome: ${valor}`)
+ 		// 	console.log(`índice: ${indice} || Nome: ${valor}`)
+ 		// }
+ 		// let xs;
+ 		// 	for(xs = 0;xs <= coletor.length;xs++){
+ 		// 		if (xs < coletor.length) {
+ 		// 			let hs;
+ 		// 			hs = document.createElement(`h2`)
+ 		// 			document.querySelector('body').appendChild(hs)
+ 		// 			hs.innerHTML = coletor[xs]
+ 		// 		}
+ 		// 	}
+ 		// // Conversor
+	 		 let titulacao;
+	 		 titulacao = document.getElementsByTagName('h1')
+	 		 for(let xs = 0;xs <= titulacao.length;xs++){
+	 		 	if (xs < titulacao.length) {
+	 		 		titulacao[xs].style.fontFamily = 'monospace'
+	 		 		titulacao[xs].style.color = 'lightgreen'
+	 		 		titulacao[xs].style.marginLeft = 10 + 'px'
+	 		 	}
+	 		 }
+
+ 	</script>
+ </body>
+ </html>

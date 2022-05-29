@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Sofá</title>
+</head>
+<body>
+	<script type="text/javascript">
+	 /* 	class caio{
+	  		constructor(nomeador){
+	  			this.nome = nomeador
+	  			console.log(`Olá ${this.nome}`)
+	  		}
+	  	}
+	  	let nomes = new caio('Caio')
+	  	*/
+
+	  	//SOFÁ
+	  	class sofa{
+	  		constructor(qtdePernas, giratoria, cor){
+	  			this.qtdePernas = qtdePernas
+	  			this.giratoria = giratoria
+	  			this.cor = cor
+	  		// console.log(`Sofa: Quantidade de pernas: ${this.qtdePernas}. Giratória: ${this.giratoria ? 'Sim' : 'Não'}. Cor: ${this.cor}`)
+	  		} girarCadeira(){
+	  			if (this.giratoria === true) {
+	  				console.log('Girou')
+	  			} else{
+	  				console.log('Não girou')
+	  			}
+	  		}
+	  	}
+	  	let sofas = new sofa(4, false, 'vermelha')
+	  	sofas.girarCadeira()
+	</script>
+
+</body>
+</html>

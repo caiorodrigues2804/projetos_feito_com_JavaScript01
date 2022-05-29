@@ -1,0 +1,352 @@
+ <!DOCTYPE html>
+	<html>
+<head>
+	<meta charset="utf-8">
+	<html lang="pt-br">
+	<title>Contagem regressiva</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+<style>
+	*{
+		font-family: Microsoft JhengHei;
+	} body{
+		/*background-color: #000; */
+		}
+	#divs{
+		border:1px solid #000;
+		border-radius: 15px;
+		display: none;
+		padding: 15px;
+		width: 140px;
+		margin: 4px;
+		
+	} #divs h1{
+		text-align: center;
+		font-size: 45px;
+	} #divs h1 c{
+		font-size: 15px;
+		} #div_01{
+		border: 1px solid #000;
+		border-radius: 8px;
+		display: none;
+		padding: 15px;
+		width: 20px;
+		font-size: 20px;
+	 	position: fixed;
+		top: 10px;
+		left: 75px;
+		} #div_02{
+		border: 1px solid #fff;
+		color: #fff;
+		display: none;
+		border-radius: 8px;
+		padding: 15px;
+		width: 20px;
+		font-size: 20px;
+	 	position: fixed;
+		top: 10px;
+		left: 75px;
+		}
+		#div_03{
+		border: 1px solid #000;
+		position: fixed;
+		top: 10px;
+		display: none;
+		left: 20px;
+		padding: 10px;
+		font-size: 30px;
+		border-radius: 8px;
+		width: 27px;
+		}
+#divisor_prin{
+	border: 1px solid #000;
+	padding:5px;
+	margin-left: 10px;
+	display: inline-block;
+} input{
+		font-size: 20px;
+		border: 1px solid #000;
+		border-radius: 3px;
+}
+</style>
+ 
+
+ 
+<k  onclick="acao()">
+<i  id="div_01" class="fas fa-moon"></i> 
+
+<i  style="display: none;" id="div_02" class="fas fa-sun"></i>
+
+
+</k> 
+<i  onclick="menu()" class="fas fa-bars" id="div_03"></i>
+
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<h1 id="mr_caioba_01">Contagem regressiva</h1>
+<h3 id="mr_caioba_02">Crie uma contagem regressiva</h3>
+ 	<!-- new Date('meses dias, anos horas,minutos,segundos'); -->
+	<input
+	id="meses_s"
+	type="number"
+	max="12"
+	style="width: 76px;"
+	min="0"
+	placeholder="meses"
+	/>
+	<input
+	id="dias_s"
+	type="number"
+	max="31"
+	min="1"
+	placeholder="dias"
+	/>
+	<input
+	id="anos_s"
+	type="number"
+	min="1000"
+	style="width: 70px;"
+	placeholder="anos"
+	/>
+	<input
+	id="horas_s"
+	type="number"
+	max="24"
+	min="0"
+	style="width: 70px;"
+	placeholder="horas"
+	/>
+	<input
+	id="minutos_s"
+	type="number"
+	max="59"
+	min="0"
+	style="width: 91px;"
+	placeholder="minutos"
+	/>
+	<input
+	id="segundos_s"
+	type="number"
+	max="59"
+	min="0"
+	style="width: 107px;"
+	placeholder="segundos"
+	/>
+<br>
+<br>
+	<input
+	type="button"
+	value="Criar"
+	class="buttons"
+	style="border: 1px solid #000;background-color: white;width: 520px;padding:10px;border-radius: 5px;"
+	/>
+ 
+	<div class="div_01"  id="divs" class="diretorio_01">
+	 <!-- <h1>0 <br> <c>meses</c></h1> -->
+	</div>
+
+	<div class="div_02" id="divs">
+		<!-- < <h1>0 <br> <c>dias</c></h1> -->
+	</div>
+
+	<div class="div_03"  id="divs">
+		<!-- <h1>0 <br> <c>anos</c></h1> -->
+	</div>
+
+	<div class="div_04"  id="divs">
+		<!-- <h1>0 <br> <c>horas</c></h1> -->
+	</div>
+
+	<div class="div_05"  id="divs">
+		<!-- <h1>0 <br> <c>minutos</c></h1> -->
+	</div>
+
+	<div class="div_06"  id="divs">
+		<!-- <h1>0 <br> <c>segundos</c></h1> -->
+	</div>
+</center>
+	<!--- let data = new Date('april 28, 2001 16:00:00') -->
+</body>
+
+<script type="text/javascript">
+//
+let d_meses,d_dias,d_anos,d_horas,d_minutos,d_segundos;
+var button = document.getElementsByClassName('buttons')[0];
+
+var meses_dD,dias_dD,anos_dD,horas_dD,minutos_dD,segundos_dD;
+meses_dD = document.getElementsByTagName('div')[0];dias_dD = document.getElementsByTagName('div')[1];
+anos_dD = document.getElementsByTagName('div')[2];horas_dD = document.getElementsByTagName('div')[3];
+minutos_dD = document.getElementsByTagName('div')[4];segundos_dD = document.getElementsByTagName('div')[5];
+
+	//TIMER
+	let data_modificada,data_;
+
+button.onclick= () => {
+var meses;
+/*
+January – Janeiro
+February – Fevereiro
+March – Março
+April – Abril
+May – Maio
+June – Junho
+July – Julho
+August – Agosto
+September – Setembro
+October – Outubro
+November – Novembro
+December – Dezembro
+*/
+
+meses = ['','january','february','march','april','may','june','july','august','september','october','november','december']
+document.getElementById('mr_caioba_01').style.display = 'none';
+document.getElementById('mr_caioba_02').style.display = 'none';
+d_meses = document.getElementById('meses_s').value;d_dias=document.getElementById('dias_s').value;
+d_anos=document.getElementById('anos_s').value;d_horas=document.getElementById('horas_s').value;
+d_minutos=document.getElementById('minutos_s').value;d_segundos=document.getElementById('segundos_s').value;
+var mes_definitivo;
+mes_definitivo = meses[d_meses];
+
+document.getElementsByTagName('input')[0].style.display = 'none';document.getElementsByTagName('input')[1].style.display = 'none';
+document.getElementsByTagName('input')[2].style.display = 'none';document.getElementsByTagName('input')[3].style.display = 'none';
+document.getElementsByTagName('input')[4].style.display = 'none';document.getElementsByTagName('input')[5].style.display = 'none';
+document.getElementsByTagName('input')[6].style.display = 'none';
+document.querySelector('#div_01').style.display = 'inline-block';
+document.querySelector('#div_03').style.display = 'inline-block';
+
+//MODIFICADOR	
+data_modificada = new Date(mes_definitivo  + ' ' + d_dias + ', ' + d_anos + ' ' + d_horas + ':' + d_minutos + ':' + d_segundos).getTime();
+alert('Foi criado com sucesso');
+ meses_dD.style.display = 'inline-block'; dias_dD.style.display = 'inline-block';anos_dD.style.display = 'inline-block'
+ horas_dD.style.display = 'inline-block';segundos_dD.style.display = 'inline-block'; minutos.style.display = 'inline-block'	
+
+}
+	//VARIÁVEIS
+	let mes_texto,dias_texto,anos_texto,horas_texto,minutos_texto,segundos_texto;
+	
+	//MESES
+	mes_texto=document.createElement('h1');
+	document.querySelector('.div_01').appendChild(mes_texto);
+
+	//DIAS
+	dias_texto=document.createElement('h1');
+	document.querySelector('.div_02').appendChild(dias_texto);
+	
+	//ANOS
+	anos_texto=document.createElement('h1');
+	document.querySelector('.div_03').appendChild(anos_texto);
+
+	//HORAS
+	horas_texto=document.createElement('h1');
+	document.querySelector('.div_04').appendChild(horas_texto);
+
+	//MINUTOS
+	minutos_texto=document.createElement('h1');
+	document.querySelector('.div_05').appendChild(minutos_texto);
+
+	//SEGUNDOS
+	segundos_texto=document.createElement('h1');
+	document.querySelector('.div_06').appendChild(segundos_texto);
+
+	
+	
+	//h_s.appendChild(c)		
+	mes_texto.innerHTML = '0 <br> <c>meses</c>'
+	dias_texto.innerHTML = '0 <br> <c>dias</c>'
+	anos_texto.innerHTML = '0 <br> <c>anos</c>'
+	horas_texto.innerHTML = '0 <br> <c>horas</c>'
+	minutos_texto.innerHTML = '0 <br> <c>minutos</c>'
+	segundos_texto.innerHTML = '0 <br> <c>segundos</c>'
+	
+	let div_01,div_02,div_03;
+	div_01=document.getElementById('div_01');
+	div_02=document.getElementById('div_02');
+	div_03=document.getElementById('div_03');
+	
+
+	//data_modificada = new Date('april 28, 2025 16:00:00').getTime();
+
+	setInterval(() => {
+		var divisor;
+		data_ = new Date().getTime();
+		divisor = Math.abs(data_modificada - data_)
+		var atualizador = function(){
+		let meses,dias,anos,horas,minuto,segundos;
+		meses=Math.floor(divisor / (30 * 24 * 60 * 60 * 1000));
+		dias=Math.floor(divisor / (24 * 60 * 60 * 1000));
+		anos=Math.floor(divisor / (365 * 24 * 60 * 60 * 1000));
+		horas=Math.floor(divisor % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+		minutos=Math.floor(divisor % (60 * 60 * 1000) / (60 * 1000));
+		segundos=Math.floor(divisor % (60 * 1000) / (1000));
+		console.log(divisor)
+ 	if(isNaN(meses)){meses=0;}; if(isNaN(dias)){dias=0;}
+ 	if(isNaN(anos)){anos=0;}; if(isNaN(horas)){horas=0;}
+ 	if(isNaN(minutos)){minutos=0;}; if(isNaN(segundos)){segundos=0;}
+	mes_texto.innerHTML = meses + ' <br> <c>meses</c>'; dias_texto.innerHTML = dias + ' <br> <c>dias</c>'
+	anos_texto.innerHTML = anos + ' <br> <c>anos</c>'; horas_texto.innerHTML = horas + ' <br> <c>horas</c>'
+	minutos_texto.innerHTML = minutos + ' <br> <c>minutos</c>'; segundos_texto.innerHTML = segundos + ' <br> <c>segundos</c>'
+
+		}
+		atualizador();
+	})
+
+var x;
+x = 0;
+function acao(){
+	switch(x){
+	case 0:
+	x+=1;
+document.body.style.background = '#000';
+document.getElementById('div_01').style.display = 'none';
+document.getElementById('div_02').style.display = 'block';
+div_03.style.color = 'white';
+div_03.style.border = '1px solid #fff';
+mes_texto.style.color = 'white';dias_texto.style.color = 'white';
+anos_texto.style.color = 'white';horas_texto.style.color = 'white';
+minutos_texto.style.color = 'white';segundos_texto.style.color = 'white';
+//DIV
+document.getElementsByTagName('div')[0].style.border = '1px solid #fff';document.getElementsByTagName('div')[1].style.border = '1px solid #fff';
+document.getElementsByTagName('div')[2].style.border = '1px solid #fff';document.getElementsByTagName('div')[3].style.border = '1px solid #fff';
+document.getElementsByTagName('div')[4].style.border = '1px solid #fff';document.getElementsByTagName('div')[5].style.border = '1px solid #fff';
+	
+	break;
+	case 1:
+	x-=1;
+document.body.style.background = '#fff';
+document.getElementById('div_01').style.display = 'block';
+document.getElementById('div_02').style.display = 'none';
+div_03.style.color = 'black';
+div_03.style.border = '1px solid #000';
+mes_texto.style.color = 'black';dias_texto.style.color = 'black';
+anos_texto.style.color = 'black';horas_texto.style.color = 'black';
+minutos_texto.style.color = 'black';segundos_texto.style.color = 'black';
+//DIV
+document.getElementsByTagName('div')[0].style.border = '1px solid #000';document.getElementsByTagName('div')[1].style.border = '1px solid #000';
+document.getElementsByTagName('div')[2].style.border = '1px solid #000';document.getElementsByTagName('div')[3].style.border = '1px solid #000';
+document.getElementsByTagName('div')[4].style.border = '1px solid #000';document.getElementsByTagName('div')[5].style.border = '1px solid #000';
+	break;
+	} 		
+}
+	function menu(){
+		let valor;
+		valor = prompt('Reiniciar a página digite 1 ou Sobre digite 2');
+		switch(parseInt(valor)){
+			case 1:
+			window.location.reload();
+			break;
+			case 2:
+	var janela;
+	janela = window.open("", "", "top=40, left=40, width=500, height=500");
+	janela.document.write('<body>dioadnwiaid</body>')
+			break;
+		}
+	}
+	 
+</script>
+	</html>
+</!DOCTYPE html>
